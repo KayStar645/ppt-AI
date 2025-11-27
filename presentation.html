@@ -1987,9 +1987,10 @@
             
             updateThumbnails();
             
-            // Add mouse wheel scroll
+            // Add mouse wheel scroll for horizontal scrolling
             thumbnailBar.addEventListener('wheel', (e) => {
                 e.preventDefault();
+                // Use deltaY for vertical wheel, convert to horizontal scroll
                 thumbnailBar.scrollLeft += e.deltaY;
             }, { passive: false });
         }
