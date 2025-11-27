@@ -28,32 +28,7 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Download Button */
-        .download-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        .download-btn i {
-            margin-right: 10px;
-        }
+        /* Download Button - REMOVED */
 
         /* Slide Container */
         .slide-section {
@@ -73,10 +48,6 @@
                 page-break-after: always;
                 page-break-inside: avoid;
             }
-            
-            .download-btn {
-                display: none !important;
-            }
         }
 
         .slide-container {
@@ -91,6 +62,166 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            /* Tablet */
+            .slide-container {
+                width: 90vw;
+                min-height: 50.625vw; /* 16:9 aspect ratio */
+                max-height: 90vh;
+            }
+            
+            .content-layout {
+                padding: 30px 35px;
+            }
+            
+            h2.slide-title {
+                font-size: 32px;
+            }
+            
+            h3 {
+                font-size: 24px;
+            }
+            
+            p, li {
+                font-size: 18px;
+            }
+            
+            .nav-controls {
+                bottom: 20px;
+                gap: 15px;
+            }
+            
+            .nav-btn {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+            
+            .thumbnail-bar {
+                max-height: 120px;
+            }
+            
+            .thumbnail-item {
+                width: 100px;
+                height: 67px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile */
+            .slide-container {
+                width: 95vw;
+                min-height: 53.4375vw; /* 16:9 aspect ratio */
+                max-height: 85vh;
+                border-radius: 15px;
+            }
+            
+            .slide-section {
+                padding: 20px 10px;
+            }
+            
+            .content-layout {
+                padding: 25px 20px;
+            }
+            
+            h2.slide-title {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            
+            h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+            
+            p, li {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            
+            .title-layout {
+                padding: 40px 30px;
+            }
+            
+            .title-layout h1 {
+                font-size: 36px;
+            }
+            
+            .title-layout .subtitle {
+                font-size: 24px;
+            }
+            
+            .nav-controls {
+                bottom: 15px;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-btn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .slide-counter {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+            .fullscreen-btn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .thumbnail-bar {
+                max-height: 100px;
+                padding: 10px;
+            }
+            
+            .thumbnail-item {
+                width: 80px;
+                height: 53px;
+            }
+            
+            .grid-body {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .two-col-layout {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Small Mobile */
+            .slide-container {
+                width: 98vw;
+                min-height: 55.125vw;
+                max-height: 80vh;
+            }
+            
+            h2.slide-title {
+                font-size: 20px;
+            }
+            
+            h3 {
+                font-size: 18px;
+            }
+            
+            p, li {
+                font-size: 14px;
+            }
+            
+            .title-layout h1 {
+                font-size: 28px;
+            }
+            
+            .title-layout .subtitle {
+                font-size: 20px;
+            }
         }
 
         /* Import styles from styles.css */
@@ -452,9 +583,6 @@
             bottom: 20px;
         }
 
-        body.fullscreen .download-btn {
-            display: none;
-        }
 
         body.fullscreen .thumbnail-bar {
             display: none;
@@ -556,10 +684,15 @@
             z-index: 1001;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 12px 20px;
+            padding: 12px 15px;
             border: none;
-            border-radius: 50px;
-            font-size: 16px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
             font-weight: 700;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -576,11 +709,7 @@
             left: 10px;
         }
 
-        /* Click to advance */
-        .slide-section {
-            cursor: pointer;
-        }
-
+        /* Click to advance in fullscreen */
         body.fullscreen .slide-section {
             cursor: pointer;
         }
@@ -601,16 +730,9 @@
     </style>
 </head>
 <body>
-    <!-- Download Button -->
-    <button class="download-btn" onclick="downloadPDF()">
-        <i class="fa-solid fa-file-pdf"></i>
-        Tải PDF
-    </button>
-
     <!-- Fullscreen Toggle Button -->
-    <button class="fullscreen-btn" onclick="toggleFullscreen()" id="fullscreenBtn">
+    <button class="fullscreen-btn" onclick="toggleFullscreen()" id="fullscreenBtn" title="Toàn màn hình">
         <i class="fa-solid fa-expand"></i>
-        Toàn màn hình
     </button>
 
     <!-- Navigation Controls -->
@@ -629,7 +751,7 @@
     </div>
 
     <!-- SLIDE 1: Đề tài và Thành viên -->
-    <section class="slide-section active" data-slide="1" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section active" data-slide="1">
         <div class="slide-container" style="background: white;">
             <div style="padding: 40px 50px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
                 <!-- Header -->
@@ -671,7 +793,7 @@
     </section>
 
     <!-- SLIDE 2: Mục lục -->
-    <section class="slide-section" data-slide="2" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="2">
         <div class="slide-container" style="background: white;">
             <div style="padding: 50px; height: 100%; display: flex; flex-direction: column;">
                 <!-- Title -->
@@ -760,55 +882,85 @@
     </section>
 
     <!-- SLIDE 3: Đặt vấn đề -->
-    <section class="slide-section" data-slide="3" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="3" >
         <div class="slide-container">
-            <div class="two-col-layout">
-                <div class="col">
-                    <h2 class="slide-title" style="color: #1b5e20; font-size: 36px; margin-bottom: 25px;">
-                        1. Bối cảnh & Thách thức
+            <div class="content-layout">
+                <!-- Header: Chương -->
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
+                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
                     </h2>
-                    
-                    <div class="section-title">Thách thức Truyền thống</div>
-                    <ul>
-                        <li><i class="fa-solid fa-seedling" style="color: #2e7d32;"></i> <b>Lúa:</b> Cây trồng chủ lực, chịu thiệt hại nặng nề từ <b>rầy nâu</b> và sâu bệnh.</li>
-                        <li><i class="fa-solid fa-clock" style="color: #f57c00;"></i> <b>Giám sát thủ công:</b> Tốn <b>thời gian</b>, <b>chi phí</b>, và <b>độ chính xác thấp</b> (dựa vào kinh nghiệm).</li>
-                        <li><i class="fa-solid fa-map-location-dot" style="color: #607d8b;"></i> <b>Quy mô lớn:</b> Khó đưa ra cảnh báo <b>kịp thời và khách quan</b> trên diện rộng.</li>
-                    </ul>
-                    
-                    <div class="section-title">Giải pháp AI & Giới hạn</div>
-                    <ul>
-                        <li><i class="fa-solid fa-robot" style="color: #03a9f4;"></i> <b>AI & YOLO:</b> Đã giải quyết tốt bài toán <b>Phát hiện (Detection)</b> và <b>Phân loại</b> rầy.</li>
-                        <li><i class="fa-solid fa-square" style="color: #c62828;"></i> <b>Hộp bao (Bounding Box):</b> Chỉ là <b>vùng ước lượng</b> bao quanh đối tượng.</li>
-                    </ul>
                 </div>
                 
-                <div class="col">
-                    <h2 class="slide-title" style="color: #c62828; font-size: 36px; margin-bottom: 25px;">
-                        2. Khoảng trống Nghiên cứu
-                    </h2>
-                    
-                    <div class="section-title" style="border-bottom-color: #ef9a9a;">Thách thức về Độ chính xác</div>
-                    <ul>
-                        <li><i class="fa-solid fa-slash" style="color: #c62828;"></i> <b>KHÔNG</b> thể tách biệt rầy khỏi nền lá lúa ở mức độ <b>pixel-level</b>.</li>
-                        <li><i class="fa-solid fa-exclamation-triangle" style="color: #ff9800;"></i> Khó tính toán <b>mật độ chính xác</b> từ bounding boxes.</li>
-                    </ul>
-                    
-                    <div class="section-title" style="border-bottom-color: #ef9a9a;">Nhu cầu Cấp thiết</div>
-                    <ul>
-                        <li><i class="fa-solid fa-mask" style="color: #3f51b5;"></i> Cần <b>Phân đoạn thực thể (Instance Segmentation)</b>.</li>
-                        <li><i class="fa-solid fa-calculator" style="color: #3f51b5;"></i> Yếu tố then chốt để tính <b>Mật độ rầy/m²</b> một cách <b>khoa học và chính xác</b>.</li>
-                        <li><i class="fa-solid fa-chart-line" style="color: #3f51b5;"></i> Hỗ trợ đánh giá mức độ xâm nhiễm và dự báo dịch hại.</li>
-                    </ul>
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 30px;">
+                    1.1. Đặt vấn đề
+                </h2>
+                
+                <div class="content-body">
+                    <div class="two-col-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 0;">
+                        <div class="col">
+                            <div class="section-title" style="color: #1b5e20; border-bottom-color: #4caf50;">Bối cảnh & Thách thức</div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h4 style="color: #2e7d32; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Thách thức Truyền thống</h4>
+                                <ul>
+                                    <li><i class="fa-solid fa-seedling" style="color: #2e7d32;"></i> <b>Lúa:</b> Cây trồng chủ lực, chịu thiệt hại nặng nề từ <b>rầy nâu</b> và sâu bệnh.</li>
+                                    <li><i class="fa-solid fa-clock" style="color: #f57c00;"></i> <b>Giám sát thủ công:</b> Tốn <b>thời gian</b>, <b>chi phí</b>, và <b>độ chính xác thấp</b> (dựa vào kinh nghiệm).</li>
+                                    <li><i class="fa-solid fa-map-location-dot" style="color: #607d8b;"></i> <b>Quy mô lớn:</b> Khó đưa ra cảnh báo <b>kịp thời và khách quan</b> trên diện rộng.</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: #03a9f4; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Giải pháp AI & Giới hạn</h4>
+                                <ul>
+                                    <li><i class="fa-solid fa-robot" style="color: #03a9f4;"></i> <b>AI & YOLO:</b> Đã giải quyết tốt bài toán <b>Phát hiện (Detection)</b> và <b>Phân loại</b> rầy.</li>
+                                    <li><i class="fa-solid fa-square" style="color: #c62828;"></i> <b>Hộp bao (Bounding Box):</b> Chỉ là <b>vùng ước lượng</b> bao quanh đối tượng.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="section-title" style="color: #c62828; border-bottom-color: #ef5350;">Khoảng trống Nghiên cứu</div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h4 style="color: #c62828; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Thách thức về Độ chính xác</h4>
+                                <ul>
+                                    <li><i class="fa-solid fa-slash" style="color: #c62828;"></i> <b>KHÔNG</b> thể tách biệt rầy khỏi nền lá lúa ở mức độ <b>pixel-level</b>.</li>
+                                    <li><i class="fa-solid fa-exclamation-triangle" style="color: #ff9800;"></i> Khó tính toán <b>mật độ chính xác</b> từ bounding boxes.</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: #3f51b5; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Nhu cầu Cấp thiết</h4>
+                                <ul>
+                                    <li><i class="fa-solid fa-mask" style="color: #3f51b5;"></i> Cần <b>Phân đoạn thực thể (Instance Segmentation)</b>.</li>
+                                    <li><i class="fa-solid fa-calculator" style="color: #3f51b5;"></i> Yếu tố then chốt để tính <b>Mật độ rầy/m²</b> một cách <b>khoa học và chính xác</b>.</li>
+                                    <li><i class="fa-solid fa-chart-line" style="color: #3f51b5;"></i> Hỗ trợ đánh giá mức độ xâm nhiễm và dự báo dịch hại.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SLIDE 4: Nghiên cứu liên quan -->
-    <section class="slide-section" data-slide="4" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="4" >
         <div class="slide-container">
             <div class="content-layout">
-                <h2 class="slide-title">1.2. Nghiên cứu liên quan</h2>
+                <!-- Header: Chương -->
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
+                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+                    </h2>
+                </div>
+                
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 30px;">
+                    1.2.1. Nghiên cứu liên quan
+                </h2>
                 
                 <div class="content-body">
                     <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
@@ -865,64 +1017,69 @@
         </div>
     </section>
 
-    <!-- SLIDE 5: Giải pháp đề xuất -->
-    <section class="slide-section" data-slide="5" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <!-- SLIDE 5: Tính mới của đồ án -->
+    <section class="slide-section" data-slide="5" >
         <div class="slide-container">
             <div class="content-layout">
-                <h2 class="slide-title" style="color: #009688;">3. Đề xuất Giải pháp Đột phá</h2>
+                <!-- Header: Chương -->
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
+                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+                    </h2>
+                </div>
+                
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 30px;">
+                    1.2.2. Tính mới của đồ án
+                </h2>
                 
                 <div class="content-body">
-                    <div style="text-align: center; margin-bottom: 30px;">
-                        <h3 style="color: #4db6ac; font-size: 32px; margin-bottom: 15px;">
-                            Pipeline Hai giai đoạn: YOLO (Tốc độ) + SAM-ViT (Độ chính xác)
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
+                        <h3 style="color: #1565c0; font-size: 24px; margin-bottom: 15px;">
+                            <i class="fa-solid fa-lightbulb" style="margin-right: 10px;"></i>
+                            Điểm Đột phá Chính
                         </h3>
-                        <p style="color: #607d8b; font-size: 22px;">
-                            Tận dụng ưu điểm của hai kiến trúc AI hàng đầu để giải quyết triệt để bài toán mật độ rầy.
+                        <p style="font-size: 18px; line-height: 1.6;">
+                            Kết hợp <b>YOLO</b> và <b>SAM-ViT</b> trong pipeline tuần tự - 
+                            <b>chưa được áp dụng</b> cho bài toán rầy nâu trên cây lúa.
                         </p>
                     </div>
 
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin: 30px 0;">
-                        <div style="background: #e0f2f1; padding: 30px; border-radius: 15px; width: 350px; border: 2px solid #009688;">
-                            <div style="text-align: center; margin-bottom: 15px;">
-                                <i class="fa-solid fa-magnifying-glass" style="font-size: 40px; color: #009688;"></i>
-                            </div>
-                            <h3 style="color: #00796b; font-size: 26px; margin-bottom: 12px; text-align: center;">
-                                Giai đoạn 1: Phát hiện YOLO
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>
+                                1. Kết hợp YOLO và SAM-ViT
                             </h3>
-                            <p style="font-size: 18px; text-align: center; margin-bottom: 10px;">
-                                Đảm nhận vai trò <b>phát hiện nhanh</b> và <b>phân loại</b> các đối tượng rầy.
-                            </p>
-                            <p style="color: #c62828; font-weight: 700; text-align: center; font-size: 18px;">
-                                Output: Bounding Boxes (Prompts)
-                            </p>
+                            <ul>
+                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> YOLO phát hiện và phân loại các đối tượng rầy nâu, rầy lưng trắng và sâu ăn lá lúa</li>
+                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> SAM-ViT thực hiện phân đoạn pixel-level dựa trên bounding boxes từ YOLO</li>
+                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> Hướng tiếp cận <b>mới</b> cho bài toán rầy nâu</li>
+                            </ul>
                         </div>
 
-                        <i class="fa-solid fa-arrow-right" style="font-size: 50px; color: #009688;"></i>
-
-                        <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; width: 350px; border: 2px solid #1565c0;">
-                            <div style="text-align: center; margin-bottom: 15px;">
-                                <i class="fa-solid fa-puzzle-piece" style="font-size: 40px; color: #1565c0;"></i>
-                            </div>
-                            <h3 style="color: #1565c0; font-size: 26px; margin-bottom: 12px; text-align: center;">
-                                Giai đoạn 2: Phân đoạn SAM-ViT
+                        <div class="grid-item" style="border-left-color: #ff9800;">
+                            <h3 style="color: #ff9800;">
+                                <i class="fa-solid fa-cogs" style="margin-right: 10px;"></i>
+                                2. Ưu điểm Kỹ thuật
                             </h3>
-                            <p style="font-size: 18px; text-align: center; margin-bottom: 10px;">
-                                Sử dụng Bounding Boxes từ YOLO làm <b>gợi ý (Prompt)</b> để tạo <b>phân đoạn pixel-level</b> tinh vi.
-                            </p>
-                            <p style="color: #c62828; font-weight: 700; text-align: center; font-size: 18px;">
-                                Output: Segmentation Masks
-                            </p>
+                            <ul>
+                                <li><i class="fa-solid fa-mask" style="color: #ff9800;"></i> <b>SAM:</b> Sinh mặt nạ khởi tạo, tăng độ chính xác biên ranh giới, giảm nhiễu nền</li>
+                                <li><i class="fa-solid fa-brain" style="color: #ff9800;"></i> <b>ViT:</b> Học biểu diễn toàn cục, nhận diện tốt các cá thể nhỏ, phân tán và bị che khuất</li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div style="background: #ffcc80; padding: 25px; border-radius: 12px; text-align: center; margin-top: 20px;">
-                        <h3 style="color: #e65100; font-size: 28px; margin-bottom: 10px;">
-                            <i class="fa-solid fa-chart-simple" style="margin-right: 10px;"></i>
-                            Mục tiêu Cuối cùng
-                        </h3>
-                        <p style="color: #e65100; font-size: 24px; font-weight: 700;">
-                            Tính toán MẬT ĐỘ RẦY/M² Chính xác
-                        </p>
+                        <div class="grid-item" style="border-left-color: #9c27b0;">
+                            <h3 style="color: #9c27b0;">
+                                <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
+                                3. Khác biệt so với Nghiên cứu trước
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Có <b>segmentation pixel-level</b>, không chỉ detection</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Đánh giá mật độ và mức độ xâm nhiễm chính xác theo không gian</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Mở ra khả năng ứng dụng mở rộng trong nông nghiệp thông minh</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -930,7 +1087,7 @@
     </section>
 
     <!-- SLIDE 6: Tính mới của đồ án -->
-    <section class="slide-section" data-slide="6" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="6" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">1.2.2. Tính mới của đồ án</h2>
@@ -989,7 +1146,7 @@
     </section>
 
     <!-- SLIDE 7: Mục tiêu tổng quát -->
-    <section class="slide-section" data-slide="7" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="7" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">1.3. Mục tiêu nghiên cứu</h2>
@@ -1026,7 +1183,7 @@
     </section>
 
     <!-- SLIDE 8: Mục tiêu cụ thể -->
-    <section class="slide-section" data-slide="8" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="8" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">1.3.2. Mục tiêu nghiên cứu cụ thể</h2>
@@ -1079,7 +1236,7 @@
     </section>
 
     <!-- SLIDE 9: Đối tượng và quy mô - Phạm vi -->
-    <section class="slide-section" data-slide="9" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="9" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">1.4. Đối tượng và quy mô nghiên cứu</h2>
@@ -1117,7 +1274,7 @@
     </section>
 
     <!-- SLIDE 10: Đối tượng và quy mô - Đối tượng -->
-    <section class="slide-section" data-slide="10" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="10" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">1.4.2. Đối tượng</h2>
@@ -1168,7 +1325,7 @@
     </section>
 
     <!-- SLIDE 11: Nội dung nghiên cứu -->
-    <section class="slide-section" data-slide="11" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="11" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">1.5. Nội dung và kỹ thuật nghiên cứu</h2>
@@ -1214,7 +1371,7 @@
     </section>
 
     <!-- SLIDE 12: Kỹ thuật nghiên cứu -->
-    <section class="slide-section" data-slide="12" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="12" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">1.5.2. Kỹ thuật nghiên cứu</h2>
@@ -1264,7 +1421,7 @@
     </section>
 
     <!-- SLIDE 13: CHƯƠNG 2 - Giới thiệu -->
-    <section class="slide-section" data-slide="13" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="13" >
         <div class="slide-container">
             <div class="title-layout" style="background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);">
                 <h1 style="font-size: 48px; margin-bottom: 30px;">
@@ -1285,7 +1442,7 @@
     </section>
 
     <!-- SLIDE 14: Thị giác máy tính -->
-    <section class="slide-section" data-slide="14" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="14" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">2.1.1. Thị giác máy tính (Computer Vision)</h2>
@@ -1331,7 +1488,7 @@
     </section>
 
     <!-- SLIDE 15: Tầm quan trọng của phân đoạn -->
-    <section class="slide-section" data-slide="15" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="15" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">Tầm quan trọng của Phân đoạn trong Phát hiện Sâu bệnh</h2>
@@ -1380,7 +1537,7 @@
     </section>
 
     <!-- SLIDE 16: Học sâu - CNN -->
-    <section class="slide-section" data-slide="16" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="16" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">2.1.2. Học sâu trong Computer Vision</h2>
@@ -1423,7 +1580,7 @@
     </section>
 
     <!-- SLIDE 17: Transfer Learning và Pre-trained Models -->
-    <section class="slide-section" data-slide="17" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="17" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">Transfer Learning & Pre-trained Models</h2>
@@ -1484,7 +1641,7 @@
     </section>
 
     <!-- SLIDE 18: Bài toán đối tượng nhỏ -->
-    <section class="slide-section" data-slide="18" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="18" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">2.1.3. Bài toán phát hiện và phân đoạn đối tượng nhỏ</h2>
@@ -1544,7 +1701,7 @@
     </section>
 
     <!-- SLIDE 19: SAM - Giới thiệu -->
-    <section class="slide-section" data-slide="19" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="19" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">2.2. Segment Anything Model (SAM)</h2>
@@ -1603,7 +1760,7 @@
     </section>
 
     <!-- SLIDE 20: SAM Encoder -->
-    <section class="slide-section" data-slide="20" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <section class="slide-section" data-slide="20" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">2.2.2. Kiến trúc SAM Encoder</h2>
@@ -1645,60 +1802,198 @@
         </div>
     </section>
 
-    <!-- SLIDE 13: CHƯƠNG 3 - Pipeline tổng thể -->
-    <section class="slide-section" data-slide="21" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <!-- SLIDE 21: SAM Ứng dụng trong đề tài -->
+    <section class="slide-section" data-slide="21" >
         <div class="slide-container">
             <div class="content-layout">
-                <h2 class="slide-title" style="color: #1565c0;">CHƯƠNG 3: THIẾT KẾ VÀ XÂY DỰNG HỆ THỐNG</h2>
-                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">3.1. Pipeline tổng thể của mô hình</h3>
+                <h2 class="slide-title" style="color: #1565c0;">2.2.3. Ứng dụng SAM trong đề tài</h2>
                 
                 <div class="content-body">
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
+                        <h3 style="color: #1565c0; font-size: 24px; margin-bottom: 15px;">
+                            <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
+                            Box Prompts trong Pipeline
+                        </h3>
+                        <p style="font-size: 18px; line-height: 1.6;">
+                            SAM có khả năng nhận <b>bounding boxes</b> như một dạng prompt để hướng dẫn quá trình phân đoạn. 
+                            Trong pipeline của đề tài, việc sử dụng box prompts giúp SAM tập trung vào vùng quan tâm (ROI) 
+                            do YOLO phát hiện, từ đó nâng cao độ chính xác phân đoạn ở mức pixel-level.
+                        </p>
+                    </div>
+
                     <div class="steps-layout" style="padding: 0;">
                         <div class="step-item">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h3>Input Image (Ảnh RGB đầu vào)</h3>
-                                <p>Nhận ảnh thực địa từ ruộng lúa chứa rầy nâu, rầy lưng trắng và sâu ăn lá lúa</p>
+                                <h3>Phát hiện bounding boxes với YOLO</h3>
+                                <p>YOLO nhận ảnh thực địa làm input và phát hiện các đối tượng rầy nâu, rầy lưng trắng, sâu ăn lá lúa. 
+                                Output gồm bounding boxes với tọa độ (x_min, y_min, x_max, y_max) theo định dạng xyxy, class label, và confidence score.</p>
                             </div>
                         </div>
 
                         <div class="step-item">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h3>YOLO Detection & Classification</h3>
-                                <p>Phát hiện và phân loại đối tượng, trả về: <b>Bounding Boxes</b>, <b>Class Labels</b>, <b>Confidence Scores</b></p>
+                                <h3>Khởi tạo SAM và trích xuất đặc trưng ảnh</h3>
+                                <p>Gọi <b>sam_predictor.set_image(image_rgb)</b> để khởi tạo SAM cho ảnh hiện tại. 
+                                ViT-H encoder bên trong SAM chạy một lần để trích xuất đặc trưng toàn cục từ ảnh, tạo feature map 256 chiều.</p>
                             </div>
                         </div>
 
                         <div class="step-item">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h3>Box Transformation</h3>
-                                <p>Chuyển đổi bounding boxes từ YOLO sang định dạng prompts cho SAM</p>
+                                <h3>Chuyển đổi bounding boxes sang format của SAM</h3>
+                                <p>YOLO trả về boxes theo định dạng xyxy (tọa độ pixel tuyệt đối). 
+                                Sử dụng <b>sam_predictor.transform.apply_boxes_torch()</b> để chuyển đổi boxes sang định dạng SAM.</p>
                             </div>
                         </div>
 
                         <div class="step-item">
                             <div class="step-number">4</div>
                             <div class="step-content">
-                                <h3>SAM-ViT Segmentation</h3>
-                                <p>Sử dụng boxes làm prompts để tạo <b>Segmentation Masks pixel-level</b> chính xác</p>
+                                <h3>SAM prediction với box prompts</h3>
+                                <p>Gọi <b>sam_predictor.predict_torch()</b> với boxes làm prompts, sinh masks pixel-level. 
+                                SAM Mask Decoder kết hợp feature map từ ViT-H encoder với box prompt embeddings để sinh masks.</p>
                             </div>
                         </div>
 
                         <div class="step-item">
                             <div class="step-number">5</div>
                             <div class="step-content">
-                                <h3>Merge Results</h3>
-                                <p>Kết hợp: <b>Boxes</b> (YOLO) + <b>Masks</b> (SAM) + <b>Classes</b> + <b>Scores</b></p>
+                                <h3>Post-processing và kết hợp kết quả</h3>
+                                <p>Kết hợp kết quả từ YOLO và SAM: boxes (YOLO), masks (SAM), classes và scores (YOLO). 
+                                Liên kết mask với class và bounding box từ YOLO để tính mật độ rầy và trực quan hóa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-top: 20px; border-left: 4px solid #4caf50;">
+                        <h3 style="color: #2e7d32; font-size: 20px; margin-bottom: 10px;">
+                            <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
+                            Ưu điểm của Box Prompts
+                        </h3>
+                        <ul>
+                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Tập trung phân đoạn vùng quan tâm, giảm nhiễu từ nền phức tạp</li>
+                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Phân đoạn chính xác đối tượng nhỏ (kích thước chỉ vài pixel)</li>
+                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Xử lý đối tượng chồng lấn, tạo mask riêng biệt cho từng instance</li>
+                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Hiệu quả tính toán: SAM chỉ cần chạy encoder một lần cho mỗi ảnh</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 22: ViT Giới thiệu -->
+    <section class="slide-section" data-slide="22" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">2.3. Vision Transformer (ViT)</h2>
+                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">2.3.1. Giới thiệu về ViT</h3>
+                
+                <div class="content-body">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; margin-bottom: 25px;">
+                        <h3 style="color: white; font-size: 28px; margin-bottom: 15px;">
+                            <i class="fa-solid fa-eye" style="margin-right: 10px;"></i>
+                            Kiến trúc Transformer cho Thị giác
+                        </h3>
+                        <p style="font-size: 19px; line-height: 1.7; color: white;">
+                            Vision Transformer (ViT) là một kiến trúc mạng dựa trên cơ chế <b>Transformer</b>, được thiết kế để xử lý các tác vụ thị giác máy tính. 
+                            Khác với CNN truyền thống, ViT sử dụng <b>self-attention</b> để học mối quan hệ toàn cục giữa các phần của ảnh.
+                        </p>
+                        <p style="font-size: 18px; margin-top: 15px; color: rgba(255,255,255,0.9);">
+                            <b>Giới thiệu:</b> "An Image is Worth 16x16 Words" (Dosovitskiy et al., 2020)
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>
+                                So sánh với CNN
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> <b>Self-attention vs Convolution:</b> ViT học mối quan hệ toàn cục, CNN chỉ học đặc trưng cục bộ</li>
+                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> <b>Global vs Local features:</b> ViT nắm bắt thông tin toàn cảnh, giúp cải thiện khả năng phân loại đối tượng nhỏ</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3;">
+                                <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
+                                Ưu điểm của ViT
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Khả năng phân loại mạnh mẽ nhờ biểu diễn toàn cảnh</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Dễ dàng tích hợp với các mô hình pre-trained (ImageNet)</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Cải thiện độ chính xác trong bài toán phức tạp như nhận dạng đối tượng nhỏ</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 12px; margin-top: 20px; border-left: 4px solid #ffc107;">
+                        <p style="color: #856404; font-size: 17px; margin: 0;">
+                            Trong đề tài này, ViT đóng vai trò backbone chính cho việc phân loại rầy dựa trên các đặc trưng semantic-level, 
+                            đồng thời kết hợp với SAM để xây dựng mô hình hybrid <b>SAM–ViT</b> mạnh mẽ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 23: ViT Kiến trúc -->
+    <section class="slide-section" data-slide="23" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">2.3.2. Kiến trúc ViT</h2>
+                
+                <div class="content-body">
+                    <div class="steps-layout" style="padding: 0;">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Patch Embedding</h3>
+                                <p>Ảnh đầu vào (ví dụ 224×224×3) được chia thành N patch nhỏ có kích thước 16×16 pixels. 
+                                Mỗi patch được "dẹt" thành vector và qua lớp linear projection để chuyển đổi thành embedding có chiều D = 768.</p>
                             </div>
                         </div>
 
                         <div class="step-item">
-                            <div class="step-number">6</div>
+                            <div class="step-number">2</div>
                             <div class="step-content">
-                                <h3>Visualization & Density Calculation</h3>
-                                <p>Trực quan hóa kết quả và tính toán <b>mật độ rầy/m²</b></p>
+                                <h3>Position Embedding</h3>
+                                <p>Position embeddings được cộng vào mỗi patch embedding để giữ thông tin không gian. 
+                                Giúp mô hình phân biệt các patch ở các vị trí khác nhau trong ảnh.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>CLS Token</h3>
+                                <p>Một token đặc biệt [CLS] token được thêm vào đầu chuỗi patch embeddings. 
+                                CLS token tích hợp thông tin toàn cục của ảnh sau quá trình Transformer encoder.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Transformer Encoder</h3>
+                                <p>ViT sử dụng nhiều layer encoder, mỗi layer gồm: 
+                                <b>Multi-head Self-Attention (MSA)</b>, <b>Feed-forward network (MLP)</b>, 
+                                <b>Layer Normalization</b> và <b>Residual Connection</b>.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Classification Head</h3>
+                                <p>Sau khi qua các encoder layer, embedding của CLS token được đưa vào MLP classification head 
+                                để ánh xạ embedding toàn cảnh sang xác suất các lớp (ví dụ: 3 lớp rầy trong đề tài).</p>
                             </div>
                         </div>
                     </div>
@@ -1707,8 +2002,283 @@
         </div>
     </section>
 
-    <!-- SLIDE 22: Tiền xử lý dữ liệu -->
-    <section class="slide-section" data-slide="22" onclick="if(document.body.classList.contains('fullscreen')) changeSlide(1)">
+    <!-- SLIDE 24: ViT trong SAM -->
+    <section class="slide-section" data-slide="24" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">2.3.3. ViT trong SAM</h2>
+                
+                <div class="content-body">
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
+                        <h3 style="color: #1565c0; font-size: 24px; margin-bottom: 15px;">
+                            <i class="fa-solid fa-brain" style="margin-right: 10px;"></i>
+                            ViT-H làm Image Encoder
+                        </h3>
+                        <p style="font-size: 18px; line-height: 1.6;">
+                            Trong kiến trúc của Segment Anything Model (SAM), Vision Transformer (ViT) đóng vai trò là <b>Image Encoder</b>, 
+                            chịu trách nhiệm trích xuất đặc trưng không gian phong phú từ ảnh đầu vào. 
+                            Trong đề tài này, SAM sử dụng <b>ViT-H (ViT-Huge)</b> làm backbone chính.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>
+                                Lý do chọn ViT-H
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Khả năng trích xuất đặc trưng mạnh mẽ:</b> Số lượng lớp Transformer và chiều embedding lớn hơn nhiều so với ViT-B/L</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Hỗ trợ phân đoạn đối tượng phức tạp:</b> Nhờ khả năng học quan hệ dài hạn giữa các patch ảnh (global self-attention)</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Đảm bảo chất lượng mask cao:</b> Giúp SAM encoder tạo ra feature map giàu thông tin, từ đó Mask Decoder sinh ra mask pixel-level chính xác</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Tối ưu cho phân đoạn pixel-level:</b> Cung cấp biểu diễn toàn cục và chi tiết hơn, giúp tạo ra masks với biên ranh giới rõ ràng</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 25: Self-Attention Mechanism -->
+    <section class="slide-section" data-slide="25" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">2.3.4. Self-Attention Mechanism</h2>
+                
+                <div class="content-body">
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
+                        <h3 style="color: #1565c0; font-size: 24px; margin-bottom: 15px;">
+                            <i class="fa-solid fa-brain" style="margin-right: 10px;"></i>
+                            Cơ chế Trung tâm của ViT
+                        </h3>
+                        <p style="font-size: 18px; line-height: 1.6;">
+                            Self-attention là cơ chế trung tâm giúp mô hình học được mối quan hệ giữa tất cả các patches trong ảnh, 
+                            thay vì chỉ dựa vào receptive field cục bộ như CNN. Cơ chế này giúp ViT khai thác thông tin toàn cảnh, 
+                            rất quan trọng trong các bài toán nhận dạng và phân đoạn đối tượng nhỏ.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-network-wired" style="margin-right: 10px;"></i>
+                                Multi-head Self-Attention (MHSA)
+                            </h3>
+                            <p style="font-size: 17px;">ViT chia token embeddings của ảnh thành nhiều head (ví dụ 12 head trong ViT-Base). 
+                            Mỗi head học các mối quan hệ khác nhau giữa patches song song, từ đó biểu diễn thông tin phong phú và đa chiều.</p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3;">
+                                <i class="fa-solid fa-key" style="margin-right: 10px;"></i>
+                                Query, Key, Value matrices
+                            </h3>
+                            <p style="font-size: 17px;">Mỗi token patch được ánh xạ thành ba vector: 
+                            <b>Query (Q)</b> - Đại diện cho token đang quan tâm; 
+                            <b>Key (K)</b> - Đại diện cho token để so sánh; 
+                            <b>Value (V)</b> - Chứa thông tin thực tế cần truyền.</p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0; grid-column: 1 / -1;">
+                            <h3 style="color: #9c27b0;">
+                                <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
+                                Tại sao hiệu quả
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Global receptive field:</b> Mỗi token có thể "nhìn" toàn bộ ảnh, khắc phục hạn chế của CNN</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Học long-range dependencies:</b> Giúp nhận diện chính xác các đối tượng nhỏ hoặc chồng lấn</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Tăng cường biểu diễn phong phú:</b> Sử dụng nhiều head cho phép mô hình học các khía cạnh khác nhau của mối quan hệ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 26: Pipeline YOLO + SAM-ViT -->
+    <section class="slide-section" data-slide="26" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">2.4. Pipeline YOLO + SAM-ViT</h2>
+                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">2.4.1. Lý do kết hợp</h3>
+                
+                <div class="content-body">
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-robot" style="margin-right: 10px;"></i>
+                                YOLO - Tốc độ
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Nổi bật ở khả năng phát hiện và phân loại <b>nhanh</b></li>
+                                <li><i class="fa-solid fa-times" style="color: #f44336;"></i> Chỉ trả về <b>bounding boxes</b>, chưa cung cấp thông tin pixel-level</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3;">
+                                <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
+                                SAM-ViT - Độ chính xác
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Có khả năng phân đoạn <b>pixel-level chính xác</b></li>
+                                <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> Cần prompts như bounding boxes để xác định vùng quan tâm</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0; grid-column: 1 / -1;">
+                            <h3 style="color: #9c27b0;">
+                                <i class="fa-solid fa-lightbulb" style="margin-right: 10px;"></i>
+                                Giải pháp: Pipeline kết hợp
+                            </h3>
+                            <p style="font-size: 18px;">
+                                Pipeline kết hợp hai mô hình: <b>YOLO phát hiện và phân loại</b> → <b>SAM-ViT phân đoạn</b> dựa trên boxes từ YOLO. 
+                                Cách tiếp cận này vừa đảm bảo tốc độ cao, vừa nâng cao độ chính xác của segmentation, 
+                                đồng thời loại bỏ nhiễu nền từ ảnh thực địa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 27: Workflow Pipeline -->
+    <section class="slide-section" data-slide="27" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">2.4.2. Workflow Pipeline</h2>
+                
+                <div class="content-body">
+                    <div class="steps-layout" style="padding: 0;">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Input image</h3>
+                                <p>Nhận ảnh RGB đầu vào</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>YOLO detection</h3>
+                                <p>Phát hiện và phân loại đối tượng, trả về bounding boxes (xyxy), classes và scores</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Transform boxes</h3>
+                                <p>Chuyển đổi bounding boxes sang định dạng SAM bằng hàm <b>apply_boxes_torch()</b></p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>SAM-ViT segmentation</h3>
+                                <p><b>set_image()</b> để ViT-H encoder trích xuất đặc trưng. 
+                                <b>predict_torch()</b> sử dụng boxes làm prompts, sinh masks pixel-level</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Merge kết quả</h3>
+                                <p>Kết hợp boxes (YOLO), masks (SAM), classes và scores (YOLO)</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Visualization & tính mật độ</h3>
+                                <p>Vẽ masks lên ảnh, tính mật độ rầy dựa trên số lượng objects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 28: Ưu điểm Pipeline -->
+    <section class="slide-section" data-slide="28" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">2.4.3. Ưu điểm</h2>
+                
+                <div class="content-body">
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-bolt" style="margin-right: 10px;"></i>
+                                1. Tốc độ
+                            </h3>
+                            <p style="font-size: 17px;">YOLO phát hiện nhanh, SAM chỉ chạy encoder một lần trên ảnh, xử lý vùng đã phát hiện.</p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3;">
+                                <i class="fa-solid fa-bullseye" style="margin-right: 10px;"></i>
+                                2. Độ chính xác
+                            </h3>
+                            <p style="font-size: 17px;">YOLO loại bỏ background, SAM phân đoạn chi tiết từng pixel của đối tượng.</p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #ff9800;">
+                            <h3 style="color: #ff9800;">
+                                <i class="fa-solid fa-cogs" style="margin-right: 10px;"></i>
+                                3. Tính thực tế
+                            </h3>
+                            <p style="font-size: 17px;">Pipeline tuần tự phù hợp triển khai thực địa, có thể tối ưu từng giai đoạn riêng.</p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0;">
+                            <h3 style="color: #9c27b0;">
+                                <i class="fa-solid fa-sitemap" style="margin-right: 10px;"></i>
+                                4. Đơn giản hóa
+                            </h3>
+                            <p style="font-size: 17px;">Không cần feature fusion, kết quả được kết hợp ở mức output (boxes + masks) thay vì mức feature.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 29: CHƯƠNG 3 - Pipeline tổng thể -->
+    <section class="slide-section" data-slide="29" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">CHƯƠNG 3: THIẾT KẾ VÀ XÂY DỰNG HỆ THỐNG</h2>
+                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">3.1. Pipeline tổng thể của mô hình</h3>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <img src="images/Sơ đồ tổng thể.jpg" alt="Sơ đồ tổng thể kiến trúc" style="max-width: 100%; max-height: 350px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 3.1. Sơ đồ tổng thể kiến trúc Pipeline YOLO + SAM-ViT</p>
+                    </div>
+                    
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; border-left: 5px solid #2196f3; margin-bottom: 20px;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0;">
+                            Hệ thống được thiết kế theo <b>pipeline tuần tự hai giai đoạn</b>, kết hợp mô hình YOLO cho phát hiện và phân loại với SAM-ViT cho phân đoạn pixel-level. 
+                            Ảnh RGB đầu vào được xử lý bởi YOLO để phát hiện các đối tượng rầy và sâu, trả về bounding boxes, class labels và confidence scores. 
+                            Các bounding boxes này sau đó được chuyển thành prompts cho SAM-ViT, giúp mô hình phân đoạn chính xác từng đối tượng, tạo ra masks pixel-level.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 30: Tiền xử lý dữ liệu -->
+    <section class="slide-section" data-slide="30" >
         <div class="slide-container">
             <div class="content-layout">
                 <h2 class="slide-title" style="color: #1565c0;">3.2. Quy trình tiền xử lý dữ liệu</h2>
@@ -1751,6 +2321,1115 @@
                                 <li><i class="fa-solid fa-circle" style="color: #4caf50; font-size: 10px;"></i> Class 0: <b>Rầy lưng trắng</b> (Whitebacked planthopper)</li>
                                 <li><i class="fa-solid fa-circle" style="color: #2196f3; font-size: 10px;"></i> Class 1: <b>Sâu ăn lá lúa</b> (Rice leaf miner)</li>
                                 <li><i class="fa-solid fa-circle" style="color: #f44336; font-size: 10px;"></i> Class 2: <b>Rầy nâu</b> (Brown planthopper)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 31: Kiến trúc YOLOv8 và Transfer Learning -->
+    <section class="slide-section" data-slide="31" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.3. Huấn luyện YOLOv8 Model</h2>
+                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">3.3.1. Kiến trúc YOLOv8 và chiến lược Transfer Learning</h3>
+                
+                <div class="content-body">
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0;">
+                            YOLOv8 là một kiến trúc <b>one-stage detector</b>, được thiết kế nhằm thực hiện phát hiện và phân loại đối tượng trong một bước duy nhất, tối ưu hóa tốc độ và độ chính xác. 
+                            Trong nghiên cứu này, phiên bản <b>YOLOv8s (small variant)</b> được lựa chọn để cân bằng giữa khả năng xử lý nhanh và hiệu quả học tập.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-network-wired" style="margin-right: 10px;"></i>
+                                Kiến trúc YOLOv8
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Backbone (CSPDarknet):</b> Trích xuất đặc trưng đa tỉ lệ, hỗ trợ nhận diện đối tượng ở nhiều kích thước khác nhau</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Neck (PANet):</b> Kết hợp thông tin từ các tầng khác nhau, tạo feature maps giàu thông tin về vị trí và ngữ cảnh</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Head:</b> Thực hiện detection và classification trực tiếp, sử dụng anchor-free detection</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #ff9800;">
+                            <h3 style="color: #ff9800;">
+                                <i class="fa-solid fa-exchange-alt" style="margin-right: 10px;"></i>
+                                Chiến lược Transfer Learning
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Fine-tuning mô hình pre-trained trên <b>COCO dataset</b> (80 classes)</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Tận dụng trọng số đã học để nhận diện đặc trưng tổng quát</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Tinh chỉnh để phát hiện chính xác <b>3 class mục tiêu</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> <b>Lợi ích:</b> Giảm thời gian huấn luyện, tăng khả năng tổng quát hóa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 32: Cơ chế huấn luyện và hàm mất mát -->
+    <section class="slide-section" data-slide="32" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.3.2. Cơ chế huấn luyện và hàm mất mát</h2>
+                
+                <div class="content-body">
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #ffc107;">
+                        <p style="font-size: 17px; line-height: 1.6; margin: 0; color: #856404;">
+                            Quá trình huấn luyện YOLO được tối ưu hóa thông qua <b>hàm mất mát tổng hợp (composite loss function)</b>, kết hợp nhiều thành phần phản ánh các khía cạnh khác nhau của nhiệm vụ detection.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-square" style="margin-right: 10px;"></i>
+                                Box Loss (Bounding Box Regression Loss)
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Đo lường độ chính xác trong việc dự đoán vị trí và kích thước bounding boxes</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Sử dụng <b>Distribution Focal Loss (DFL)</b> kết hợp với <b>Complete IoU (CIoU) Loss</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> CIoU tính khoảng cách tâm, tỷ lệ khung hình và diện tích, cải thiện định vị chính xác</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3;">
+                                <i class="fa-solid fa-tag" style="margin-right: 10px;"></i>
+                                Classification Loss
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Đánh giá độ chính xác của việc phân loại class cho từng object</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Sử dụng <b>Binary Cross-Entropy (BCE) Loss</b> với <b>label smoothing</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Label smoothing giúp xử lý mất cân bằng dữ liệu và tránh overconfidence</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0;">
+                            <h3 style="color: #9c27b0;">
+                                <i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i>
+                                Distribution Focal Loss (DFL)
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Tập trung vào việc học <b>phân phối xác suất</b> của tọa độ bounding box</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Thay vì chỉ dự đoán một điểm duy nhất</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Giúp mô hình dự đoán chính xác hơn các biên giới phức tạp và đối tượng nhỏ</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #4caf50;">
+                        <p style="font-size: 16px; color: #2e7d32; margin: 0;">
+                            <b>Tổng hàm mất mát:</b> Tổng có trọng số của các thành phần trên. Quá trình tối ưu hóa sử dụng gradient descent kết hợp learning rate scheduling, weight decay và gradient clipping để đảm bảo hội tụ ổn định.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 33: Đánh giá hiệu suất và Metrics -->
+    <section class="slide-section" data-slide="33" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.3.3. Đánh giá hiệu suất và Metrics</h2>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/Quá trình đào tạo.jpg" alt="Quá trình đào tạo YOLOv8" style="max-width: 100%; max-height: 300px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 3.2. Kết quả đào tạo YOLOv8 qua các epochs</p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50; font-size: 20px;">
+                                <i class="fa-solid fa-bullseye" style="margin-right: 8px;"></i>
+                                Mean Average Precision (mAP)
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>mAP@0.5:</b> Độ chính xác trung bình với IoU threshold = 0.5</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>mAP@0.5:0.95:</b> Trung bình mAP trên nhiều ngưỡng IoU từ 0.5 đến 0.95</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3; font-size: 20px;">
+                                <i class="fa-solid fa-chart-bar" style="margin-right: 8px;"></i>
+                                Precision & Recall
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> <b>Precision:</b> Tỷ lệ dự đoán đúng trên tổng số dự đoán dương tính</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> <b>Recall:</b> Tỷ lệ các đối tượng thực sự được mô hình phát hiện</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #ff9800;">
+                            <h3 style="color: #ff9800; font-size: 20px;">
+                                <i class="fa-solid fa-balance-scale" style="margin-right: 8px;"></i>
+                                F1-score
+                            </h3>
+                            <p style="font-size: 16px; margin: 0;">Trung bình điều hòa của Precision và Recall, cung cấp chỉ số cân bằng giữa hai yếu tố</p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0;">
+                            <h3 style="color: #9c27b0; font-size: 20px;">
+                                <i class="fa-solid fa-list" style="margin-right: 8px;"></i>
+                                Per-class Metrics
+                            </h3>
+                            <p style="font-size: 16px; margin: 0;">Đánh giá riêng từng class, cho phép xác định các đối tượng mà mô hình còn yếu và điều chỉnh data hoặc augmentation tương ứng</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin-top: 15px; border-left: 4px solid #2196f3;">
+                        <p style="font-size: 16px; color: #1565c0; margin: 0;">
+                            <b>Theo dõi metrics qua các epochs giúp:</b> Phát hiện overfitting sớm; Đánh giá hiệu quả các kỹ thuật augmentation; Quyết định thời điểm dừng huấn luyện (Early Stopping).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 34: Image Encoding và Feature Extraction -->
+    <section class="slide-section" data-slide="34" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.4. Tích hợp SAM-ViT</h2>
+                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">3.4.1. Cơ chế Image Encoding và Feature Extraction</h3>
+                
+                <div class="content-body">
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0;">
+                            Quá trình encoding ảnh trong SAM được thực hiện thông qua phương thức <b>set_image()</b>, kích hoạt <b>ViT-H encoder</b> để trích xuất đặc trưng từ ảnh đầu vào. 
+                            Đây là bước quan trọng vì toàn bộ thông tin không gian của ảnh được nén vào feature map, làm nền tảng cho việc sinh mask chính xác.
+                        </p>
+                    </div>
+
+                    <div class="steps-layout" style="padding: 0;">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Resize và Normalize</h3>
+                                <p>Ảnh đầu vào được resize về <b>1024×1024 pixels</b> và normalize, giữ nguyên aspect ratio</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Patch Division</h3>
+                                <p>Chia thành <b>4096 patches (64×64)</b>, mỗi patch có kích thước <b>16×16 pixels</b></p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Patch Embedding</h3>
+                                <p>Mỗi patch được ánh xạ thành <b>1280-dim vector</b>; sequence patch embeddings đi qua <b>32 tầng Transformer</b></p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Self-Attention</h3>
+                                <p>Self-attention cho phép mỗi patch <b>"nhìn thấy"</b> toàn bộ patches khác, tạo <b>biểu diễn toàn cục (global representation)</b></p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Feature Map Output</h3>
+                                <p>Feature map cuối cùng <b>64×64×256</b> chứa thông tin chi tiết về toàn bộ ảnh, được <b>lưu trữ và tái sử dụng</b> cho nhiều prompts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 35: Prompt Encoding và Box Transformation -->
+    <section class="slide-section" data-slide="35" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.4.2. Cơ chế Prompt Encoding và Box Transformation</h2>
+                
+                <div class="content-body">
+                    <div style="background: #fff3cd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #ffc107;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0; color: #856404;">
+                            Trong pipeline YOLO + SAM, <b>bounding boxes từ YOLO</b> được dùng làm prompts để hướng dẫn SAM tập trung phân đoạn các vùng quan tâm. 
+                            Quá trình chuyển đổi và encoding đảm bảo boxes được ánh xạ chính xác vào không gian feature map của SAM.
+                        </p>
+                    </div>
+
+                    <div class="steps-layout" style="padding: 0;">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Bounding Boxes từ YOLO</h3>
+                                <p>Boxes YOLO có định dạng <b>(x_min, y_min, x_max, y_max)</b> trong không gian ảnh gốc</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Box Transformation</h3>
+                                <p>Biến đổi <b>affine</b> sang không gian feature map <b>(64×64)</b>, đảm bảo vị trí đúng với ảnh gốc</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Prompt Encoder</h3>
+                                <p>Ánh xạ boxes thành <b>embeddings 256 chiều</b>, phù hợp với chiều feature map</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Embedding Information</h3>
+                                <p>Embeddings lưu trữ: <b>tọa độ boxes</b>, <b>loại prompt</b> (box/point/mask), và <b>vị trí tương đối</b></p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Batch Processing</h3>
+                                <p>SAM hỗ trợ <b>batch processing</b> cho nhiều boxes cùng lúc, tối ưu hiệu suất tính toán</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 36: Mask Decoder và sinh Mask Pixel-level -->
+    <section class="slide-section" data-slide="36" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.4.3. Mask Decoder và Cơ chế sinh Mask Pixel-level</h2>
+                
+                <div class="content-body">
+                    <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #4caf50;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0; color: #2e7d32;">
+                            <b>Mask Decoder</b> chịu trách nhiệm sinh masks pixel-level từ feature map và prompt embeddings. 
+                            Sử dụng cơ chế cross-attention để tập trung vào các vùng tương ứng với bounding boxes từ YOLO.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-brain" style="margin-right: 10px;"></i>
+                                Cross-Attention Mechanism
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Prompt embeddings là <b>queries</b>, feature map là <b>keys</b> và <b>values</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Cho phép decoder tập trung vào các vùng tương ứng với bounding boxes</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Trích xuất đặc trưng liên quan tới đối tượng từ feature map</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3;">
+                                <i class="fa-solid fa-expand" style="margin-right: 10px;"></i>
+                                Upscaling và Activation
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Output là logits kích thước <b>64×64</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Được <b>upscale</b> về kích thước ảnh gốc <b>(1024×1024)</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Áp dụng <b>sigmoid activation</b> để tạo binary mask</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0;">
+                            <h3 style="color: #9c27b0;">
+                                <i class="fa-solid fa-filter" style="margin-right: 10px;"></i>
+                                Mask Selection
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> SAM có thể sinh nhiều mask candidates cho mỗi prompt</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Trong pipeline này, chỉ chọn <b>mask tốt nhất</b> (multimask_output=False)</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Giảm thời gian xử lý và đảm bảo kết quả tối ưu</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #ff9800;">
+                            <h3 style="color: #ff9800;">
+                                <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
+                                Confidence Scores
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Decoder trả về <b>confidence scores</b> cho mỗi mask</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Giúp đánh giá chất lượng phân đoạn</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Có thể lọc các masks kém chất lượng nếu cần</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 37: Kết hợp Kết quả từ YOLO và SAM -->
+    <section class="slide-section" data-slide="37" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.5. Kết hợp Kết quả và Post-processing</h2>
+                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">3.5.1. Cơ chế Kết hợp Kết quả từ YOLO và SAM</h3>
+                
+                <div class="content-body">
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0;">
+                            Trong pipeline YOLO + SAM, hai mô hình hoạt động <b>tuần tự (sequential)</b>. 
+                            Việc kết hợp kết quả đòi hỏi sự <b>đồng bộ hóa</b> giữa outputs của YOLO và SAM để đảm bảo tính nhất quán.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-robot" style="margin-right: 10px;"></i>
+                                YOLO Output
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Object detection và classification</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Bounding boxes với tọa độ (x_min, y_min, x_max, y_max)</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Class labels và confidence scores</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3;">
+                                <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
+                                SAM Output
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Segmentation pixel-level</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Masks tương ứng với mỗi bounding box</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Mask confidence scores</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0; grid-column: 1 / -1;">
+                            <h3 style="color: #9c27b0;">
+                                <i class="fa-solid fa-link" style="margin-right: 10px;"></i>
+                                Đồng bộ hóa 1:1
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Mỗi bounding box từ YOLO tương ứng <b>1:1</b> với một mask từ SAM</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Theo thứ tự confidence score giảm dần (sau NMS)</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Duy trì liên kết giữa thông tin phân loại (class, confidence) và phân đoạn (mask)</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Tạo cấu trúc dữ liệu thống nhất cho visualization và phân tích mật độ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 38: Non-Maximum Suppression và Lọc Kết quả -->
+    <section class="slide-section" data-slide="38" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.5.2. Non-Maximum Suppression và Lọc Kết quả</h2>
+                
+                <div class="content-body">
+                    <div style="background: #fff3cd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #ffc107;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0; color: #856404;">
+                            <b>Non-Maximum Suppression (NMS)</b> là kỹ thuật cơ bản trong object detection để loại bỏ các bounding boxes chồng chéo hoặc dư thừa, 
+                            đảm bảo chỉ giữ lại các detections chất lượng cao.
+                        </p>
+                    </div>
+
+                    <div class="steps-layout" style="padding: 0;">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>NMS tự động trong YOLO</h3>
+                                <p>YOLO tự động thực hiện NMS <b>trước khi</b> các boxes được đưa vào SAM</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Sắp xếp theo Confidence</h3>
+                                <p>Boxes được sắp xếp theo <b>confidence score giảm dần</b></p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Loại bỏ Boxes chồng chéo</h3>
+                                <p>Loại bỏ các boxes có <b>IoU vượt ngưỡng NMS threshold</b> (thường 0.5) với box được chọn</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Confidence Threshold Filtering</h3>
+                                <p>Lọc các boxes theo <b>confidence threshold</b>, loại bỏ detections có khả năng sai cao</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Kết quả</h3>
+                                <p>Chỉ các boxes <b>chất lượng cao</b> được giữ lại, tối ưu thời gian tính toán và đảm bảo SAM chỉ phân đoạn các đối tượng đáng tin cậy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 39: Mask Post-processing và Visualization -->
+    <section class="slide-section" data-slide="39" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.5.3. Mask Post-processing và Visualization</h2>
+                
+                <div class="content-body">
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50;">
+                                <i class="fa-solid fa-exchange-alt" style="margin-right: 10px;"></i>
+                                Format Conversion
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Chuyển đổi từ <b>tensor</b> sang <b>numpy array</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Hoặc <b>boolean mask</b> (threshold 0.5) để dễ dàng xử lý với các thư viện ảnh</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3;">
+                                <i class="fa-solid fa-palette" style="margin-right: 10px;"></i>
+                                Alpha Blending Visualization
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Masks được overlay lên ảnh gốc bằng <b>alpha blending</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Kết hợp màu sắc theo class: <b>xanh lá</b> – rầy lưng trắng, <b>xanh dương</b> – sâu ăn lá lúa, <b>đỏ</b> – rầy nâu</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Alpha ≈ 0.4, giúp quan sát đồng thời đối tượng và bối cảnh</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0;">
+                            <h3 style="color: #9c27b0;">
+                                <i class="fa-solid fa-shield-alt" style="margin-right: 10px;"></i>
+                                Giữ nguyên chất lượng Masks
+                            </h3>
+                            <ul>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Nhờ SAM là mô hình <b>zero-shot mạnh</b>, masks có độ chính xác cao</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Không cần các bước phức tạp như loại nhiễu hay điền lỗ hổng</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Giữ nguyên masks gốc đảm bảo độ chính xác phân đoạn và không làm mất thông tin quan trọng</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-top: 20px; border-left: 4px solid #4caf50;">
+                        <h3 style="color: #2e7d32; font-size: 20px; margin-bottom: 10px;">
+                            <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
+                            Ưu điểm của Pipeline
+                        </h3>
+                        <ul style="margin: 0;">
+                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Tỷ lệ false positives thấp nhờ NMS và confidence threshold</li>
+                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Masks chính xác và chi tiết nhờ zero-shot segmentation của SAM</li>
+                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Khả năng truy xuất thông tin đầy đủ: mỗi đối tượng có cả box, mask, class và confidence</li>
+                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Tối ưu hiệu suất: feature map ViT-H được tái sử dụng, xử lý nhiều boxes cùng lúc</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 40: Visualization và Alpha Blending -->
+    <section class="slide-section" data-slide="40" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.6. Visualization và Tính Mật Độ</h2>
+                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">3.6.1. Phương pháp Visualization và Alpha Blending</h3>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/DemoPhanDoan.jpg" alt="Demo phân đoạn rầy" style="max-width: 100%; max-height: 280px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 3.3. Kết quả phân đoạn rầy trên ảnh ruộng lúa</p>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #2196f3;">
+                        <h3 style="color: #1565c0; font-size: 20px; margin-bottom: 10px;">
+                            <i class="fa-solid fa-palette" style="margin-right: 10px;"></i>
+                            Nguyên lý Alpha Blending
+                        </h3>
+                        <p style="font-size: 17px; line-height: 1.6; margin: 0;">
+                            <b>Công thức:</b> I<sub>result</sub> = α × I<sub>foreground</sub> + (1-α) × I<sub>background</sub><br>
+                            Trong đề tài, <b>α = 0.4</b> được lựa chọn để tối ưu sự cân bằng giữa việc nhấn mạnh các vùng phân đoạn và giữ lại chi tiết môi trường gốc.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50; font-size: 18px;">
+                                <i class="fa-solid fa-tag" style="margin-right: 8px;"></i>
+                                Color Mapping
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-circle" style="color: #4caf50; font-size: 8px;"></i> <b>Class 0:</b> Xanh lá (0,255,0) - Rầy lưng trắng</li>
+                                <li><i class="fa-solid fa-circle" style="color: #2196f3; font-size: 8px;"></i> <b>Class 1:</b> Xanh dương (255,0,0) - Sâu ăn lá lúa</li>
+                                <li><i class="fa-solid fa-circle" style="color: #f44336; font-size: 8px;"></i> <b>Class 2:</b> Đỏ (0,0,255) - Rầy nâu</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #ff9800;">
+                            <h3 style="color: #ff9800; font-size: 18px;">
+                                <i class="fa-solid fa-eye" style="margin-right: 8px;"></i>
+                                Vai trò Visualization
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Kiểm tra năng lực phân đoạn của mô hình</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Nhận dạng lỗi (over/under-segmentation)</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Đánh giá phân bố dịch hại trực tiếp</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Giao tiếp kết quả với người dùng nông nghiệp</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 41: Tính Toán Mật Độ Rầy -->
+    <section class="slide-section" data-slide="41" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.6.2. Phương pháp Tính Toán Mật Độ Rầy</h2>
+                
+                <div class="content-body">
+                    <div style="background: #fff3cd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #ffc107;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0; color: #856404;">
+                            Mật độ rầy (số cá thể trên mỗi đơn vị diện tích) là chỉ số quen thuộc trong các phương pháp điều tra đồng ruộng truyền thống, 
+                            giúp kết quả tương thích với các tiêu chuẩn đánh giá nông nghiệp hiện hành.
+                        </p>
+                    </div>
+
+                    <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #4caf50;">
+                        <h3 style="color: #2e7d32; font-size: 22px; margin-bottom: 15px;">
+                            <i class="fa-solid fa-calculator" style="margin-right: 10px;"></i>
+                            Công thức tính mật độ
+                        </h3>
+                        <p style="font-size: 20px; text-align: center; font-weight: 700; color: #1b5e20; margin: 0;">
+                            D = N / A
+                        </p>
+                        <ul style="margin-top: 15px; font-size: 16px;">
+                            <li><i class="fa-solid fa-info-circle" style="color: #4caf50;"></i> <b>D:</b> Mật độ (con/m²)</li>
+                            <li><i class="fa-solid fa-info-circle" style="color: #4caf50;"></i> <b>N:</b> Tổng số đối tượng được mô hình phát hiện</li>
+                            <li><i class="fa-solid fa-info-circle" style="color: #4caf50;"></i> <b>A:</b> Diện tích thực tương ứng với ảnh đầu vào (m²)</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3; font-size: 18px;">
+                                <i class="fa-solid fa-ruler" style="margin-right: 8px;"></i>
+                                Xác định diện tích (A)
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Giả định: <b>1 m²</b> cho ảnh kích thước 1024×1024 pixels</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Dựa trên khoảng cách chụp trung bình và FOV camera điện thoại</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Có thể hiệu chỉnh với thông số: độ cao camera, kích thước cảm biến, góc mở ống kính</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0;">
+                            <h3 style="color: #9c27b0; font-size: 18px;">
+                                <i class="fa-solid fa-layer-group" style="margin-right: 8px;"></i>
+                                Các cấp độ tính toán
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Mật độ tổng:</b> Tổng mức độ hiện diện của tất cả các loài trong ảnh</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Mật độ theo class:</b> Đánh giá loài nào chiếm ưu thế, so sánh khả năng xâm nhiễm</li>
+                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Mật độ trung bình dataset:</b> Cái nhìn tổng quát về mức độ xuất hiện dịch hại</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 42: Hệ thống Đánh giá và Báo cáo -->
+    <section class="slide-section" data-slide="42" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.6.3. Hệ thống Đánh giá và Báo cáo Kết quả</h2>
+                
+                <div class="content-body">
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #2196f3;">
+                        <p style="font-size: 17px; line-height: 1.6; margin: 0;">
+                            Hệ thống đánh giá cung cấp cái nhìn <b>đầy đủ, đa chiều và có hệ thống</b> về hiệu suất của pipeline YOLO + SAM, 
+                            được tổ chức thành ba cấp độ: tổng quan, theo class và chi tiết theo từng ảnh.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50; font-size: 18px;">
+                                <i class="fa-solid fa-chart-pie" style="margin-right: 8px;"></i>
+                                Thống kê Tổng quan
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Tổng số ảnh được đánh giá</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Tổng số đối tượng phát hiện được</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Số lượng trung bình đối tượng/ảnh</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Mật độ trung bình trên mỗi ảnh</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Phần trăm ảnh có xuất hiện rầy</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3; font-size: 18px;">
+                                <i class="fa-solid fa-list" style="margin-right: 8px;"></i>
+                                Thống kê theo Class
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Tổng số đối tượng phát hiện theo class</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Tỷ lệ phần trăm của class</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Mật độ trung bình theo từng class</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Tần suất xuất hiện trong ảnh</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Phân bố theo mức độ dày đặc</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #ff9800; grid-column: 1 / -1;">
+                            <h3 style="color: #ff9800; font-size: 18px;">
+                                <i class="fa-solid fa-chart-bar" style="margin-right: 8px;"></i>
+                                Phân tích Phân bố Mật độ
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> <b>Histogram mật độ:</b> Tần suất xuất hiện các giá trị mật độ, xác định mức độ phổ biến</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> <b>Box plot theo class:</b> So sánh trực quan mật độ giữa các loài, quan sát median và outliers</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Phát hiện các vùng có mật độ bất thường (điểm nóng dịch hại)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 43: Kiến trúc Pipeline Tuần tự -->
+    <section class="slide-section" data-slide="43" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.7. Thiết kế Pipeline và Kiến trúc Hệ thống</h2>
+                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">3.7.1. Kiến trúc Pipeline Tuần tự YOLO + SAM-ViT</h3>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/Kiến trúc pipeline yolo - sam.jpg" alt="Kiến trúc Pipeline YOLO + SAM-ViT" style="max-width: 100%; max-height: 300px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 3.4. Kiến trúc Pipeline Tuần tự YOLO + SAM-ViT</p>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
+                        <p style="font-size: 18px; line-height: 1.6; margin: 0;">
+                            Kiến trúc pipeline được thiết kế theo mô hình <b>tuần tự (sequential pipeline)</b>, trong đó:
+                        </p>
+                        <ul style="margin-top: 15px; font-size: 17px;">
+                            <li><i class="fa-solid fa-robot" style="color: #2196f3;"></i> <b>YOLO</b> đảm nhiệm vai trò phát hiện đối tượng và tạo ra các bounding boxes</li>
+                            <li><i class="fa-solid fa-puzzle-piece" style="color: #4caf50;"></i> <b>SAM-ViT</b> đảm nhiệm phân đoạn chi tiết (instance segmentation) dựa trên các bounding boxes này</li>
+                            <li><i class="fa-solid fa-arrow-right" style="color: #ff9800;"></i> Hai mô hình được vận hành theo <b>thứ tự cố định</b> vì SAM yêu cầu bounding boxes làm prompts đầu vào</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 44: Cơ chế Xử lý và Tối ưu hóa -->
+    <section class="slide-section" data-slide="44" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">3.7.2. Cơ chế Xử lý và Tối ưu hóa Hiệu suất</h2>
+                
+                <div class="content-body">
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #ffc107;">
+                        <p style="font-size: 17px; line-height: 1.6; margin: 0; color: #856404;">
+                            Pipeline được thiết kế theo mô hình xử lý tuần tự với <b>7 bước chính</b>, đảm bảo tính nhất quán của đầu ra và tối ưu hóa hiệu suất.
+                        </p>
+                    </div>
+
+                    <div class="steps-layout" style="padding: 0;">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Đọc và tiền xử lý ảnh</h3>
+                                <p>Ảnh được đọc từ ổ đĩa và chuẩn hóa kích thước theo yêu cầu của YOLO và SAM</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>YOLO Detection & Classification</h3>
+                                <p>YOLO được load <b>một lần</b> trong __init__(), sau đó tái sử dụng cho toàn bộ quá trình xử lý</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Lọc Bounding Boxes</h3>
+                                <p>Kiểm tra sớm giúp giảm tính toán cho SAM-ViT nếu không có đối tượng được phát hiện</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>SAM Image Encoding (ViT-H)</h3>
+                                <p><b>Tối ưu quan trọng:</b> ViT Encoder chỉ chạy <b>một lần</b> cho mỗi ảnh. Feature map được tái sử dụng cho tất cả boxes, giảm thời gian segmentation xuống 5–20 lần</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>SAM Segmentation với Box Prompts</h3>
+                                <p>Mask Decoder nhận image embeddings, box prompts và sinh masks pixel-level</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Hợp nhất và Hậu xử lý</h3>
+                                <p>Kết hợp kết quả từ YOLO và SAM, format masks, rescaling với chi phí tính toán nhỏ</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Visualization (Tùy chọn)</h3>
+                                <p>Chỉ được kích hoạt khi người dùng yêu cầu, tránh lãng phí tài nguyên khi chạy trên dataset lớn</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #4caf50;">
+                        <p style="font-size: 16px; color: #2e7d32; margin: 0;">
+                            <b>Lý do không batch song song:</b> YOLO và SAM-ViT đều tiêu tốn nhiều VRAM; segmentation theo box prompts có tính chất tuần tự. 
+                            Thiết kế tuần tự nhưng được tổ chức tốt giúp đảm bảo hiệu suất cao mà không vượt quá giới hạn phần cứng.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 45: CHƯƠNG 4 - Giới thiệu -->
+    <section class="slide-section" data-slide="45" >
+        <div class="slide-container">
+            <div class="title-layout" style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
+                <h1 style="font-size: 48px; margin-bottom: 30px;">
+                    <i class="fa-solid fa-chart-line" style="margin-right: 20px;"></i>
+                    CHƯƠNG 4
+                </h1>
+                <p class="subtitle" style="font-size: 36px; font-weight: 600;">
+                    KẾT QUẢ THỰC NGHIỆM VÀ PHÂN TÍCH
+                </p>
+                <div style="margin-top: 50px; font-size: 22px; opacity: 0.95;">
+                    <p><i class="fa-solid fa-graduation-cap" style="margin-right: 10px;"></i>Phân tích kết quả đào tạo</p>
+                    <p><i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>Đánh giá khả năng phân loại</p>
+                    <p><i class="fa-solid fa-chart-bar" style="margin-right: 10px;"></i>Phân tích phân đoạn và mật độ</p>
+                    <p><i class="fa-solid fa-star" style="margin-right: 10px;"></i>Đánh giá chất lượng phân đoạn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 46: Phân tích kết quả đào tạo -->
+    <section class="slide-section" data-slide="46" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">4.1. Phân tích kết quả đào tạo (Training)</h2>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/Quá trình đào tạo.jpg" alt="Kết quả đào tạo YOLOv8" style="max-width: 100%; max-height: 300px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 4.1. Kết quả đào tạo YOLOv8 qua 20 epochs</p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50; font-size: 18px;">
+                                <i class="fa-solid fa-bullseye" style="margin-right: 8px;"></i>
+                                Precision & Recall
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Cả <b>Precision</b> và <b>Recall</b> đều tăng trưởng rõ rệt và ổn định qua các epoch</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>F1-Score</b> đạt mức cao <b>0.9379</b> ở epoch cuối</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Cân bằng tốt giữa khả năng phát hiện đúng và tìm kiếm đầy đủ đối tượng</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3; font-size: 18px;">
+                                <i class="fa-solid fa-chart-line" style="margin-right: 8px;"></i>
+                                Mean Average Precision (mAP)
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> <b>mAP@0.5:</b> Đạt đỉnh rất cao <b>0.9793</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Khẳng định khả năng định vị đối tượng rất chính xác</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> <b>mAP@0.5:0.95:</b> Đạt <b>0.8194</b></li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Mô hình tạo ra các hộp bao sát với Ground Truth ngay cả ở các ngưỡng IoU nghiêm ngặt</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 47: Đánh giá khả năng phân loại -->
+    <section class="slide-section" data-slide="47" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">4.2. Đánh giá khả năng phân loại (Classification Performance)</h2>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/Ma trận nhầm lẫn.jpg" alt="Ma trận nhầm lẫn" style="max-width: 100%; max-height: 300px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 4.2. Ma trận nhầm lẫn (Confusion Matrix Normalized)</p>
+                    </div>
+
+                    <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #4caf50;">
+                        <h3 style="color: #2e7d32; font-size: 20px; margin-bottom: 15px;">
+                            <i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>
+                            Độ chính xác cao
+                        </h3>
+                        <p style="font-size: 17px; line-height: 1.6; margin: 0; color: #1b5e20;">
+                            Mô hình thể hiện khả năng phân loại vượt trội cho cả ba lớp, với tỷ lệ đúng trên đường chéo chính (True Positives):
+                        </p>
+                        <ul style="margin-top: 10px; font-size: 16px;">
+                            <li><i class="fa-solid fa-bug" style="color: #4caf50;"></i> <b>Rầy lưng trắng:</b> 0.98</li>
+                            <li><i class="fa-solid fa-bug" style="color: #2196f3;"></i> <b>Sâu ăn lá lúa:</b> 0.97</li>
+                            <li><i class="fa-solid fa-bug" style="color: #f44336;"></i> <b>Rầy nâu:</b> 0.95</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 12px; border-left: 4px solid #ffc107;">
+                        <h3 style="color: #856404; font-size: 20px; margin-bottom: 10px;">
+                            <i class="fa-solid fa-shield-alt" style="margin-right: 10px;"></i>
+                            Tỷ lệ nhầm lẫn thấp
+                        </h3>
+                        <p style="font-size: 16px; color: #856404; margin: 0;">
+                            Tỷ lệ nhầm lẫn giữa các lớp gần như bằng <b>0</b> (chỉ khoảng 0.01-0.02). 
+                            Điều này củng cố độ tin cậy của Bounding Boxes do YOLO tạo ra, đảm bảo các prompts đầu vào cho SAM-ViT là chính xác về mặt định danh lớp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 48: Phân tích phân đoạn và mật độ -->
+    <section class="slide-section" data-slide="48" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">4.3. Phân tích kết quả phân đoạn và tính mật độ</h2>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/Phân tích mật độ.jpg" alt="Phân tích mật độ rầy" style="max-width: 100%; max-height: 280px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 4.3. Phân tích mật độ rầy</p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50; font-size: 18px;">
+                                <i class="fa-solid fa-bug" style="margin-right: 8px;"></i>
+                                Phân bố đối tượng
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-circle" style="color: #f44336; font-size: 8px;"></i> <b>Rầy nâu:</b> 2289 cá thể (ưu thế)</li>
+                                <li><i class="fa-solid fa-circle" style="color: #4caf50; font-size: 8px;"></i> <b>Rầy lưng trắng:</b> 1275 cá thể</li>
+                                <li><i class="fa-solid fa-circle" style="color: #2196f3; font-size: 8px;"></i> <b>Sâu ăn lá lúa:</b> 114 cá thể</li>
+                                <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> <b>Mật độ trung bình:</b> 1.64 con/m²</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3; font-size: 18px;">
+                                <i class="fa-solid fa-chart-bar" style="margin-right: 8px;"></i>
+                                Mật độ theo Class
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> <b>Rầy nâu:</b> 2.09 con/m² (cao nhất)</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> <b>Rầy lưng trắng:</b> 1.79 con/m²</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> <b>Sâu ăn lá lúa:</b> 1.14 con/m²</li>
+                                <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> Phân tích giúp định lượng mức độ gây hại của từng loại</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #ff9800; grid-column: 1 / -1;">
+                            <h3 style="color: #ff9800; font-size: 18px;">
+                                <i class="fa-solid fa-chart-line" style="margin-right: 8px;"></i>
+                                Phân tích Phân bố
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> <b>Histogram:</b> Phần lớn ảnh (hơn 130 ảnh) có mật độ thấp dưới 1 con/m²</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> <b>Box plot:</b> Rầy nâu và rầy lưng trắng có sự phân tán rộng, nhiều outliers có mật độ rất cao</li>
+                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Phát hiện các cụm rầy gây hại nghiêm trọng cục bộ (lên đến 8 con/m²)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 49: Đánh giá chất lượng phân đoạn -->
+    <section class="slide-section" data-slide="49" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">4.4. Đánh giá chất lượng phân đoạn</h2>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/DemoPhanDoan.jpg" alt="Hình ảnh phân đoạn rầy" style="max-width: 100%; max-height: 300px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 4.4. Hình ảnh phân đoạn rầy trên ảnh ruộng</p>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #2196f3;">
+                        <p style="font-size: 17px; line-height: 1.6; margin: 0;">
+                            Mặc dù các chỉ số Detection (mAP) rất cao, <b>chất lượng của Segmentation Masks</b> mới là yếu tố khẳng định giá trị của việc tích hợp SAM-ViT.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50; font-size: 18px;">
+                                <i class="fa-solid fa-check-circle" style="margin-right: 8px;"></i>
+                                Độ bám sát biên
+                            </h3>
+                            <p style="font-size: 15px; margin: 0;">
+                                Các mặt nạ phân đoạn màu đỏ (cho rầy nâu) được tạo ra <b>bám sát hình dạng</b> của rầy, không bị lẫn vào nền lá lúa
+                            </p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3;">
+                            <h3 style="color: #2196f3; font-size: 18px;">
+                                <i class="fa-solid fa-eye" style="margin-right: 8px;"></i>
+                                Tính tinh tế
+                            </h3>
+                            <p style="font-size: 15px; margin: 0;">
+                                Ngay cả trong các trường hợp rầy nhỏ hoặc nằm khuất, hệ thống vẫn tạo ra <b>mask chi tiết</b>, thể hiện khả năng phân đoạn pixel-level chính xác
+                            </p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #9c27b0;">
+                            <h3 style="color: #9c27b0; font-size: 18px;">
+                                <i class="fa-solid fa-exchange-alt" style="margin-right: 8px;"></i>
+                                Chuyển đổi Box → Mask
+                            </h3>
+                            <p style="font-size: 15px; margin: 0;">
+                                Bounding Box chỉ định vị vùng đối tượng, còn Mask do SAM tạo ra cho phép <b>tính toán mật độ thực (count)</b> và <b>diện tích che phủ thực tế</b> của sâu bệnh
+                            </p>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #ff9800;">
+                            <h3 style="color: #ff9800; font-size: 18px;">
+                                <i class="fa-solid fa-star" style="margin-right: 8px;"></i>
+                                Độ tin cậy của Count
+                            </h3>
+                            <p style="font-size: 15px; margin: 0;">
+                                Với mAP@0.5 = 0.9793, các hộp bao của YOLO hầu như đã xác định đúng vị trí. SAM sử dụng thông tin này làm gợi ý đáng tin cậy để tạo ra mask, 
+                                giảm thiểu tối đa lỗi phân đoạn sai vùng, tạo ra một kết quả đếm chính xác và có thể giải thích được
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 50: Phân bổ đối tượng -->
+    <section class="slide-section" data-slide="50" >
+        <div class="slide-container">
+            <div class="content-layout">
+                <h2 class="slide-title" style="color: #1565c0;">4.5. Phân bổ đối tượng trong Dataset</h2>
+                
+                <div class="content-body">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="images/Phân bổ đối tượng.jpg" alt="Phân bổ đối tượng" style="max-width: 100%; max-height: 300px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">Hình 4.5. Phân bổ đối tượng theo class trong dataset</p>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #2196f3;">
+                        <p style="font-size: 17px; line-height: 1.6; margin: 0;">
+                            Phân tích phân bổ đối tượng giúp hiểu rõ hơn về <b>đặc điểm dataset</b> và <b>khả năng phát hiện</b> của mô hình đối với từng loài rầy và sâu hại.
+                        </p>
+                    </div>
+
+                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="grid-item" style="border-left-color: #f44336;">
+                            <h3 style="color: #f44336; font-size: 18px;">
+                                <i class="fa-solid fa-bug" style="margin-right: 8px;"></i>
+                                Rầy nâu
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-chart-pie" style="color: #f44336;"></i> <b>2289 cá thể</b> - Chiếm ưu thế</li>
+                                <li><i class="fa-solid fa-percent" style="color: #f44336;"></i> Tỷ lệ cao nhất trong dataset</li>
+                                <li><i class="fa-solid fa-check" style="color: #f44336;"></i> Mô hình phát hiện tốt với độ chính xác 0.95</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #4caf50;">
+                            <h3 style="color: #4caf50; font-size: 18px;">
+                                <i class="fa-solid fa-bug" style="margin-right: 8px;"></i>
+                                Rầy lưng trắng
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-chart-pie" style="color: #4caf50;"></i> <b>1275 cá thể</b> - Đứng thứ hai</li>
+                                <li><i class="fa-solid fa-percent" style="color: #4caf50;"></i> Tỷ lệ trung bình</li>
+                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Mô hình phát hiện tốt với độ chính xác 0.98</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-item" style="border-left-color: #2196f3; grid-column: 1 / -1;">
+                            <h3 style="color: #2196f3; font-size: 18px;">
+                                <i class="fa-solid fa-bug" style="margin-right: 8px;"></i>
+                                Sâu ăn lá lúa
+                            </h3>
+                            <ul style="font-size: 15px;">
+                                <li><i class="fa-solid fa-chart-pie" style="color: #2196f3;"></i> <b>114 cá thể</b> - Số lượng ít nhất</li>
+                                <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> Class thiểu số trong dataset</li>
+                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Mô hình vẫn phát hiện tốt với độ chính xác 0.97</li>
+                                <li><i class="fa-solid fa-lightbulb" style="color: #2196f3;"></i> Thể hiện khả năng xử lý class imbalance của mô hình</li>
                             </ul>
                         </div>
                     </div>
@@ -1830,7 +3509,8 @@
         function enterFullscreen() {
             document.body.classList.add('fullscreen');
             const btn = document.getElementById('fullscreenBtn');
-            btn.innerHTML = '<i class="fa-solid fa-compress"></i> Thoát toàn màn hình';
+            btn.innerHTML = '<i class="fa-solid fa-compress"></i>';
+            btn.title = 'Thoát toàn màn hình';
             
             // Add click handlers to all slides
             slides.forEach(slide => {
@@ -1841,7 +3521,8 @@
         function exitFullscreen() {
             document.body.classList.remove('fullscreen');
             const btn = document.getElementById('fullscreenBtn');
-            btn.innerHTML = '<i class="fa-solid fa-expand"></i> Toàn màn hình';
+            btn.innerHTML = '<i class="fa-solid fa-expand"></i>';
+            btn.title = 'Toàn màn hình';
             
             // Remove click handlers
             slides.forEach(slide => {
@@ -1850,20 +3531,37 @@
         }
 
         function handleSlideClick(e) {
-            // Only advance if clicking on the slide itself, not on buttons or links
-            if (e.target.closest('.nav-btn, .download-btn, .fullscreen-btn, a, button, .slide-container')) {
+            // Chỉ xử lý khi ở chế độ fullscreen
+            if (!document.body.classList.contains('fullscreen')) {
                 return;
             }
-            // Check if click is on the right side (next) or left side (previous)
+            
+            // Bỏ qua khi click vào các nút điều khiển
+            if (e.target.closest('.nav-btn, .fullscreen-btn, a, button')) {
+                return;
+            }
+            
+            // Kiểm tra click vào bên phải (slide sau) hay bên trái (slide trước)
             const slide = e.currentTarget;
             const rect = slide.getBoundingClientRect();
             const clickX = e.clientX - rect.left;
             const slideWidth = rect.width;
             
+            // Chỉ xử lý khi click vào slide, không phải các phần tử con có thể click được
+            if (e.target.closest('a, button, input, select, textarea')) {
+                return;
+            }
+            
             if (clickX > slideWidth / 2) {
-                changeSlide(1); // Click right side - next
+                // Click bên phải - slide sau
+                if (currentSlideIndex < totalSlides) {
+                    changeSlide(1);
+                }
             } else {
-                changeSlide(-1); // Click left side - previous
+                // Click bên trái - slide trước
+                if (currentSlideIndex > 1) {
+                    changeSlide(-1);
+                }
             }
         }
 
@@ -2018,96 +3716,6 @@
             }
         });
 
-        async function downloadPDF() {
-            try {
-                const btn = document.querySelector('.download-btn');
-                btn.disabled = true;
-                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo PDF...';
-                
-                // Ẩn nút download
-                btn.style.display = 'none';
-                
-                // Lấy tất cả slide sections
-                const slides = document.querySelectorAll('.slide-section');
-                
-                if (slides.length === 0) {
-                    throw new Error('Không tìm thấy slide nào');
-                }
-                
-                // Kiểm tra thư viện
-                if (typeof html2canvas === 'undefined') {
-                    throw new Error('html2canvas chưa được tải. Vui lòng tải lại trang.');
-                }
-                
-                if (typeof jspdf === 'undefined') {
-                    throw new Error('jsPDF chưa được tải. Vui lòng tải lại trang.');
-                }
-                
-                // Tạo PDF từng slide một để đảm bảo chất lượng
-                const { jsPDF } = jspdf;
-                const pdf = new jsPDF({
-                    orientation: 'landscape',
-                    unit: 'in',
-                    format: [10, 7.2] // 1280x720px tỷ lệ 16:9
-                });
-                
-                // Render từng slide
-                for (let i = 0; i < slides.length; i++) {
-                    const slide = slides[i];
-                    
-                    // Scroll đến slide để đảm bảo render đúng
-                    slide.scrollIntoView({ behavior: 'instant', block: 'center' });
-                    
-                    // Đợi để browser render
-                    await new Promise(resolve => setTimeout(resolve, 200));
-                    
-                    // Render slide thành canvas với chất lượng cao
-                    const canvas = await html2canvas(slide, {
-                        scale: 2.5, // Chất lượng cao
-                        useCORS: true,
-                        allowTaint: true,
-                        backgroundColor: '#f0f2f5',
-                        logging: false,
-                        width: slide.offsetWidth || 1280,
-                        height: slide.offsetHeight || 720,
-                        windowWidth: window.innerWidth,
-                        windowHeight: window.innerHeight
-                    });
-                    
-                    // Chuyển canvas thành image
-                    const imgData = canvas.toDataURL('image/png', 1.0);
-                    
-                    // Thêm vào PDF (trừ slide đầu tiên)
-                    if (i > 0) {
-                        pdf.addPage();
-                    }
-                    
-                    // Tính toán kích thước để fit vào trang
-                    const imgWidth = 10;
-                    const imgHeight = (canvas.height / canvas.width) * 10;
-                    
-                    // Thêm image vào PDF
-                    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, Math.min(imgHeight, 7.2), undefined, 'FAST');
-                }
-                
-                // Lưu file
-                pdf.save('BaoCao_RayNau.pdf');
-                
-                // Hiện lại nút download
-                btn.style.display = 'block';
-                btn.disabled = false;
-                btn.innerHTML = '<i class="fa-solid fa-file-pdf"></i> Tải PDF';
-                
-                alert('Đã tạo file PDF thành công với ' + slides.length + ' slide!');
-            } catch (error) {
-                console.error('Lỗi khi tạo PDF:', error);
-                alert('Có lỗi xảy ra khi tạo file PDF. Vui lòng thử lại.\n' + error.message);
-                const btn = document.querySelector('.download-btn');
-                btn.style.display = 'block';
-                btn.disabled = false;
-                btn.innerHTML = '<i class="fa-solid fa-file-pdf"></i> Tải PDF';
-            }
-        }
     </script>
 </body>
 </html>
