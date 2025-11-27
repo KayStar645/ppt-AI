@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo - Phân loại Rầy Nâu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 900px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        h1 {
+            color: #1565c0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #666;
+            font-size: 24px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .main-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .main-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .main-button i {
+            margin-right: 10px;
+        }
+        .info {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-seedling" style="margin-right: 15px;"></i>BÁO CÁO ĐỒ ÁN</h1>
+        <h2>Phân loại giống và xác định mật độ rầy nâu trên cây lúa</h2>
+        <h2 style="font-size: 20px; color: #999;">Ứng dụng mô hình kết hợp SAM – ViT</h2>
+        
+        <a href="presentation.html" class="main-button">
+            <i class="fa-solid fa-presentation-screen"></i>
+            Xem Báo Cáo
+        </a>
+        
+        <div class="info">
+            <p><i class="fa-solid fa-info-circle" style="margin-right: 8px;"></i>
+            Báo cáo được trình bày dạng cuộn dọc, có thể tải xuống file PDF</p>
+            <p style="margin-top: 10px; font-size: 14px;">
+                <i class="fa-solid fa-users" style="margin-right: 8px;"></i>
+                Phạm Tấn Thuận (1001240035) & Lý Dạ Lan (1001240030)
+            </p>
+        </div>
+    </div>
+</body>
+</html>
