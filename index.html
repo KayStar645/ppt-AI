@@ -2436,54 +2436,118 @@
 
     <!-- SLIDE 15: SAM Encoder -->
     <section class="slide-section" data-slide="15" >
-        <div class="slide-container">
-            <div class="content-layout">
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);">
+            <div class="content-layout" style="padding: 40px 50px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
                 <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); padding: 6px 18px; border-radius: 20px;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+                        </h2>
+                    </div>
                 </div>
                 
-                <h2 class="slide-title" style="color: #1565c0;">Kiến trúc SAM Encoder</h2>
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #e65100; font-size: 28px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    <i class="fa-solid fa-brain" style="margin-right: 12px; color: #ff9800;"></i>
+                    Kiến trúc SAM Encoder
+                </h2>
                 
-                <div class="content-body">
-                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
-                        <h3 style="color: #1565c0; font-size: 24px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-brain" style="margin-right: 10px;"></i>
-                            Vision Transformer (ViT) Backbone
-                        </h3>
-                        <ul>
-                            <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> Dựa trên <b>Vision Transformer (ViT)</b></li>
-                            <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> Các phiên bản: <b>ViT-B</b>, <b>ViT-L</b>, <b>ViT-H</b></li>
-                            <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> Ảnh đầu vào: <b>1024×1024 pixels</b></li>
-                            <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> Feature map output: <b>256 chiều</b></li>
-                        </ul>
+                <div style="display: flex; flex-direction: column; gap: 18px; flex: 1; justify-content: center;">
+                    <!-- Vision Transformer Backbone -->
+                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 22px 28px; border-radius: 15px; border-left: 6px solid #2196f3; box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);">
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #2196f3 0%, #1565c0 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px; box-shadow: 0 3px 10px rgba(33, 150, 243, 0.3);">
+                                <i class="fa-solid fa-eye" style="font-size: 22px; color: #ffffff;"></i>
+                            </div>
+                            <h3 style="color: #1565c0; font-size: 22px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">
+                                Vision Transformer (ViT) Backbone
+                            </h3>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px;">
+                            <div style="background: rgba(255, 255, 255, 0.6); padding: 12px; border-radius: 10px;">
+                                <p style="font-size: 15px; color: #0d47a1; margin: 0; line-height: 1.5;">
+                                    <strong>Phiên bản:</strong> ViT-B, ViT-L, <strong>ViT-H</strong> (sử dụng trong đề tài)
+                                </p>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.6); padding: 12px; border-radius: 10px;">
+                                <p style="font-size: 15px; color: #0d47a1; margin: 0; line-height: 1.5;">
+                                    <strong>Đầu vào:</strong> Ảnh <strong>1024×1024 pixels</strong>
+                                </p>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.6); padding: 12px; border-radius: 10px;">
+                                <p style="font-size: 15px; color: #0d47a1; margin: 0; line-height: 1.5;">
+                                    <strong>Đầu ra:</strong> Feature map <strong>64×64×256</strong> chiều
+                                </p>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.6); padding: 12px; border-radius: 10px;">
+                                <p style="font-size: 15px; color: #0d47a1; margin: 0; line-height: 1.5;">
+                                    <strong>Ưu điểm:</strong> Nắm bắt <strong>quan hệ dài hạn</strong> giữa các vùng ảnh
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3><i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>Lợi ích của Frozen Feature Extractor</h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Đặc trưng không gian phong phú được học từ bộ dữ liệu <b>SA-1B</b></li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Giúp mô hình <b>ổn định và chính xác</b> trong việc phân đoạn các vùng ROI</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Giảm chi phí tính toán khi kết hợp với ViT trong nhiệm vụ phân loại</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Tăng tính <b>robust</b> của mô hình trong môi trường thực địa với nhiều yếu tố nhiễu</li>
+                    <!-- Grid 2 cột -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                        <!-- Lợi ích -->
+                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 20px; border-radius: 15px; border-left: 6px solid #4caf50; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);">
+                            <h3 style="color: #2e7d32; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-check-circle" style="margin-right: 10px; font-size: 18px;"></i>
+                                Lợi ích
+                            </h3>
+                            <ul style="margin: 0; padding-left: 22px; font-size: 14px; line-height: 1.7;">
+                                <li style="margin-bottom: 6px;"><strong>Đặc trưng phong phú:</strong> Học từ SA-1B (11M ảnh, 1.1B masks)</li>
+                                <li style="margin-bottom: 6px;"><strong>Ổn định:</strong> Frozen encoder giữ nguyên đặc trưng đã học</li>
+                                <li style="margin-bottom: 6px;"><strong>Giảm tính toán:</strong> Chỉ encode ảnh một lần, tái sử dụng cho nhiều boxes</li>
+                                <li><strong>Robust:</strong> Chống nhiễu tốt trong môi trường thực địa</li>
                             </ul>
                         </div>
 
-                        <div style="background: #fff3cd; padding: 20px; border-radius: 12px; border-left: 4px solid #ffc107;">
-                            <p style="color: #856404; font-size: 17px; margin: 0;">
-                                SAM Encoder cung cấp đặc trưng không gian chi tiết và là <b>nền tảng</b> để kết hợp với ViT, 
-                                xây dựng mô hình hybrid <b>SAM–ViT</b> mạnh mẽ cho bài toán nhận dạng và phân đoạn rầy.
-                            </p>
+                        <!-- Quy trình xử lý -->
+                        <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 20px; border-radius: 15px; border-left: 6px solid #ff9800; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.25);">
+                            <h3 style="color: #e65100; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-cogs" style="margin-right: 10px; font-size: 18px;"></i>
+                                Quy trình Xử lý
+                            </h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="background: #ff9800; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 12px; flex-shrink: 0; font-size: 14px;">1</span>
+                                    <p style="font-size: 14px; color: #856404; margin: 0; line-height: 1.6;"><strong>Input:</strong> Ảnh 1024×1024px</p>
+                                </div>
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="background: #ff9800; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 12px; flex-shrink: 0; font-size: 14px;">2</span>
+                                    <p style="font-size: 14px; color: #856404; margin: 0; line-height: 1.6;"><strong>ViT-H:</strong> Chia thành patches, xử lý qua transformer</p>
+                                </div>
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="background: #ff9800; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 12px; flex-shrink: 0; font-size: 14px;">3</span>
+                                    <p style="font-size: 14px; color: #856404; margin: 0; line-height: 1.6;"><strong>Output:</strong> Feature map 64×64×256</p>
+                                </div>
+                                <div style="display: flex; align-items: flex-start;">
+                                    <span style="background: #ff9800; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 12px; flex-shrink: 0; font-size: 14px;">4</span>
+                                    <p style="font-size: 14px; color: #856404; margin: 0; line-height: 1.6;"><strong>Tái sử dụng:</strong> Cho tất cả bounding boxes từ YOLO</p>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+
+                    <!-- Kết luận -->
+                    <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 20px 25px; border-radius: 15px; border-left: 6px solid #9c27b0; box-shadow: 0 4px 15px rgba(156, 39, 176, 0.25);">
+                        <h3 style="color: #7b1fa2; font-size: 20px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                            <i class="fa-solid fa-lightbulb" style="margin-right: 10px; font-size: 18px;"></i>
+                            Tầm quan trọng
+                        </h3>
+                        <p style="font-size: 16px; line-height: 1.6; color: #4a148c; margin: 0;">
+                            SAM Encoder cung cấp <strong>đặc trưng không gian chi tiết</strong> và là <strong>nền tảng</strong> để kết hợp với ViT, 
+                            xây dựng mô hình hybrid <strong>SAM–ViT</strong> mạnh mẽ cho bài toán nhận dạng và phân đoạn rầy.
+                            <em style="display: block; margin-top: 10px; color: #8e24aa;">Ví dụ: Feature map từ encoder được tái sử dụng cho 15 bounding boxes, giảm thời gian xử lý từ 15×100ms xuống 100ms + 15×5ms = 175ms.</em>
+                        </p>
                     </div>
                 </div>
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 15
             </div>
         </div>
