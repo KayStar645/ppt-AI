@@ -917,7 +917,7 @@
                 </div>
 
                 <!-- Slide Number -->
-                <div style="position: absolute; bottom: 20px; left: 40px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                     2
                 </div>
             </div>
@@ -1091,7 +1091,7 @@
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 20px; left: 40px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 3
             </div>
         </div>
@@ -1280,7 +1280,7 @@
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 20px; left: 40px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 4
             </div>
         </div>
@@ -1460,79 +1460,8 @@
         </div>
     </section>
 
-    <!-- SLIDE 6: Tính mới của đồ án -->
+    <!-- SLIDE 6: Mục tiêu tổng quát -->
     <section class="slide-section" data-slide="6" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">1.2.2. Tính mới của đồ án</h2>
-                
-                <div class="content-body">
-                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
-                        <h3 style="color: #1565c0; font-size: 28px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-lightbulb" style="margin-right: 10px;"></i>
-                            Điểm Đột phá Chính
-                        </h3>
-                        <p style="font-size: 19px; line-height: 1.6;">
-                            Kết hợp <b>YOLO</b> và <b>SAM-ViT</b> trong pipeline tuần tự - 
-                            <b>chưa được áp dụng</b> cho bài toán rầy nâu trên cây lúa.
-                        </p>
-                    </div>
-
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>
-                                1. Kết hợp YOLO và SAM-ViT
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> YOLO phát hiện và phân loại các đối tượng rầy</li>
-                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> SAM-ViT thực hiện phân đoạn pixel-level dựa trên bounding boxes</li>
-                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> Hướng tiếp cận <b>mới</b> cho bài toán rầy nâu</li>
-                            </ul>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #ff9800;">
-                            <h3 style="color: #ff9800;">
-                                <i class="fa-solid fa-cogs" style="margin-right: 10px;"></i>
-                                2. Ưu điểm Kỹ thuật
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-mask" style="color: #ff9800;"></i> <b>SAM:</b> Sinh mặt nạ khởi tạo, tăng độ chính xác biên ranh giới, giảm nhiễu nền</li>
-                                <li><i class="fa-solid fa-brain" style="color: #ff9800;"></i> <b>ViT:</b> Học biểu diễn toàn cục, nhận diện tốt các cá thể nhỏ, phân tán và bị che khuất</li>
-                            </ul>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #9c27b0;">
-                            <h3 style="color: #9c27b0;">
-                                <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
-                                3. Khác biệt so với Nghiên cứu trước
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Có <b>segmentation pixel-level</b>, không chỉ detection</li>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Đánh giá mật độ và mức độ xâm nhiễm chính xác theo không gian</li>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Mở ra khả năng ứng dụng mở rộng trong nông nghiệp thông minh</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                6
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 7: Mục tiêu tổng quát -->
-    <section class="slide-section" data-slide="7" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -1579,315 +1508,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                7
+                6
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 8: Mục tiêu cụ thể -->
-    <section class="slide-section" data-slide="8" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">1.3.2. Mục tiêu nghiên cứu cụ thể</h2>
-                
-                <div class="content-body">
-                    <div class="steps-layout" style="padding: 0;">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Huấn luyện YOLO</h3>
-                                <p>Phát hiện và phân loại ba loại đối tượng: <b>rầy nâu</b>, <b>rầy lưng trắng</b> và <b>sâu ăn lá lúa</b></p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>Tích hợp SAM-ViT</h3>
-                                <p>Phân đoạn <b>pixel-level</b> dựa trên bounding boxes từ YOLO, đảm bảo tách biệt chính xác giữa rầy và nền ruộng phức tạp</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Khai thác ViT</h3>
-                                <p>Sử dụng cơ chế <b>tự chú ý toàn cục (global self-attention)</b> nhằm nâng cao khả năng nhận diện đặc trưng hình thái của các đối tượng nhỏ, phân tán hoặc bị che khuất</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>Đánh giá hiệu quả</h3>
-                                <p>Sử dụng các chỉ số: <b>IoU</b>, <b>Dice coefficient</b>, <b>Precision</b>, <b>Recall</b> và <b>F1-score</b> để đo lường hiệu suất phân đoạn</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h3>So sánh và Phân tích</h3>
-                                <p>So sánh kết quả pipeline YOLO + SAM-ViT với <b>SwinT-YOLOv8-p2</b>, xác định ưu điểm và hạn chế của phương pháp đề xuất</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                8
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 9: Đối tượng và quy mô - Phạm vi -->
-    <section class="slide-section" data-slide="9" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <div style="display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); padding: 8px 20px; border-radius: 20px; margin-bottom: 10px;">
-                        <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
-                            CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                        </h2>
-                    </div>
-                </div>
-                
-                <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 22px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
-                    Đối tượng và phạm vi nghiên cứu
-                </h2>
-                
-                <div class="content-body">
-                    <div style="background: #fff3cd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #ffc107;">
-                        <h3 style="color: #856404; font-size: 24px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-database" style="margin-right: 10px;"></i>
-                            Bộ dữ liệu
-                        </h3>
-                        <p style="font-size: 18px; color: #856404;">
-                            Kế thừa từ <b>SwinT–YOLOv8–p2</b>, bao gồm các ảnh thực địa của:
-                        </p>
-                        <ul style="margin-top: 15px;">
-                            <li><i class="fa-solid fa-bug" style="color: #856404;"></i> Rầy nâu (Brown planthopper)</li>
-                            <li><i class="fa-solid fa-bug" style="color: #856404;"></i> Rầy lưng trắng (Whitebacked planthopper)</li>
-                            <li><i class="fa-solid fa-bug" style="color: #856404;"></i> Sâu ăn lá lúa (Rice leaf miner)</li>
-                        </ul>
-                    </div>
-
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3><i class="fa-solid fa-project-diagram" style="margin-right: 10px;"></i>Phạm vi nghiên cứu</h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Pipeline hai giai đoạn:</b> YOLO phát hiện và phân loại → SAM-ViT phân đoạn pixel-level</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Phân loại và phân đoạn:</b> Nhận dạng ba loại đối tượng, phân đoạn chính xác theo pixel và tính mật độ rầy</li>
-                                <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> <b>Giới hạn:</b> Không mở rộng sang dự báo lan truyền dịch hại; tập trung vào phân loại và xác định mật độ</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                9
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 10: Đối tượng và quy mô - Đối tượng -->
-    <section class="slide-section" data-slide="10" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">1.4.2. Đối tượng</h2>
-                
-                <div class="content-body">
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-bug" style="margin-right: 10px;"></i>
-                                Đối tượng Sinh học
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-circle" style="color: #4caf50; font-size: 8px;"></i> <b>Rầy nâu</b> (Nilaparvata lugens)</li>
-                                <li><i class="fa-solid fa-circle" style="color: #4caf50; font-size: 8px;"></i> <b>Rầy lưng trắng</b> (Sogatella furcifera)</li>
-                                <li><i class="fa-solid fa-circle" style="color: #4caf50; font-size: 8px;"></i> <b>Sâu ăn lá lúa</b> (Rice leaf miner)</li>
-                                <li style="margin-top: 10px; font-size: 17px; color: #666;">Xuất hiện trong ảnh thực địa trên ruộng lúa</li>
-                            </ul>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3;">
-                                <i class="fa-solid fa-brain" style="margin-right: 10px;"></i>
-                                Đối tượng Kỹ thuật
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-robot" style="color: #2196f3;"></i> <b>YOLO</b> (YOLOv8) - Phát hiện và phân loại</li>
-                                <li><i class="fa-solid fa-puzzle-piece" style="color: #2196f3;"></i> <b>SAM</b> với <b>ViT-H backbone</b> - Phân đoạn pixel-level</li>
-                                <li><i class="fa-solid fa-cogs" style="color: #2196f3;"></i> Quy trình huấn luyện, tích hợp và đánh giá pipeline YOLO + SAM-ViT</li>
-                                <li style="margin-top: 10px; font-size: 17px; color: #666;">Cho phân loại và phân đoạn đối tượng nhỏ</li>
-                            </ul>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #ff9800;">
-                            <h3 style="color: #ff9800;">
-                                <i class="fa-solid fa-balance-scale" style="margin-right: 10px;"></i>
-                                Đối tượng So sánh
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-chart-bar" style="color: #ff9800;"></i> Mô hình <b>SwinT–YOLOv8–p2</b></li>
-                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Được sử dụng làm <b>chuẩn</b> để đánh giá độ chính xác</li>
-                                <li><i class="fa-solid fa-check" style="color: #ff9800;"></i> Đánh giá khả năng nhận diện và đếm đối tượng trong điều kiện thực địa</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                10
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 11: Nội dung nghiên cứu -->
-    <section class="slide-section" data-slide="11" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">1.5. Nội dung và kỹ thuật nghiên cứu</h2>
-                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">1.5.1. Nội dung nghiên cứu</h3>
-                
-                <div class="content-body">
-                    <div class="steps-layout" style="padding: 0;">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Khảo sát và chuẩn hóa dữ liệu</h3>
-                                <p>Sử dụng bộ dữ liệu từ SwinT–YOLOv8–p2. Phân tích đặc điểm dataset: định dạng ảnh, mask, cấu trúc thư mục, phân bố class, số lượng instances. Chuẩn hóa kích thước ảnh về 224×224 pixels.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>Huấn luyện YOLO</h3>
-                                <p>Xây dựng mô hình YOLO để phát hiện và phân loại ba loại đối tượng. Chuẩn hóa dữ liệu, xử lý mất cân bằng class, huấn luyện và đánh giá bằng Precision, Recall, F1-score, mAP.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Tích hợp SAM-ViT</h3>
-                                <p>Dùng bounding boxes từ YOLO làm prompt, SAM trích xuất mặt nạ phân đoạn pixel-level. ViT-H backbone học đặc trưng toàn cục, kết hợp với SAM qua cơ chế feature fusion và attention guidance.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>Phân tích kết quả và đề xuất hướng mở rộng</h3>
-                                <p>So sánh kết quả pipeline YOLO + SAM-ViT với SwinT–YOLOv8–p2. Tính mật độ rầy dựa trên kết quả phân đoạn pixel-level. Thực hiện ablation study và đề xuất hướng mở rộng.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                11
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 12: Kỹ thuật nghiên cứu -->
-    <section class="slide-section" data-slide="12" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">1.5.2. Kỹ thuật nghiên cứu</h2>
-                
-                <div class="content-body">
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-robot" style="margin-right: 10px;"></i>
-                                YOLOv8
-                            </h3>
-                            <p style="font-size: 18px; margin-bottom: 10px;">Phát hiện và phân loại ba loại đối tượng, trả về bounding boxes, class và confidence score. Fine-tuning trên dataset rầy nâu với data augmentation.</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3;">
-                                <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
-                                SAM-ViT
-                            </h3>
-                            <p style="font-size: 18px; margin-bottom: 10px;">ViT-H trích xuất đặc trưng toàn cục, SAM sử dụng bounding boxes từ YOLO làm prompts để phân đoạn pixel-level, giảm nhiễu từ nền và ánh sáng.</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #ff9800;">
-                            <h3 style="color: #ff9800;">
-                                <i class="fa-solid fa-project-diagram" style="margin-right: 10px;"></i>
-                                Pipeline hai giai đoạn
-                            </h3>
-                            <p style="font-size: 18px; margin-bottom: 10px;">YOLO detection → SAM-ViT segmentation → kết hợp boxes, masks, class, score.</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #9c27b0;">
-                            <h3 style="color: #9c27b0;">
-                                <i class="fa-solid fa-chart-bar" style="margin-right: 10px;"></i>
-                                Huấn luyện và đánh giá
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> YOLO fine-tuning với early stopping</li>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> SAM inference với box prompts</li>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Metrics: mAP, Precision, Recall, F1 (detection); IoU, Dice (segmentation)</li>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> Mật độ rầy = số đối tượng / diện tích ảnh</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                12
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 13: CHƯƠNG 2 - Giới thiệu -->
-    <section class="slide-section" data-slide="13" >
+    <!-- SLIDE 7: CHƯƠNG 2 - Giới thiệu -->
+    <section class="slide-section" data-slide="7" >
         <div class="slide-container">
             <div class="title-layout" style="background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);">
                 <h1 style="font-size: 48px; margin-bottom: 30px;">
@@ -1907,13 +1534,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                13
+                7
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 14: Thị giác máy tính -->
-    <section class="slide-section" data-slide="14" >
+    <!-- SLIDE 8: Thị giác máy tính -->
+    <section class="slide-section" data-slide="8" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -1965,13 +1592,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                14
+                8
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 15: Tầm quan trọng của phân đoạn -->
-    <section class="slide-section" data-slide="15" >
+    <!-- SLIDE 9: Tầm quan trọng của phân đoạn -->
+    <section class="slide-section" data-slide="9" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2026,13 +1653,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                15
+                9
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 16: Học sâu - CNN -->
-    <section class="slide-section" data-slide="16" >
+    <!-- SLIDE 10: Học sâu - CNN -->
+    <section class="slide-section" data-slide="10" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2081,13 +1708,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                16
+                10
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 17: Transfer Learning và Pre-trained Models -->
-    <section class="slide-section" data-slide="17" >
+    <!-- SLIDE 11: Transfer Learning và Pre-trained Models -->
+    <section class="slide-section" data-slide="11" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2154,13 +1781,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                17
+                11
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 18: Bài toán đối tượng nhỏ -->
-    <section class="slide-section" data-slide="18" >
+    <!-- SLIDE 12: Bài toán đối tượng nhỏ -->
+    <section class="slide-section" data-slide="12" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2226,13 +1853,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                18
+                12
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 19: SAM - Giới thiệu -->
-    <section class="slide-section" data-slide="19" >
+    <!-- SLIDE 13: SAM - Giới thiệu -->
+    <section class="slide-section" data-slide="13" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2297,13 +1924,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                19
+                13
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 20: SAM Encoder -->
-    <section class="slide-section" data-slide="20" >
+    <!-- SLIDE 14: SAM Encoder -->
+    <section class="slide-section" data-slide="14" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2352,13 +1979,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                20
+                14
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 21: SAM Ứng dụng trong đề tài -->
-    <section class="slide-section" data-slide="21" >
+    <!-- SLIDE 15: SAM Ứng dụng trong đề tài -->
+    <section class="slide-section" data-slide="15" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2447,13 +2074,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                21
+                15
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 22: ViT Giới thiệu -->
-    <section class="slide-section" data-slide="22" >
+    <!-- SLIDE 16: ViT Giới thiệu -->
+    <section class="slide-section" data-slide="16" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2517,13 +2144,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                22
+                16
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 23: ViT Kiến trúc -->
-    <section class="slide-section" data-slide="23" >
+    <!-- SLIDE 17: ViT Kiến trúc -->
+    <section class="slide-section" data-slide="17" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2588,13 +2215,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                23
+                17
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 24: ViT trong SAM -->
-    <section class="slide-section" data-slide="24" >
+    <!-- SLIDE 18: ViT trong SAM -->
+    <section class="slide-section" data-slide="18" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2638,13 +2265,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                24
+                18
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 25: Self-Attention Mechanism -->
-    <section class="slide-section" data-slide="25" >
+    <!-- SLIDE 19: Self-Attention Mechanism -->
+    <section class="slide-section" data-slide="19" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2707,13 +2334,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                25
+                19
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 26: Pipeline YOLO + SAM-ViT -->
-    <section class="slide-section" data-slide="26" >
+    <!-- SLIDE 20: Pipeline YOLO + SAM-ViT -->
+    <section class="slide-section" data-slide="20" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2767,13 +2394,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                26
+                20
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 27: Workflow Pipeline -->
-    <section class="slide-section" data-slide="27" >
+    <!-- SLIDE 21: Workflow Pipeline -->
+    <section class="slide-section" data-slide="21" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2841,13 +2468,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                27
+                21
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 28: Ưu điểm Pipeline -->
-    <section class="slide-section" data-slide="28" >
+    <!-- SLIDE 22: Ưu điểm Pipeline -->
+    <section class="slide-section" data-slide="22" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2898,13 +2525,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                28
+                22
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 29: CHƯƠNG 3 - Pipeline tổng thể -->
-    <section class="slide-section" data-slide="29" >
+    <!-- SLIDE 23: CHƯƠNG 3 - Pipeline tổng thể -->
+    <section class="slide-section" data-slide="23" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2934,13 +2561,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                29
+                23
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 30: Tiền xử lý dữ liệu -->
-    <section class="slide-section" data-slide="30" >
+    <!-- SLIDE 24: Tiền xử lý dữ liệu -->
+    <section class="slide-section" data-slide="24" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -2998,13 +2625,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                30
+                24
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 31: Kiến trúc YOLOv8 và Transfer Learning -->
-    <section class="slide-section" data-slide="31" >
+    <!-- SLIDE 25: Kiến trúc YOLOv8 và Transfer Learning -->
+    <section class="slide-section" data-slide="25" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3056,13 +2683,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                31
+                25
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 32: Cơ chế huấn luyện và hàm mất mát -->
-    <section class="slide-section" data-slide="32" >
+    <!-- SLIDE 26: Cơ chế huấn luyện và hàm mất mát -->
+    <section class="slide-section" data-slide="26" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3129,13 +2756,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                32
+                26
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 33: Đánh giá hiệu suất và Metrics -->
-    <section class="slide-section" data-slide="33" >
+    <!-- SLIDE 27: Đánh giá hiệu suất và Metrics -->
+    <section class="slide-section" data-slide="27" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3203,13 +2830,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                33
+                27
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 34: Image Encoding và Feature Extraction -->
-    <section class="slide-section" data-slide="34" >
+    <!-- SLIDE 28: Image Encoding và Feature Extraction -->
+    <section class="slide-section" data-slide="28" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3276,13 +2903,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                34
+                28
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 35: Prompt Encoding và Box Transformation -->
-    <section class="slide-section" data-slide="35" >
+    <!-- SLIDE 29: Prompt Encoding và Box Transformation -->
+    <section class="slide-section" data-slide="29" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3348,13 +2975,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                35
+                29
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 36: Mask Decoder và sinh Mask Pixel-level -->
-    <section class="slide-section" data-slide="36" >
+    <!-- SLIDE 30: Mask Decoder và sinh Mask Pixel-level -->
+    <section class="slide-section" data-slide="30" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3428,13 +3055,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                36
+                30
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 37: Kết hợp Kết quả từ YOLO và SAM -->
-    <section class="slide-section" data-slide="37" >
+    <!-- SLIDE 31: Kết hợp Kết quả từ YOLO và SAM -->
+    <section class="slide-section" data-slide="31" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3498,13 +3125,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                37
+                31
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 38: Non-Maximum Suppression và Lọc Kết quả -->
-    <section class="slide-section" data-slide="38" >
+    <!-- SLIDE 32: Non-Maximum Suppression và Lọc Kết quả -->
+    <section class="slide-section" data-slide="32" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3570,13 +3197,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                38
+                32
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 39: Mask Post-processing và Visualization -->
-    <section class="slide-section" data-slide="39" >
+    <!-- SLIDE 33: Mask Post-processing và Visualization -->
+    <section class="slide-section" data-slide="33" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3643,13 +3270,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                39
+                33
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 40: Visualization và Alpha Blending -->
-    <section class="slide-section" data-slide="40" >
+    <!-- SLIDE 34: Visualization và Alpha Blending -->
+    <section class="slide-section" data-slide="34" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3710,13 +3337,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                40
+                34
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 41: Tính Toán Mật Độ Rầy -->
-    <section class="slide-section" data-slide="41" >
+    <!-- SLIDE 35: Tính Toán Mật Độ Rầy -->
+    <section class="slide-section" data-slide="35" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3781,13 +3408,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                41
+                35
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 42: Hệ thống Đánh giá và Báo cáo -->
-    <section class="slide-section" data-slide="42" >
+    <!-- SLIDE 36: Hệ thống Đánh giá và Báo cáo -->
+    <section class="slide-section" data-slide="36" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3853,13 +3480,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                42
+                36
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 43: Kiến trúc Pipeline Tuần tự -->
-    <section class="slide-section" data-slide="43" >
+    <!-- SLIDE 37: Kiến trúc Pipeline Tuần tự -->
+    <section class="slide-section" data-slide="37" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3893,13 +3520,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                43
+                37
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 44: Cơ chế Xử lý và Tối ưu hóa -->
-    <section class="slide-section" data-slide="44" >
+    <!-- SLIDE 38: Cơ chế Xử lý và Tối ưu hóa -->
+    <section class="slide-section" data-slide="38" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3987,13 +3614,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                44
+                38
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 45: CHƯƠNG 4 - Giới thiệu -->
-    <section class="slide-section" data-slide="45" >
+    <!-- SLIDE 39: CHƯƠNG 4 - Giới thiệu -->
+    <section class="slide-section" data-slide="39" >
         <div class="slide-container">
             <div class="title-layout" style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
                 <h1 style="font-size: 48px; margin-bottom: 30px;">
@@ -4013,13 +3640,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                45
+                39
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 46: Phân tích kết quả đào tạo -->
-    <section class="slide-section" data-slide="46" >
+    <!-- SLIDE 40: Phân tích kết quả đào tạo -->
+    <section class="slide-section" data-slide="40" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4068,13 +3695,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                46
+                40
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 47: Đánh giá khả năng phân loại -->
-    <section class="slide-section" data-slide="47" >
+    <!-- SLIDE 41: Đánh giá khả năng phân loại -->
+    <section class="slide-section" data-slide="41" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4122,13 +3749,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                47
+                41
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 48: Phân tích phân đoạn và mật độ -->
-    <section class="slide-section" data-slide="48" >
+    <!-- SLIDE 42: Phân tích phân đoạn và mật độ -->
+    <section class="slide-section" data-slide="42" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4190,13 +3817,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                48
+                42
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 49: Đánh giá chất lượng phân đoạn -->
-    <section class="slide-section" data-slide="49" >
+    <!-- SLIDE 43: Đánh giá chất lượng phân đoạn -->
+    <section class="slide-section" data-slide="43" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4267,8 +3894,8 @@
         </div>
     </section>
 
-    <!-- SLIDE 50: Phân bổ đối tượng -->
-    <section class="slide-section" data-slide="50" >
+    <!-- SLIDE 44: Phân bổ đối tượng -->
+    <section class="slide-section" data-slide="44" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4335,7 +3962,7 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                50
+                44
             </div>
         </div>
     </section>
