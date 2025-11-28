@@ -1634,15 +1634,6 @@
                             <p style="font-size: 13px; color: #666; margin: 0; font-family: 'Roboto', sans-serif;">(You Only Look Once)</p>
                         </div>
                         
-                        <!-- Item 3 -->
-                        <div style="background: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-left: 4px solid #ff6f00;">
-                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: 0 4px 8px rgba(255, 111, 0, 0.3);">
-                                <i class="fa-solid fa-puzzle-piece" style="font-size: 24px; color: #ffffff;"></i>
-                            </div>
-                            <h3 style="font-size: 16px; font-weight: 700; color: #e65100; margin: 0 0 8px 0; font-family: 'Montserrat', sans-serif;">Segment Anything</h3>
-                            <p style="font-size: 13px; color: #666; margin: 0; font-family: 'Roboto', sans-serif;">Model (SAM)</p>
-                        </div>
-                        
                         <!-- Item 4 -->
                         <div style="background: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-left: 4px solid #ff6f00;">
                             <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: 0 4px 8px rgba(255, 111, 0, 0.3);">
@@ -1650,6 +1641,15 @@
                             </div>
                             <h3 style="font-size: 16px; font-weight: 700; color: #e65100; margin: 0 0 8px 0; font-family: 'Montserrat', sans-serif;">Vision Transformer</h3>
                             <p style="font-size: 13px; color: #666; margin: 0; font-family: 'Roboto', sans-serif;">(ViT)</p>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div style="background: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-left: 4px solid #ff6f00;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: 0 4px 8px rgba(255, 111, 0, 0.3);">
+                                <i class="fa-solid fa-puzzle-piece" style="font-size: 24px; color: #ffffff;"></i>
+                            </div>
+                            <h3 style="font-size: 16px; font-weight: 700; color: #e65100; margin: 0 0 8px 0; font-family: 'Montserrat', sans-serif;">Segment Anything</h3>
+                            <p style="font-size: 13px; color: #666; margin: 0; font-family: 'Roboto', sans-serif;">Model (SAM)</p>
                         </div>
                         
                         <!-- Item 5 -->
@@ -2333,7 +2333,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 14: SAM - Giới thiệu -->
+    <!-- SLIDE 14: ViT Giới thiệu -->
     <section class="slide-section" data-slide="14" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);">
             <div class="content-layout" style="padding: 40px 50px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
@@ -2348,8 +2348,129 @@
                 
                 <!-- Mục -->
                 <h2 class="slide-title" style="text-align: center; color: #e65100; font-size: 28px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    <i class="fa-solid fa-eye" style="margin-right: 12px; color: #ff9800;"></i>
+                    Vision Transformer (ViT)
+                </h2>
+                
+                <div style="display: flex; flex-direction: column; gap: 18px; flex: 1; justify-content: center;">
+                    <!-- Giới thiệu ViT -->
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px 25px; border-radius: 15px; border-left: 6px solid #9c27b0; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); color: white;">
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <div style="width: 45px; height: 45px; background: rgba(255, 255, 255, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);">
+                                <i class="fa-solid fa-brain" style="font-size: 22px; color: #ffffff;"></i>
+                            </div>
+                            <h3 style="color: white; font-size: 21px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">
+                                ViT là gì?
+                            </h3>
+                        </div>
+                        <p style="font-size: 16px; line-height: 1.6; color: white; margin: 0;">
+                            Vision Transformer (ViT) là kiến trúc mạng dựa trên <strong>Transformer</strong> (giống như GPT, BERT) nhưng được áp dụng cho <strong>ảnh</strong> thay vì văn bản.
+                            <em style="display: block; margin-top: 10px; font-size: 14px; color: rgba(255,255,255,0.95);">
+                                Ý tưởng: Chia ảnh thành các "patches" (mảnh nhỏ) → Xử lý mỗi patch như một "từ" trong câu → Transformer học mối quan hệ giữa các patches.
+                            </em>
+                        </p>
+                    </div>
+
+                    <!-- Grid 2 cột: So sánh và Ưu điểm -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                        <!-- So sánh với CNN -->
+                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #4caf50; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);">
+                            <h3 style="color: #2e7d32; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-balance-scale" style="margin-right: 10px; font-size: 18px;"></i>
+                                ViT vs CNN
+                            </h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div style="background: rgba(255,255,255,0.6); padding: 10px; border-radius: 8px;">
+                                    <p style="font-size: 14px; color: #1b5e20; margin: 0; line-height: 1.5;">
+                                        <strong>CNN:</strong> Chỉ "nhìn" vùng nhỏ (receptive field cục bộ), cần nhiều layer để "nhìn" xa hơn
+                                    </p>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.6); padding: 10px; border-radius: 8px;">
+                                    <p style="font-size: 14px; color: #1b5e20; margin: 0; line-height: 1.5;">
+                                        <strong>ViT:</strong> "Nhìn" toàn bộ ảnh ngay từ đầu nhờ self-attention, nắm bắt context toàn cảnh
+                                    </p>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.6); padding: 10px; border-radius: 8px;">
+                                    <p style="font-size: 14px; color: #1b5e20; margin: 0; line-height: 1.5;">
+                                        <strong>Ví dụ:</strong> ViT có thể liên kết rầy ở góc trên với rầy ở góc dưới, CNN khó làm được điều này
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ưu điểm -->
+                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #2196f3; box-shadow: 0 4px 15px rgba(33, 150, 243, 0.25);">
+                            <h3 style="color: #1565c0; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-star" style="margin-right: 10px; font-size: 18px;"></i>
+                                Tại sao dùng ViT?
+                            </h3>
+                            <ul style="margin: 0; padding-left: 22px; font-size: 14px; line-height: 1.7;">
+                                <li style="margin-bottom: 6px;"><strong>Context:</strong> Hiểu được mối quan hệ giữa các vùng xa nhau trong ảnh</li>
+                                <li style="margin-bottom: 6px;"><strong>Object:</strong> Giúp nhận diện rầy tốt nhờ khả năng nắm bắt toàn cảnh</li>
+                                <li style="margin-bottom: 6px;"><strong>Pre-trained:</strong> Có sẵn mô hình đã huấn luyện trên ImageNet, dễ sử dụng</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Vai trò trong đề tài -->
+                    <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 20px 25px; border-radius: 15px; border-left: 6px solid #ff9800; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.25);">
+                        <h3 style="color: #e65100; font-size: 20px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                            <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px; font-size: 18px;"></i>
+                            ViT trong Đề tài này
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                            <div style="background: rgba(255,255,255,0.7); padding: 14px; border-radius: 10px;">
+                                <p style="font-size: 15px; color: #856404; margin: 0 0 8px 0; line-height: 1.5;">
+                                    <strong>ViT-H là Image Encoder trong SAM</strong>
+                                </p>
+                                <p style="font-size: 13px; color: #e65100; margin: 0; line-height: 1.5;">
+                                    ViT-H không phải mô hình riêng. Nó là <strong>một phần của SAM</strong>, đóng vai trò trích xuất đặc trưng từ ảnh.
+                                </p>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.7); padding: 14px; border-radius: 10px;">
+                                <p style="font-size: 15px; color: #856404; margin: 0 0 8px 0; line-height: 1.5;">
+                                    <strong>Quy trình trong Pipeline</strong>
+                                </p>
+                                <p style="font-size: 13px; color: #e65100; margin: 0; line-height: 1.5;">
+                                    <strong>1.</strong> YOLO phát hiện & phân loại rầy → <strong>2.</strong> ViT-H (trong SAM) trích xuất đặc trưng → <strong>3.</strong> SAM phân đoạn pixel-level
+                                </p>
+                            </div>
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.6; color: #856404; margin: 12px 0 0 0;">
+                            <strong>Lưu ý quan trọng:</strong> ViT-H <strong>KHÔNG phân loại</strong> rầy (YOLO đã làm). 
+                            ViT-H chỉ <strong>trích xuất đặc trưng toàn cục</strong> từ ảnh, giúp SAM hiểu toàn bộ ngữ cảnh và phân đoạn chính xác từng pixel của rầy.
+                            <em style="display: block; margin-top: 8px; color: #e65100; font-size: 13px;">
+                                Ví dụ: ViT-H giúp SAM phân biệt rõ ràng biên giới giữa rầy và lá lúa, ngay cả khi màu sắc gần giống nhau.
+                            </em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide Number -->
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                14
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 15: SAM - Giới thiệu -->
+    <section class="slide-section" data-slide="15" >
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);">
+            <div class="content-layout" style="padding: 40px 50px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                <!-- Header: Chương -->
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); padding: 6px 18px; border-radius: 20px;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+                        </h2>
+                    </div>
+                </div>
+                
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #e65100; font-size: 28px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
                     <i class="fa-solid fa-puzzle-piece" style="margin-right: 12px; color: #ff9800;"></i>
-                    2.2. Segment Anything Model (SAM)
+                    Segment Anything Model (SAM)
                 </h2>
                 
                 <div style="display: flex; flex-direction: column; gap: 20px; flex: 1; justify-content: center;">
@@ -2429,13 +2550,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                14
+                15
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 15: SAM Encoder -->
-    <section class="slide-section" data-slide="15" >
+    <!-- SLIDE 16: SAM Encoder -->
+    <section class="slide-section" data-slide="16" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);">
             <div class="content-layout" style="padding: 40px 50px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
                 <!-- Header: Chương -->
@@ -2548,233 +2669,168 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                15
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 16: SAM Ứng dụng trong đề tài -->
-    <section class="slide-section" data-slide="16" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">Ứng dụng SAM trong đề tài</h2>
-                
-                <div class="content-body">
-                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
-                        <h3 style="color: #1565c0; font-size: 24px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
-                            Box Prompts trong Pipeline
-                        </h3>
-                        <p style="font-size: 18px; line-height: 1.6;">
-                            SAM có khả năng nhận <b>bounding boxes</b> như một dạng prompt để hướng dẫn quá trình phân đoạn. 
-                            Trong pipeline của đề tài, việc sử dụng box prompts giúp SAM tập trung vào vùng quan tâm (ROI) 
-                            do YOLO phát hiện, từ đó nâng cao độ chính xác phân đoạn ở mức pixel-level.
-                        </p>
-                    </div>
-
-                    <div class="steps-layout" style="padding: 0;">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Phát hiện bounding boxes với YOLO</h3>
-                                <p>YOLO nhận ảnh thực địa làm input và phát hiện các đối tượng rầy nâu, rầy lưng trắng, sâu ăn lá lúa. 
-                                Output gồm bounding boxes với tọa độ (x_min, y_min, x_max, y_max) theo định dạng xyxy, class label, và confidence score.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>Khởi tạo SAM và trích xuất đặc trưng ảnh</h3>
-                                <p>Gọi <b>sam_predictor.set_image(image_rgb)</b> để khởi tạo SAM cho ảnh hiện tại. 
-                                ViT-H encoder bên trong SAM chạy một lần để trích xuất đặc trưng toàn cục từ ảnh, tạo feature map 256 chiều.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Chuyển đổi bounding boxes sang format của SAM</h3>
-                                <p>YOLO trả về boxes theo định dạng xyxy (tọa độ pixel tuyệt đối). 
-                                Sử dụng <b>sam_predictor.transform.apply_boxes_torch()</b> để chuyển đổi boxes sang định dạng SAM.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>SAM prediction với box prompts</h3>
-                                <p>Gọi <b>sam_predictor.predict_torch()</b> với boxes làm prompts, sinh masks pixel-level. 
-                                SAM Mask Decoder kết hợp feature map từ ViT-H encoder với box prompt embeddings để sinh masks.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h3>Post-processing và kết hợp kết quả</h3>
-                                <p>Kết hợp kết quả từ YOLO và SAM: boxes (YOLO), masks (SAM), classes và scores (YOLO). 
-                                Liên kết mask với class và bounding box từ YOLO để tính mật độ rầy và trực quan hóa.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-top: 20px; border-left: 4px solid #4caf50;">
-                        <h3 style="color: #2e7d32; font-size: 20px; margin-bottom: 10px;">
-                            <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
-                            Ưu điểm của Box Prompts
-                        </h3>
-                        <ul>
-                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Tập trung phân đoạn vùng quan tâm, giảm nhiễu từ nền phức tạp</li>
-                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Phân đoạn chính xác đối tượng nhỏ (kích thước chỉ vài pixel)</li>
-                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Xử lý đối tượng chồng lấn, tạo mask riêng biệt cho từng instance</li>
-                            <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Hiệu quả tính toán: SAM chỉ cần chạy encoder một lần cho mỗi ảnh</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
                 16
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 17: ViT Giới thiệu -->
+    <!-- SLIDE 17: SAM Ứng dụng trong đề tài -->
     <section class="slide-section" data-slide="17" >
-        <div class="slide-container">
-            <div class="content-layout">
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
+            <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                 <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
+                <div style="text-align: center; margin-bottom: 8px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); padding: 5px 16px; border-radius: 20px;">
+                        <h2 style="font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+                        </h2>
+                    </div>
                 </div>
                 
-                <h2 class="slide-title" style="color: #1565c0;">Vision Transformer (ViT)</h2>
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #e65100; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
+                    Ứng dụng SAM trong đề tài
+                </h2>
                 
-                <div class="content-body">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; margin-bottom: 25px;">
-                        <h3 style="color: white; font-size: 28px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-eye" style="margin-right: 10px;"></i>
-                            Kiến trúc Transformer cho Thị giác
+                <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
+                    <!-- Giải thích về ViT trong SAM -->
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 12px 18px; border-radius: 12px; border-left: 5px solid #9c27b0; box-shadow: 0 3px 12px rgba(102, 126, 234, 0.3); color: white;">
+                        <h3 style="color: white; font-size: 17px; font-weight: 700; margin: 0 0 8px 0; font-family: 'Montserrat', sans-serif;">
+                            <i class="fa-solid fa-brain" style="margin-right: 8px;"></i>
+                            Vai trò của ViT-H trong SAM
                         </h3>
-                        <p style="font-size: 19px; line-height: 1.7; color: white;">
-                            Vision Transformer (ViT) là một kiến trúc mạng dựa trên cơ chế <b>Transformer</b>, được thiết kế để xử lý các tác vụ thị giác máy tính. 
-                            Khác với CNN truyền thống, ViT sử dụng <b>self-attention</b> để học mối quan hệ toàn cục giữa các phần của ảnh.
-                        </p>
-                        <p style="font-size: 18px; margin-top: 15px; color: rgba(255,255,255,0.9);">
-                            <b>Giới thiệu:</b> "An Image is Worth 16x16 Words" (Dosovitskiy et al., 2020)
+                        <p style="font-size: 13px; line-height: 1.5; color: white; margin: 0;">
+                            <strong>ViT-H là Image Encoder của SAM</strong>, trích xuất đặc trưng toàn cục. Nhờ <strong>self-attention</strong>, ViT-H: nắm bắt context toàn cảnh, phát hiện đối tượng nhỏ tốt hơn CNN, tạo feature map giàu thông tin.
+                            <em style="display: block; margin-top: 6px; font-size: 12px; color: rgba(255,255,255,0.95);">
+                                Ví dụ: ViT-H "nhìn" toàn bộ ảnh, hiểu pixel màu nâu nhỏ là rầy, không phải đốm trên lá → Giúp SAM phân đoạn chính xác.
+                            </em>
                         </p>
                     </div>
 
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>
-                                So sánh với CNN
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> <b>Self-attention vs Convolution:</b> ViT học mối quan hệ toàn cục, CNN chỉ học đặc trưng cục bộ</li>
-                                <li><i class="fa-solid fa-arrow-right" style="color: #4caf50;"></i> <b>Global vs Local features:</b> ViT nắm bắt thông tin toàn cảnh, giúp cải thiện khả năng phân loại đối tượng nhỏ</li>
-                            </ul>
+                    <!-- Quy trình bước 1-2 -->
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <!-- Bước 1 -->
+                        <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 14px 16px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; margin-right: 12px;">
+                                    <span style="background: #ff9800; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0;">1</span>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #e65100; font-size: 17px; font-weight: 700; margin: 0 0 6px 0;">YOLO phát hiện rầy</h3>
+                                    <p style="font-size: 13px; color: #856404; margin: 0; line-height: 1.5;">
+                                        <strong>Input:</strong> Ảnh lá lúa có rầy<br>
+                                        <strong>Output:</strong> Bounding boxes, loại rầy (nâu/lưng trắng/sâu), độ tin cậy<br>
+                                        <em style="color: #e65100; display: block; margin-top: 5px; font-size: 12px;">Ví dụ: 15 con rầy → 15 boxes với tọa độ (x1, y1, x2, y2)</em>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3;">
-                                <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
-                                Ưu điểm của ViT
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Khả năng phân loại mạnh mẽ nhờ biểu diễn toàn cảnh</li>
-                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Dễ dàng tích hợp với các mô hình pre-trained (ImageNet)</li>
-                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Cải thiện độ chính xác trong bài toán phức tạp như nhận dạng đối tượng nhỏ</li>
-                            </ul>
+                        <!-- Bước 2 -->
+                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 14px 16px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; margin-right: 12px;">
+                                    <span style="background: #2196f3; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0;">2</span>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #1565c0; font-size: 17px; font-weight: 700; margin: 0 0 6px 0;">ViT-H trích xuất đặc trưng toàn cục</h3>
+                                    <p style="font-size: 13px; color: #0d47a1; margin: 0; line-height: 1.5;">
+                                        <strong>Mục đích:</strong> SAM "hiểu" toàn bộ ảnh trước khi phân đoạn<br>
+                                        <strong>Quá trình:</strong> <strong>ViT-H</strong> dùng self-attention xử lý ảnh một lần, so sánh mỗi patch với tất cả patches khác → Feature map giàu context toàn cục<br>
+                                        <strong>Lợi ích:</strong> Receptive field toàn cục phát hiện rầy nhỏ (2-3mm) tốt hơn CNN<br>
+                                        <em style="color: #1976d2; display: block; margin-top: 5px; font-size: 12px;">Ví dụ: Ảnh 1024×1024 → ViT-H patches → Self-attention → Feature map 64×64×256 chứa thông tin toàn bộ ảnh</em>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div style="background: #fff3cd; padding: 20px; border-radius: 12px; margin-top: 20px; border-left: 4px solid #ffc107;">
-                        <p style="color: #856404; font-size: 17px; margin: 0;">
-                            Trong đề tài này, ViT đóng vai trò backbone chính cho việc phân loại rầy dựa trên các đặc trưng semantic-level, 
-                            đồng thời kết hợp với SAM để xây dựng mô hình hybrid <b>SAM–ViT</b> mạnh mẽ.
-                        </p>
                     </div>
                 </div>
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 17
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 18: ViT Kiến trúc -->
+    <!-- SLIDE 18: SAM Ứng dụng trong đề tài (tiếp) -->
     <section class="slide-section" data-slide="18" >
-        <div class="slide-container">
-            <div class="content-layout">
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
+            <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                 <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
+                <div style="text-align: center; margin-bottom: 8px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); padding: 5px 16px; border-radius: 20px;">
+                        <h2 style="font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+                        </h2>
+                    </div>
                 </div>
                 
-                <h2 class="slide-title" style="color: #1565c0;">Kiến trúc ViT</h2>
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #e65100; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
+                    Ứng dụng SAM trong đề tài (tiếp)
+                </h2>
                 
-                <div class="content-body">
-                    <div class="steps-layout" style="padding: 0;">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Patch Embedding</h3>
-                                <p>Ảnh đầu vào (ví dụ 224×224×3) được chia thành N patch nhỏ có kích thước 16×16 pixels. 
-                                Mỗi patch được "dẹt" thành vector và qua lớp linear projection để chuyển đổi thành embedding có chiều D = 768.</p>
+                <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
+                    <!-- Quy trình bước 3-5 -->
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <!-- Bước 3 -->
+                        <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 14px 16px; border-radius: 10px; border-left: 5px solid #9c27b0; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; margin-right: 12px;">
+                                    <span style="background: #9c27b0; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0;">3</span>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #7b1fa2; font-size: 17px; font-weight: 700; margin: 0 0 6px 0;">Chuyển đổi định dạng boxes</h3>
+                                    <p style="font-size: 13px; color: #4a148c; margin: 0; line-height: 1.5;">
+                                        <strong>Vấn đề:</strong> YOLO trả về boxes theo định dạng khác với SAM<br>
+                                        <strong>Giải pháp:</strong> Chuyển đổi tọa độ từ YOLO sang SAM<br>
+                                        <em style="color: #8e24aa; display: block; margin-top: 5px; font-size: 12px;">Ví dụ: Box (100, 200, 150, 250) từ YOLO → Định dạng SAM</em>
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>Position Embedding</h3>
-                                <p>Position embeddings được cộng vào mỗi patch embedding để giữ thông tin không gian. 
-                                Giúp mô hình phân biệt các patch ở các vị trí khác nhau trong ảnh.</p>
+                        <!-- Bước 4 -->
+                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 14px 16px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; margin-right: 12px;">
+                                    <span style="background: #4caf50; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0;">4</span>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #2e7d32; font-size: 17px; font-weight: 700; margin: 0 0 6px 0;">SAM Mask Decoder phân đoạn dựa trên ViT-H</h3>
+                                    <p style="font-size: 13px; color: #1b5e20; margin: 0; line-height: 1.5;">
+                                        <strong>Input:</strong> Feature map từ ViT-H (bước 2) + Boxes từ bước 3<br>
+                                        <strong>Quá trình:</strong> Mask Decoder nhận feature map từ <strong>ViT-H</strong> (chứa thông tin toàn cục) kết hợp box prompt. Nhờ ViT-H, biết được:
+                                        <ul style="margin: 6px 0 0 18px; padding: 0; font-size: 12px; line-height: 1.4;">
+                                            <li>Pixel nào thuộc rầy (context + màu sắc)</li>
+                                            <li>Biên giới chính xác rầy-lá (thông tin toàn cục từ ViT-H)</li>
+                                            <li>Phân biệt rầy với đốm trên lá (self-attention của ViT-H)</li>
+                                        </ul>
+                                        <strong>Output:</strong> Mask cho từng con rầy - mỗi pixel là "rầy" hay "nền"<br>
+                                        <em style="color: #388e3c; display: block; margin-top: 5px; font-size: 12px;">Ví dụ: 15 boxes → Mask Decoder dùng feature map từ ViT-H → 15 masks 1024×1024. ViT-H giúp phân biệt: pixel nâu nhỏ là rầy, không phải đốm lá.</em>
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>CLS Token</h3>
-                                <p>Một token đặc biệt [CLS] token được thêm vào đầu chuỗi patch embeddings. 
-                                CLS token tích hợp thông tin toàn cục của ảnh sau quá trình Transformer encoder.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>Transformer Encoder</h3>
-                                <p>ViT sử dụng nhiều layer encoder, mỗi layer gồm: 
-                                <b>Multi-head Self-Attention (MSA)</b>, <b>Feed-forward network (MLP)</b>, 
-                                <b>Layer Normalization</b> và <b>Residual Connection</b>.</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h3>Classification Head</h3>
-                                <p>Sau khi qua các encoder layer, embedding của CLS token được đưa vào MLP classification head 
-                                để ánh xạ embedding toàn cảnh sang xác suất các lớp (ví dụ: 3 lớp rầy trong đề tài).</p>
+                        <!-- Bước 5 -->
+                        <div style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 14px 16px; border-radius: 10px; border-left: 5px solid #f44336; box-shadow: 0 2px 8px rgba(244, 67, 54, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; margin-right: 12px;">
+                                    <span style="background: #f44336; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0;">5</span>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #c62828; font-size: 17px; font-weight: 700; margin: 0 0 6px 0;">Kết hợp kết quả</h3>
+                                    <p style="font-size: 13px; color: #b71c1c; margin: 0; line-height: 1.5;">
+                                        <strong>Kết hợp:</strong> Box (vị trí) từ YOLO + Mask (hình dạng) từ SAM + Loại rầy + Độ tin cậy<br>
+                                        <strong>Kết quả:</strong> Vị trí, hình dạng chính xác, loại và số lượng rầy trong ảnh<br>
+                                        <em style="color: #d32f2f; display: block; margin-top: 5px; font-size: 12px;">Ví dụ: 15 rầy nâu, 8 rầy lưng trắng → Tổng 23 con, mật độ = 23 con/ảnh</em>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2782,324 +2838,14 @@
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 18
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 19: ViT trong SAM -->
+    <!-- SLIDE 19: CHƯƠNG 3 - Pipeline tổng thể -->
     <section class="slide-section" data-slide="19" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">ViT trong SAM</h2>
-                
-                <div class="content-body">
-                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
-                        <h3 style="color: #1565c0; font-size: 24px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-brain" style="margin-right: 10px;"></i>
-                            ViT-H làm Image Encoder
-                        </h3>
-                        <p style="font-size: 18px; line-height: 1.6;">
-                            Trong kiến trúc của Segment Anything Model (SAM), Vision Transformer (ViT) đóng vai trò là <b>Image Encoder</b>, 
-                            chịu trách nhiệm trích xuất đặc trưng không gian phong phú từ ảnh đầu vào. 
-                            Trong đề tài này, SAM sử dụng <b>ViT-H (ViT-Huge)</b> làm backbone chính.
-                        </p>
-                    </div>
-
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-check-circle" style="margin-right: 10px;"></i>
-                                Lý do chọn ViT-H
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Khả năng trích xuất đặc trưng mạnh mẽ:</b> Số lượng lớp Transformer và chiều embedding lớn hơn nhiều so với ViT-B/L</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Hỗ trợ phân đoạn đối tượng phức tạp:</b> Nhờ khả năng học quan hệ dài hạn giữa các patch ảnh (global self-attention)</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Đảm bảo chất lượng mask cao:</b> Giúp SAM encoder tạo ra feature map giàu thông tin, từ đó Mask Decoder sinh ra mask pixel-level chính xác</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Tối ưu cho phân đoạn pixel-level:</b> Cung cấp biểu diễn toàn cục và chi tiết hơn, giúp tạo ra masks với biên ranh giới rõ ràng</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                19
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 20: Self-Attention Mechanism -->
-    <section class="slide-section" data-slide="20" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">Self-Attention Mechanism</h2>    
-                
-                <div class="content-body">
-                    <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #2196f3;">
-                        <h3 style="color: #1565c0; font-size: 24px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-brain" style="margin-right: 10px;"></i>
-                            Cơ chế Trung tâm của ViT
-                        </h3>
-                        <p style="font-size: 18px; line-height: 1.6;">
-                            Self-attention là cơ chế trung tâm giúp mô hình học được mối quan hệ giữa tất cả các patches trong ảnh, 
-                            thay vì chỉ dựa vào receptive field cục bộ như CNN. Cơ chế này giúp ViT khai thác thông tin toàn cảnh, 
-                            rất quan trọng trong các bài toán nhận dạng và phân đoạn đối tượng nhỏ.
-                        </p>
-                    </div>
-
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-network-wired" style="margin-right: 10px;"></i>
-                                Multi-head Self-Attention (MHSA)
-                            </h3>
-                            <p style="font-size: 17px;">ViT chia token embeddings của ảnh thành nhiều head (ví dụ 12 head trong ViT-Base). 
-                            Mỗi head học các mối quan hệ khác nhau giữa patches song song, từ đó biểu diễn thông tin phong phú và đa chiều.</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3;">
-                                <i class="fa-solid fa-key" style="margin-right: 10px;"></i>
-                                Query, Key, Value matrices
-                            </h3>
-                            <p style="font-size: 17px;">Mỗi token patch được ánh xạ thành ba vector: 
-                            <b>Query (Q)</b> - Đại diện cho token đang quan tâm; 
-                            <b>Key (K)</b> - Đại diện cho token để so sánh; 
-                            <b>Value (V)</b> - Chứa thông tin thực tế cần truyền.</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #9c27b0; grid-column: 1 / -1;">
-                            <h3 style="color: #9c27b0;">
-                                <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
-                                Tại sao hiệu quả
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Global receptive field:</b> Mỗi token có thể "nhìn" toàn bộ ảnh, khắc phục hạn chế của CNN</li>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Học long-range dependencies:</b> Giúp nhận diện chính xác các đối tượng nhỏ hoặc chồng lấn</li>
-                                <li><i class="fa-solid fa-check" style="color: #9c27b0;"></i> <b>Tăng cường biểu diễn phong phú:</b> Sử dụng nhiều head cho phép mô hình học các khía cạnh khác nhau của mối quan hệ</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                20
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 21: Pipeline YOLO + SAM-ViT -->
-    <section class="slide-section" data-slide="21" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">Pipeline YOLO + SAM-ViT</h2>
-                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">2.4.1. Lý do kết hợp</h3>
-                
-                <div class="content-body">
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-robot" style="margin-right: 10px;"></i>
-                                YOLO - Tốc độ
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Nổi bật ở khả năng phát hiện và phân loại <b>nhanh</b></li>
-                                <li><i class="fa-solid fa-times" style="color: #f44336;"></i> Chỉ trả về <b>bounding boxes</b>, chưa cung cấp thông tin pixel-level</li>
-                            </ul>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3;">
-                                <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
-                                SAM-ViT - Độ chính xác
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #2196f3;"></i> Có khả năng phân đoạn <b>pixel-level chính xác</b></li>
-                                <li><i class="fa-solid fa-info-circle" style="color: #2196f3;"></i> Cần prompts như bounding boxes để xác định vùng quan tâm</li>
-                            </ul>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #9c27b0; grid-column: 1 / -1;">
-                            <h3 style="color: #9c27b0;">
-                                <i class="fa-solid fa-lightbulb" style="margin-right: 10px;"></i>
-                                Giải pháp: Pipeline kết hợp
-                            </h3>
-                            <p style="font-size: 18px;">
-                                Pipeline kết hợp hai mô hình: <b>YOLO phát hiện và phân loại</b> → <b>SAM-ViT phân đoạn</b> dựa trên boxes từ YOLO. 
-                                Cách tiếp cận này vừa đảm bảo tốc độ cao, vừa nâng cao độ chính xác của segmentation, 
-                                đồng thời loại bỏ nhiễu nền từ ảnh thực địa.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                21
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 22: Workflow Pipeline -->
-    <section class="slide-section" data-slide="22" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">Workflow Pipeline</h2>
-                
-                <div class="content-body">
-                    <div class="steps-layout" style="padding: 0;">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Input image</h3>
-                                <p>Nhận ảnh RGB đầu vào</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>YOLO detection</h3>
-                                <p>Phát hiện và phân loại đối tượng, trả về bounding boxes (xyxy), classes và scores</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Transform boxes</h3>
-                                <p>Chuyển đổi bounding boxes sang định dạng SAM bằng hàm <b>apply_boxes_torch()</b></p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>SAM-ViT segmentation</h3>
-                                <p><b>set_image()</b> để ViT-H encoder trích xuất đặc trưng. 
-                                <b>predict_torch()</b> sử dụng boxes làm prompts, sinh masks pixel-level</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h3>Merge kết quả</h3>
-                                <p>Kết hợp boxes (YOLO), masks (SAM), classes và scores (YOLO)</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">6</div>
-                            <div class="step-content">
-                                <h3>Visualization & tính mật độ</h3>
-                                <p>Vẽ masks lên ảnh, tính mật độ rầy dựa trên số lượng objects</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                22
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 23: Ưu điểm Pipeline -->
-    <section class="slide-section" data-slide="23" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">Ưu điểm</h2>
-                
-                <div class="content-body">
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-bolt" style="margin-right: 10px;"></i>
-                                1. Tốc độ
-                            </h3>
-                            <p style="font-size: 17px;">YOLO phát hiện nhanh, SAM chỉ chạy encoder một lần trên ảnh, xử lý vùng đã phát hiện.</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3;">
-                                <i class="fa-solid fa-bullseye" style="margin-right: 10px;"></i>
-                                2. Độ chính xác
-                            </h3>
-                            <p style="font-size: 17px;">YOLO loại bỏ background, SAM phân đoạn chi tiết từng pixel của đối tượng.</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #ff9800;">
-                            <h3 style="color: #ff9800;">
-                                <i class="fa-solid fa-cogs" style="margin-right: 10px;"></i>
-                                3. Tính thực tế
-                            </h3>
-                            <p style="font-size: 17px;">Pipeline tuần tự phù hợp triển khai thực địa, có thể tối ưu từng giai đoạn riêng.</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #9c27b0;">
-                            <h3 style="color: #9c27b0;">
-                                <i class="fa-solid fa-sitemap" style="margin-right: 10px;"></i>
-                                4. Đơn giản hóa
-                            </h3>
-                            <p style="font-size: 17px;">Không cần feature fusion, kết quả được kết hợp ở mức output (boxes + masks) thay vì mức feature.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                23
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 24: CHƯƠNG 3 - Pipeline tổng thể -->
-    <section class="slide-section" data-slide="24" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3129,13 +2875,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                24
+                19
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 25: Tiền xử lý dữ liệu -->
-    <section class="slide-section" data-slide="25" >
+    <!-- SLIDE 20: Tiền xử lý dữ liệu -->
+    <section class="slide-section" data-slide="20" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3193,13 +2939,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                25
+                20
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 26: Kiến trúc YOLOv8 và Transfer Learning -->
-    <section class="slide-section" data-slide="26" >
+    <!-- SLIDE 21: Kiến trúc YOLOv8 và Transfer Learning -->
+    <section class="slide-section" data-slide="21" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3251,13 +2997,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                26
+                21
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 27: Cơ chế huấn luyện và hàm mất mát -->
-    <section class="slide-section" data-slide="27" >
+    <!-- SLIDE 22: Cơ chế huấn luyện và hàm mất mát -->
+    <section class="slide-section" data-slide="22" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3324,13 +3070,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                27
+                22
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 28: Đánh giá hiệu suất và Metrics -->
-    <section class="slide-section" data-slide="28" >
+    <!-- SLIDE 23: Đánh giá hiệu suất và Metrics -->
+    <section class="slide-section" data-slide="23" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3398,13 +3144,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                28
+                23
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 29: Image Encoding và Feature Extraction -->
-    <section class="slide-section" data-slide="29" >
+    <!-- SLIDE 24: Image Encoding và Feature Extraction -->
+    <section class="slide-section" data-slide="24" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3471,13 +3217,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                29
+                24
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 30: Prompt Encoding và Box Transformation -->
-    <section class="slide-section" data-slide="30" >
+    <!-- SLIDE 25: Prompt Encoding và Box Transformation -->
+    <section class="slide-section" data-slide="25" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3543,13 +3289,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                30
+                25
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 31: Mask Decoder và sinh Mask Pixel-level -->
-    <section class="slide-section" data-slide="31" >
+    <!-- SLIDE 26: Mask Decoder và sinh Mask Pixel-level -->
+    <section class="slide-section" data-slide="26" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3623,13 +3369,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                31
+                26
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 32: Kết hợp Kết quả từ YOLO và SAM -->
-    <section class="slide-section" data-slide="32" >
+    <!-- SLIDE 27: Kết hợp Kết quả từ YOLO và SAM -->
+    <section class="slide-section" data-slide="27" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3693,13 +3439,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                32
+                27
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 33: Non-Maximum Suppression và Lọc Kết quả -->
-    <section class="slide-section" data-slide="33" >
+    <!-- SLIDE 28: Non-Maximum Suppression và Lọc Kết quả -->
+    <section class="slide-section" data-slide="28" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3765,13 +3511,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                33
+                28
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 34: Mask Post-processing và Visualization -->
-    <section class="slide-section" data-slide="34" >
+    <!-- SLIDE 29: Mask Post-processing và Visualization -->
+    <section class="slide-section" data-slide="29" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3838,13 +3584,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                34
+                29
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 35: Visualization và Alpha Blending -->
-    <section class="slide-section" data-slide="35" >
+    <!-- SLIDE 30: Visualization và Alpha Blending -->
+    <section class="slide-section" data-slide="36" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3905,13 +3651,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                35
+                30
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 36: Tính Toán Mật Độ Rầy -->
-    <section class="slide-section" data-slide="36" >
+    <!-- SLIDE 31: Tính Toán Mật Độ Rầy -->
+    <section class="slide-section" data-slide="31" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -3976,13 +3722,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                36
+                31
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 37: Hệ thống Đánh giá và Báo cáo -->
-    <section class="slide-section" data-slide="37" >
+    <!-- SLIDE 32: Hệ thống Đánh giá và Báo cáo -->
+    <section class="slide-section" data-slide="32" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4048,13 +3794,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                37
+                32
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 38: Kiến trúc Pipeline Tuần tự -->
-    <section class="slide-section" data-slide="38" >
+    <!-- SLIDE 33: Kiến trúc Pipeline Tuần tự -->
+    <section class="slide-section" data-slide="33" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4088,13 +3834,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                38
+                33
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 39: Cơ chế Xử lý và Tối ưu hóa -->
-    <section class="slide-section" data-slide="39" >
+    <!-- SLIDE 34: Cơ chế Xử lý và Tối ưu hóa -->
+    <section class="slide-section" data-slide="34" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4182,13 +3928,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                39
+                34
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 40: CHƯƠNG 4 - Giới thiệu -->
-    <section class="slide-section" data-slide="40" >
+    <!-- SLIDE 35: CHƯƠNG 4 - Giới thiệu -->
+    <section class="slide-section" data-slide="35" >
         <div class="slide-container">
             <div class="title-layout" style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
                 <h1 style="font-size: 48px; margin-bottom: 30px;">
@@ -4208,13 +3954,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                40
+                35
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 41: Phân tích kết quả đào tạo -->
-    <section class="slide-section" data-slide="41" >
+    <!-- SLIDE 36: Phân tích kết quả đào tạo -->
+    <section class="slide-section" data-slide="36" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4263,13 +4009,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                41
+                36
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 42: Đánh giá khả năng phân loại -->
-    <section class="slide-section" data-slide="42" >
+    <!-- SLIDE 37: Đánh giá khả năng phân loại -->
+    <section class="slide-section" data-slide="37" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4317,13 +4063,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                42
+                37
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 43: Phân tích phân đoạn và mật độ -->
-    <section class="slide-section" data-slide="43" >
+    <!-- SLIDE 38: Phân tích phân đoạn và mật độ -->
+    <section class="slide-section" data-slide="38" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4385,13 +4131,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                43
+                38
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 44: Đánh giá chất lượng phân đoạn -->
-    <section class="slide-section" data-slide="44" >
+    <!-- SLIDE 39: Đánh giá chất lượng phân đoạn -->
+    <section class="slide-section" data-slide="39" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4462,13 +4208,13 @@
 
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                44
+                39
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 45: Phân bổ đối tượng -->
-    <section class="slide-section" data-slide="45" >
+    <!-- SLIDE 40: Phân bổ đối tượng -->
+    <section class="slide-section" data-slide="40" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4535,7 +4281,7 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                45
+                40
             </div>
         </div>
     </section>
