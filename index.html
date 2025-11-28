@@ -2335,69 +2335,100 @@
 
     <!-- SLIDE 14: SAM - Giới thiệu -->
     <section class="slide-section" data-slide="14" >
-        <div class="slide-container">
-            <div class="content-layout">
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);">
+            <div class="content-layout" style="padding: 40px 50px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
                 <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); padding: 6px 18px; border-radius: 20px;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+                        </h2>
+                    </div>
                 </div>
                 
-                <h2 class="slide-title" style="color: #1565c0;">Segment Anything Model (SAM)</h2>
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #e65100; font-size: 28px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    <i class="fa-solid fa-puzzle-piece" style="margin-right: 12px; color: #ff9800;"></i>
+                    2.2. Segment Anything Model (SAM)
+                </h2>
                 
-                <div class="content-body">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; margin-bottom: 25px;">
-                        <h3 style="color: white; font-size: 28px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-star" style="margin-right: 10px;"></i>
-                            Mô hình Phân đoạn Tiên tiến
-                        </h3>
-                        <p style="font-size: 19px; line-height: 1.7; color: white;">
-                            Được <b>Meta AI</b> phát triển, nổi bật với khả năng <b>zero-shot segmentation</b>, 
-                            cho phép phân đoạn các đối tượng <b>chưa từng xuất hiện</b> trong dữ liệu huấn luyện.
+                <div style="display: flex; flex-direction: column; gap: 20px; flex: 1; justify-content: center;">
+                    <!-- Giới thiệu -->
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 22px 28px; border-radius: 15px; border-left: 6px solid #9c27b0; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); color: white;">
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <div style="width: 45px; height: 45px; background: rgba(255, 255, 255, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);">
+                                <i class="fa-solid fa-star" style="font-size: 22px; color: #ffffff;"></i>
+                            </div>
+                            <h3 style="color: white; font-size: 22px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">
+                                Mô hình Phân đoạn Tiên tiến
+                            </h3>
+                        </div>
+                        <p style="font-size: 17px; line-height: 1.6; color: white; margin: 0 0 10px 0;">
+                            Được <strong>Meta AI</strong> phát triển, nổi bật với khả năng <strong>zero-shot segmentation</strong>, 
+                            cho phép phân đoạn các đối tượng <strong>chưa từng xuất hiện</strong> trong dữ liệu huấn luyện.
                         </p>
-                        <p style="font-size: 18px; margin-top: 15px; color: rgba(255,255,255,0.9);">
-                            <b>Huấn luyện:</b> SA-1B với <b>11 triệu ảnh</b> và <b>1,1 tỷ masks</b>
+                        <p style="font-size: 15px; color: rgba(255,255,255,0.9); margin: 0;">
+                            <strong>Huấn luyện:</strong> SA-1B với <strong>11 triệu ảnh</strong> và <strong>1,1 tỷ masks</strong>
+                            <em style="display: block; margin-top: 8px; font-size: 14px;">Ví dụ: SAM có thể phân đoạn rầy xanh dù chưa từng thấy trong quá trình huấn luyện, chỉ cần có bounding box từ YOLO.</em>
                         </p>
                     </div>
 
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50; font-size: 20px;">
-                                <i class="fa-solid fa-image" style="margin-right: 8px;"></i>
+                    <!-- Grid 3 cột -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                        <!-- Image Encoder -->
+                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #4caf50; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);">
+                            <h3 style="color: #2e7d32; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-image" style="margin-right: 10px; font-size: 18px;"></i>
                                 Image Encoder
                             </h3>
-                            <p style="font-size: 16px;">Trích xuất đặc trưng từ ảnh đầu vào, cung cấp representation phong phú và chi tiết về các đối tượng</p>
+                            <p style="font-size: 14px; line-height: 1.6; color: #1b5e20; margin: 0;">
+                                Trích xuất đặc trưng từ ảnh đầu vào, cung cấp <strong>representation phong phú</strong> về các đối tượng.
+                                <em style="display: block; margin-top: 8px; color: #388e3c; font-size: 13px;">Ví dụ: Chuyển ảnh 1024x1024 thành feature map 64x64, giữ lại thông tin chi tiết.</em>
+                            </p>
                         </div>
 
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3; font-size: 20px;">
-                                <i class="fa-solid fa-keyboard" style="margin-right: 8px;"></i>
+                        <!-- Prompt Encoder -->
+                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #2196f3; box-shadow: 0 4px 15px rgba(33, 150, 243, 0.25);">
+                            <h3 style="color: #1565c0; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-keyboard" style="margin-right: 10px; font-size: 18px;"></i>
                                 Prompt Encoder
                             </h3>
-                            <p style="font-size: 16px;">Nhận các chỉ dẫn (prompt) như điểm, bounding box, hoặc mask sơ bộ, giúp mô hình tập trung phân đoạn theo vùng quan tâm</p>
+                            <p style="font-size: 14px; line-height: 1.6; color: #0d47a1; margin: 0;">
+                                Nhận các chỉ dẫn (prompt) như <strong>điểm, bounding box</strong>, giúp mô hình tập trung phân đoạn.
+                                <em style="display: block; margin-top: 8px; color: #1976d2; font-size: 13px;">Ví dụ: Nhận bounding box từ YOLO (x, y, w, h) và chuyển thành embedding vector.</em>
+                            </p>
                         </div>
 
-                        <div class="grid-item" style="border-left-color: #9c27b0;">
-                            <h3 style="color: #9c27b0; font-size: 20px;">
-                                <i class="fa-solid fa-mask" style="margin-right: 8px;"></i>
+                        <!-- Mask Decoder -->
+                        <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #9c27b0; box-shadow: 0 4px 15px rgba(156, 39, 176, 0.25);">
+                            <h3 style="color: #7b1fa2; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-mask" style="margin-right: 10px; font-size: 18px;"></i>
                                 Mask Decoder
                             </h3>
-                            <p style="font-size: 16px;">Sinh ra mask phân đoạn cuối cùng dựa trên feature map từ Image Encoder và Prompt Encoder</p>
+                            <p style="font-size: 14px; line-height: 1.6; color: #4a148c; margin: 0;">
+                                Sinh ra <strong>mask phân đoạn pixel-level</strong> dựa trên feature map và prompt.
+                                <em style="display: block; margin-top: 8px; color: #8e24aa; font-size: 13px;">Ví dụ: Tạo mask 1024x1024 chỉ định từng pixel thuộc rầy hay nền.</em>
+                            </p>
                         </div>
                     </div>
 
-                    <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-top: 20px; border-left: 4px solid #4caf50;">
-                        <p style="font-size: 17px; color: #2e7d32; margin: 0;">
-                            <b>Ưu điểm:</b> Khả năng zero-shot làm cho SAM thích hợp với các bài toán nông nghiệp, 
-                            nơi mà các loại sâu, rầy và lá cây có thể đa dạng và ít dữ liệu được gán nhãn.
+                    <!-- Ưu điểm -->
+                    <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 20px 25px; border-radius: 15px; border-left: 6px solid #4caf50; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);">
+                        <h3 style="color: #2e7d32; font-size: 20px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                            <i class="fa-solid fa-check-circle" style="margin-right: 10px; font-size: 18px;"></i>
+                            Ưu điểm trong Ứng dụng Nông nghiệp
+                        </h3>
+                        <p style="font-size: 16px; line-height: 1.6; color: #1b5e20; margin: 0;">
+                            Khả năng <strong>zero-shot</strong> làm cho SAM thích hợp với các bài toán nông nghiệp, 
+                            nơi mà các loại sâu, rầy và lá cây có thể <strong>đa dạng</strong> và <strong>ít dữ liệu được gán nhãn</strong>.
+                            <em style="display: block; margin-top: 10px; color: #388e3c;">Ví dụ: SAM có thể phân đoạn rầy nâu, rầy xanh, sâu ăn lá mà không cần fine-tuning, chỉ cần bounding boxes từ YOLO.</em>
                         </p>
                     </div>
                 </div>
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 14
             </div>
         </div>
