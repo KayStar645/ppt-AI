@@ -2231,63 +2231,95 @@
 
     <!-- SLIDE 13: Bài toán đối tượng nhỏ -->
     <section class="slide-section" data-slide="13" >
-        <div class="slide-container">
-            <div class="content-layout">
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);">
+            <div class="content-layout" style="padding: 40px 50px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
                 <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
-                    </h2>
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); padding: 6px 18px; border-radius: 20px;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+                        </h2>
+                    </div>
                 </div>
                 
-                <h2 class="slide-title" style="color: #1565c0;">2.1.3. Bài toán phát hiện và phân đoạn đối tượng nhỏ</h2>
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #e65100; font-size: 28px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    <i class="fa-solid fa-bug" style="margin-right: 12px; color: #ff9800;"></i>
+                    Bài toán Phát hiện và Phân đoạn Đối tượng Nhỏ
+                </h2>
                 
-                <div class="content-body">
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #f44336;">
-                            <h3 style="color: #f44336;">
-                                <i class="fa-solid fa-exclamation-circle" style="margin-right: 10px;"></i>
-                                Đặc điểm Đối tượng Nhỏ
+                <div style="display: flex; flex-direction: column; gap: 18px; flex: 1; justify-content: center;">
+                    <!-- Giới thiệu -->
+                    <div style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 20px 25px; border-radius: 15px; border-left: 6px solid #f44336; box-shadow: 0 4px 15px rgba(244, 67, 54, 0.2);">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #f44336 0%, #c62828 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px; box-shadow: 0 3px 10px rgba(244, 67, 54, 0.3);">
+                                <i class="fa-solid fa-ruler-combined" style="font-size: 22px; color: #ffffff;"></i>
+                            </div>
+                            <h3 style="color: #c62828; font-size: 21px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">
+                                Đối tượng Nhỏ là gì?
                             </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-ruler" style="color: #f44336;"></i> Kích thước vật thể <b>nhỏ so với toàn cảnh ảnh</b></li>
-                                <li><i class="fa-solid fa-eye-slash" style="color: #f44336;"></i> Dễ bị <b>nhiễu nền</b> hoặc <b>che khuất (occlusion)</b></li>
-                                <li><i class="fa-solid fa-layer-group" style="color: #f44336;"></i> Nhiều instances có kích thước và hình dạng khác nhau trong cùng một ảnh</li>
+                        </div>
+                        <p style="font-size: 16px; line-height: 1.6; color: #b71c1c; margin: 0;">
+                            Đối tượng nhỏ là những vật thể có <strong>kích thước rất nhỏ so với toàn cảnh ảnh</strong>, thường chiếm <strong>&lt;1% diện tích ảnh</strong>. 
+                            <em style="display: block; margin-top: 8px; color: #d32f2f;">Ví dụ: Rầy chỉ 2-3mm, trong ảnh 640x640px chỉ chiếm khoảng 5-10 pixels, tương đương &lt;0.02% diện tích ảnh.</em>
+                        </p>
+                    </div>
+
+                    <!-- Grid 2x2 -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                        <!-- Đặc điểm -->
+                        <div style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #f44336; box-shadow: 0 4px 15px rgba(244, 67, 54, 0.25);">
+                            <h3 style="color: #c62828; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-exclamation-circle" style="margin-right: 10px; font-size: 18px;"></i>
+                                Đặc điểm
+                            </h3>
+                            <ul style="margin: 0; padding-left: 22px; font-size: 14px; line-height: 1.7;">
+                                <li style="margin-bottom: 6px;"><strong>Kích thước nhỏ:</strong> Rầy 2-3mm, chiếm &lt;0.02% ảnh</li>
+                                <li style="margin-bottom: 6px;"><strong>Nhiễu nền:</strong> Màu xanh lá gần giống nền lá</li>
+                                <li style="margin-bottom: 6px;"><strong>Che khuất:</strong> Bị che bởi lá, cành</li>
+                                <li><strong>Nhiều instances:</strong> 10-50 con rầy trong một ảnh</li>
                             </ul>
                         </div>
 
-                        <div class="grid-item" style="border-left-color: #ff9800;">
-                            <h3 style="color: #ff9800;">
-                                <i class="fa-solid fa-tasks" style="margin-right: 10px;"></i>
+                        <!-- Thách thức -->
+                        <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #ff9800; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.25);">
+                            <h3 style="color: #e65100; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-tasks" style="margin-right: 10px; font-size: 18px;"></i>
                                 Thách thức
                             </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-slash" style="color: #ff9800;"></i> Biên giới của đối tượng <b>không rõ ràng</b></li>
-                                <li><i class="fa-solid fa-balance-scale" style="color: #ff9800;"></i> Tỷ lệ <b>background so với foreground lớn</b></li>
-                                <li><i class="fa-solid fa-compress" style="color: #ff9800;"></i> Nhiều object gần nhau gây <b>chồng lấn</b></li>
+                            <ul style="margin: 0; padding-left: 22px; font-size: 14px; line-height: 1.7;">
+                                <li style="margin-bottom: 6px;"><strong>Biên giới mờ:</strong> Khó phân biệt rầy với nền lá</li>
+                                <li style="margin-bottom: 6px;"><strong>Tỷ lệ nền lớn:</strong> 99.98% là background</li>
+                                <li style="margin-bottom: 6px;"><strong>Chồng lấn:</strong> Nhiều con rầy gần nhau</li>
+                                <li><strong>Độ phân giải:</strong> Chi tiết nhỏ dễ mất khi resize</li>
                             </ul>
                         </div>
 
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3;">
-                                <i class="fa-solid fa-tools" style="margin-right: 10px;"></i>
-                                Phương pháp Tiếp cận
+                        <!-- Phương pháp -->
+                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #2196f3; box-shadow: 0 4px 15px rgba(33, 150, 243, 0.25);">
+                            <h3 style="color: #1565c0; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-tools" style="margin-right: 10px; font-size: 18px;"></i>
+                                Phương pháp
                             </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-mask" style="color: #2196f3;"></i> <b>Instance Segmentation:</b> Nhận diện và phân đoạn từng instance riêng biệt (Mask R-CNN, SAM)</li>
-                                <li><i class="fa-solid fa-tag" style="color: #2196f3;"></i> <b>Semantic Segmentation:</b> Gán nhãn pixel theo class, không phân biệt instances (U-Net, DeepLabv3)</li>
+                            <ul style="margin: 0; padding-left: 22px; font-size: 14px; line-height: 1.7;">
+                                <li style="margin-bottom: 6px;"><strong>Instance Segmentation:</strong> Phân đoạn từng con rầy riêng biệt (SAM)</li>
+                                <li style="margin-bottom: 6px;"><strong>Semantic Segmentation:</strong> Gán nhãn pixel theo lớp (U-Net)</li>
+                                <li style="margin-bottom: 6px;"><strong>Hybrid:</strong> YOLO phát hiện + SAM phân đoạn</li>
+                                <li><strong>Multi-scale:</strong> Xử lý ở nhiều độ phân giải</li>
                             </ul>
                         </div>
 
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3 style="color: #4caf50;">
-                                <i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i>
+                        <!-- Chỉ số đánh giá -->
+                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 18px; border-radius: 15px; border-left: 6px solid #4caf50; box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);">
+                            <h3 style="color: #2e7d32; font-size: 19px; font-weight: 700; margin: 0 0 12px 0; display: flex; align-items: center;">
+                                <i class="fa-solid fa-chart-line" style="margin-right: 10px; font-size: 18px;"></i>
                                 Chỉ số Đánh giá
                             </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>IoU</b> (Intersection over Union): Đo độ trùng khớp giữa predicted mask và ground truth</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Dice coefficient:</b> Đánh giá độ chính xác phân đoạn, nhạy với các object nhỏ</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> <b>Pixel accuracy:</b> Tỷ lệ pixel được phân loại đúng trên toàn bộ ảnh</li>
+                            <ul style="margin: 0; padding-left: 22px; font-size: 14px; line-height: 1.7;">
+                                <li style="margin-bottom: 6px;"><strong>IoU:</strong> Đo độ trùng khớp mask (mục tiêu &gt;0.7)</li>
+                                <li style="margin-bottom: 6px;"><strong>Dice:</strong> Nhạy với object nhỏ (mục tiêu &gt;0.8)</li>
+                                <li style="margin-bottom: 6px;"><strong>Pixel Accuracy:</strong> Tỷ lệ pixel đúng (mục tiêu &gt;95%)</li>
+                                <li><strong>mAP:</strong> Độ chính xác trung bình (mục tiêu &gt;0.9)</li>
                             </ul>
                         </div>
                     </div>
@@ -2295,7 +2327,7 @@
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 13
             </div>
         </div>
