@@ -4242,25 +4242,29 @@
                 const gradient = ctx.createLinearGradient(0, 0, 120, 80);
                 let color1, color2;
                 if (index < 2) {
-                    // Title and TOC slides
+                    // Title and TOC slides (slide 1-2)
                     color1 = '#667eea';
                     color2 = '#764ba2';
-                } else if (index < 13) {
-                    // Chapter 1
+                } else if (index < 6) {
+                    // Chapter 1 (slide 3-6)
                     color1 = '#1565c0';
                     color2 = '#0d47a1';
-                } else if (index < 29) {
-                    // Chapter 2
-                    color1 = '#1565c0';
-                    color2 = '#0d47a1';
-                } else if (index < 45) {
-                    // Chapter 3
+                } else if (index < 22) {
+                    // Chapter 2 (slide 7-22)
+                    color1 = '#ff6f00';
+                    color2 = '#e65100';
+                } else if (index < 28) {
+                    // Chapter 3 (slide 23-28)
                     color1 = '#4caf50';
                     color2 = '#2e7d32';
+                } else if (index < 38) {
+                    // Chapter 4 (slide 29-38)
+                    color1 = '#9c27b0';
+                    color2 = '#7b1fa2';
                 } else {
-                    // Chapter 4
-                    color1 = '#4caf50';
-                    color2 = '#2e7d32';
+                    // Chapter 4 - Kết quả (slide 39-44)
+                    color1 = '#f44336';
+                    color2 = '#c62828';
                 }
                 
                 gradient.addColorStop(0, color1);
