@@ -938,7 +938,7 @@
                 </div>
                 
                 <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 22px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
                     Đặt vấn đề
                 </h2>
                 
@@ -1098,76 +1098,189 @@
     </section>
 
     <!-- SLIDE 4: Nghiên cứu liên quan -->
-    <section class="slide-section" data-slide="4" >
-        <div class="slide-container">
-            <div class="content-layout">
+    <section class="slide-section" data-slide="4">
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);">
+            <div class="content-layout" style="padding: 25px 35px;">
                 <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); padding: 6px 18px; border-radius: 20px;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+                        </h2>
+                    </div>
                 </div>
                 
                 <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 30px;">
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 28px; margin-bottom: 18px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
                     Nghiên cứu liên quan
                 </h2>
                 
-                <div class="content-body">
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3 style="color: #2196f3;">
-                                <i class="fa-solid fa-microscope" style="margin-right: 10px;"></i>
-                                RPH-Counter (2024)
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Mạng Fully Convolutional Network (FCN)</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Kết quả: F1 = 92.36%, MAE = 2.40, R² = 0.985</li>
-                                <li><i class="fa-solid fa-times" style="color: #f44336;"></i> <b>Hạn chế:</b> Chỉ phát hiện và đếm, chưa có segmentation pixel-level</li>
-                            </ul>
+                <div class="content-body" style="overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; flex: 1; min-height: 0;">
+                        <!-- Nghiên cứu 1: RPH-Counter -->
+                        <div style="background: #ffffff; padding: 14px; border-radius: 12px; box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15); border-top: 4px solid #2196f3; display: flex; flex-direction: column; overflow: hidden;">
+                            <div style="text-align: center; margin-bottom: 10px;">
+                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);">
+                                    <i class="fa-solid fa-microscope" style="font-size: 22px; color: #ffffff;"></i>
+                                </div>
+                                <h3 style="color: #1565c0; font-size: 16px; font-weight: 700; margin: 0 0 4px 0; font-family: 'Montserrat', sans-serif;">RPH-Counter</h3>
+                                <div style="font-size: 10px; color: #666; font-family: 'Roboto', sans-serif; font-style: italic; margin-bottom: 6px;">
+                                    Zhang et al. (2024)
+                                </div>
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168169924006331" target="_blank" style="font-size: 9px; color: #2196f3; text-decoration: none; font-family: 'Roboto', sans-serif;">ScienceDirect →</a>
+                            </div>
+                            <div style="background: #f0f7ff; padding: 8px; border-radius: 6px; margin-bottom: 8px; border-left: 2px solid #2196f3;">
+                                <div style="font-size: 10px; color: #1565c0; font-weight: 600; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">Giới thiệu:</div>
+                                <div style="font-size: 10px; color: #333; line-height: 1.4; font-family: 'Roboto', sans-serif;">
+                                    Mạng FCN với Object Counting loss để phát hiện và đếm rầy nâu trên đồng ruộng. Dataset 140,000 rầy nâu từ thực địa.
+                                </div>
+                            </div>
+                            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px; min-height: 0;">
+                                <div style="background: #e8f5e9; padding: 8px; border-radius: 6px; border-left: 3px solid #4caf50;">
+                                    <div style="font-size: 10px; font-weight: 600; color: #2e7d32; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">
+                                        <i class="fa-solid fa-check-circle" style="margin-right: 4px; font-size: 9px;"></i>Ưu điểm
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; margin-bottom: 3px; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-check" style="color: #4caf50; margin-right: 4px; font-size: 8px;"></i>
+                                            F1 = 92.36%, MAE = 2.40
+                                        </li>
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; margin-bottom: 0; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-check" style="color: #4caf50; margin-right: 4px; font-size: 8px;"></i>
+                                            R² = 0.985, độ phức tạp thấp
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="background: #ffebee; padding: 8px; border-radius: 6px; border-left: 3px solid #f44336;">
+                                    <div style="font-size: 10px; font-weight: 600; color: #c62828; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">
+                                        <i class="fa-solid fa-times-circle" style="margin-right: 4px; font-size: 9px;"></i>Hạn chế
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-times" style="color: #f44336; margin-right: 4px; font-size: 8px;"></i>
+                                            Không có <b>segmentation pixel-level</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="grid-item" style="border-left-color: #ff9800;">
-                            <h3 style="color: #ff9800;">
-                                <i class="fa-solid fa-brain" style="margin-right: 10px;"></i>
-                                SwinT-YOLOv8-p2 (2025)
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Tích hợp Swin Transformer và SCConv</li>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Kết quả: mAP@0.5 = 0.847, F1 = 0.899</li>
-                                <li><i class="fa-solid fa-times" style="color: #f44336;"></i> <b>Hạn chế:</b> Dựa trên bounding boxes, chưa phân đoạn từng cá thể</li>
-                            </ul>
+                        <!-- Nghiên cứu 2: SwinT-YOLOv8-p2 -->
+                        <div style="background: #ffffff; padding: 14px; border-radius: 12px; box-shadow: 0 4px 12px rgba(255, 152, 0, 0.15); border-top: 4px solid #ff9800; display: flex; flex-direction: column; overflow: hidden;">
+                            <div style="text-align: center; margin-bottom: 10px;">
+                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; box-shadow: 0 4px 8px rgba(255, 152, 0, 0.3);">
+                                    <i class="fa-solid fa-brain" style="font-size: 22px; color: #ffffff;"></i>
+                                </div>
+                                <h3 style="color: #e65100; font-size: 16px; font-weight: 700; margin: 0 0 4px 0; font-family: 'Montserrat', sans-serif;">SwinT-YOLOv8-p2</h3>
+                                <div style="font-size: 10px; color: #666; font-family: 'Roboto', sans-serif; font-style: italic; margin-bottom: 6px;">
+                                    Ji et al. (2025)
+                                </div>
+                                <a href="https://www.mdpi.com/2077-0472/15/13/1366" target="_blank" style="font-size: 9px; color: #ff9800; text-decoration: none; font-family: 'Roboto', sans-serif;">MDPI Agriculture →</a>
+                            </div>
+                            <div style="background: #fff8e1; padding: 8px; border-radius: 6px; margin-bottom: 8px; border-left: 2px solid #ff9800;">
+                                <div style="font-size: 10px; color: #e65100; font-weight: 600; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">Giới thiệu:</div>
+                                <div style="font-size: 10px; color: #333; line-height: 1.4; font-family: 'Roboto', sans-serif;">
+                                    Tích hợp Swin Transformer vào YOLOv8-p2 và SCConv để phát hiện rầy nâu và rầy lưng trắng từ ảnh RGB. Dataset công khai.
+                                </div>
+                            </div>
+                            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px; min-height: 0;">
+                                <div style="background: #e8f5e9; padding: 8px; border-radius: 6px; border-left: 3px solid #4caf50;">
+                                    <div style="font-size: 10px; font-weight: 600; color: #2e7d32; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">
+                                        <i class="fa-solid fa-check-circle" style="margin-right: 4px; font-size: 9px;"></i>Ưu điểm
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; margin-bottom: 3px; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-check" style="color: #4caf50; margin-right: 4px; font-size: 8px;"></i>
+                                            mAP@0.5 = 0.847, F1 = 0.899
+                                        </li>
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; margin-bottom: 0; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-check" style="color: #4caf50; margin-right: 4px; font-size: 8px;"></i>
+                                            R² > 0.85, RMSE < 0.64
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="background: #ffebee; padding: 8px; border-radius: 6px; border-left: 3px solid #f44336;">
+                                    <div style="font-size: 10px; font-weight: 600; color: #c62828; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">
+                                        <i class="fa-solid fa-times-circle" style="margin-right: 4px; font-size: 9px;"></i>Hạn chế
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-times" style="color: #f44336; margin-right: 4px; font-size: 8px;"></i>
+                                            Chỉ dùng <b>bounding boxes</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="grid-item" style="border-left-color: #9c27b0;">
-                            <h3 style="color: #9c27b0;">
-                                <i class="fa-solid fa-network-wired" style="margin-right: 10px;"></i>
-                                U-Net, Mask R-CNN, DeepLabV3+
-                            </h3>
-                            <ul>
-                                <li><i class="fa-solid fa-check" style="color: #4caf50;"></i> Được áp dụng cho phân đoạn bệnh lá</li>
-                                <li><i class="fa-solid fa-times" style="color: #f44336;"></i> <b>Hạn chế:</b> Phụ thuộc nhiều vào dữ liệu gán nhãn thủ công</li>
-                                <li><i class="fa-solid fa-times" style="color: #f44336;"></i> Giảm hiệu suất trong điều kiện thực địa phức tạp</li>
-                            </ul>
+                        <!-- Nghiên cứu 3: U-Net, Mask R-CNN, DeepLabV3+ -->
+                        <div style="background: #ffffff; padding: 14px; border-radius: 12px; box-shadow: 0 4px 12px rgba(156, 39, 176, 0.15); border-top: 4px solid #9c27b0; display: flex; flex-direction: column; overflow: hidden;">
+                            <div style="text-align: center; margin-bottom: 10px;">
+                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; box-shadow: 0 4px 8px rgba(156, 39, 176, 0.3);">
+                                    <i class="fa-solid fa-network-wired" style="font-size: 22px; color: #ffffff;"></i>
+                                </div>
+                                <h3 style="color: #7b1fa2; font-size: 16px; font-weight: 700; margin: 0 0 4px 0; font-family: 'Montserrat', sans-serif;">U-Net, Mask R-CNN, DeepLabV3+</h3>
+                                <div style="font-size: 10px; color: #666; font-family: 'Roboto', sans-serif; font-style: italic; margin-bottom: 6px;">
+                                    Mostafid (2024) - Review
+                                </div>
+                                <a href="https://medium.com/@t.mostafid/tumor-segmentation-with-u-net-and-deeplabv3-a-review-048e10001fb2" target="_blank" style="font-size: 9px; color: #9c27b0; text-decoration: none; font-family: 'Roboto', sans-serif;">Medium Review →</a>
+                            </div>
+                            <div style="background: #f3e5f5; padding: 8px; border-radius: 6px; margin-bottom: 8px; border-left: 2px solid #9c27b0;">
+                                <div style="font-size: 10px; color: #7b1fa2; font-weight: 600; margin-bottom: 4px; font-family: 'Montserrat', sans-serif;">Giới thiệu:</div>
+                                <div style="font-size: 10px; color: #333; line-height: 1.4; font-family: 'Roboto', sans-serif;">
+                                    Các mô hình segmentation phổ biến: U-Net (encoder-decoder), DeepLabV3+ (atrous convolution), Mask R-CNN (instance segmentation). Áp dụng trong y học và nông nghiệp.
+                                </div>
+                            </div>
+                            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px; min-height: 0;">
+                                <div style="background: #e8f5e9; padding: 8px; border-radius: 6px; border-left: 3px solid #4caf50;">
+                                    <div style="font-size: 10px; font-weight: 600; color: #2e7d32; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">
+                                        <i class="fa-solid fa-check-circle" style="margin-right: 4px; font-size: 9px;"></i>Ưu điểm
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-check" style="color: #4caf50; margin-right: 4px; font-size: 8px;"></i>
+                                            Áp dụng cho phân đoạn bệnh lá
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="background: #ffebee; padding: 8px; border-radius: 6px; border-left: 3px solid #f44336;">
+                                    <div style="font-size: 10px; font-weight: 600; color: #c62828; margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">
+                                        <i class="fa-solid fa-times-circle" style="margin-right: 4px; font-size: 9px;"></i>Hạn chế
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; margin-bottom: 3px; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-times" style="color: #f44336; margin-right: 4px; font-size: 8px;"></i>
+                                            Phụ thuộc <b>gán nhãn thủ công</b>
+                                        </li>
+                                        <li style="font-size: 10px; line-height: 1.3; color: #333; margin-bottom: 0; font-family: 'Roboto', sans-serif;">
+                                            <i class="fa-solid fa-times" style="color: #f44336; margin-right: 4px; font-size: 8px;"></i>
+                                            Hiệu suất thấp trong <b>thực địa</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-
-                        <div style="background: #fff3cd; padding: 20px; border-radius: 12px; border-left: 4px solid #ffc107;">
-                            <h3 style="color: #856404; margin-bottom: 10px;">
-                                <i class="fa-solid fa-lightbulb" style="margin-right: 10px;"></i>
-                                Nhận xét chung
-                            </h3>
-                            <p style="color: #856404; font-size: 18px; margin: 0;">
-                                Hầu hết các nghiên cứu hiện nay tập trung vào <b>detection</b> hoặc <b>counting</b>, 
-                                chưa khai thác <b>segmentation pixel-level</b> - yếu tố then chốt để đánh giá 
-                                mật độ và mức độ xâm nhiễm chính xác.
-                            </p>
+                    </div>
+                    
+                    <!-- Nhận xét chung -->
+                    <div style="background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); padding: 10px; border-radius: 12px; border-left: 4px solid #ffc107; box-shadow: 0 3px 12px rgba(255, 193, 7, 0.15); margin-top: 10px; flex-shrink: 0; margin-bottom: 60px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #ffc107 0%, #ffa000 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 8px; box-shadow: 0 3px 6px rgba(255, 193, 7, 0.3);">
+                                <i class="fa-solid fa-lightbulb" style="font-size: 15px; color: #ffffff;"></i>
+                            </div>
+                            <h3 style="color: #f57f17; font-size: 14px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Nhận xét chung</h3>
                         </div>
+                        <p style="color: #856404; font-size: 12px; line-height: 1.4; margin: 0; font-family: 'Roboto', sans-serif;">
+                            Hầu hết các nghiên cứu tập trung vào <b style="color: #1565c0;">detection</b> hoặc <b style="color: #1565c0;">counting</b>, 
+                            chưa khai thác <b style="color: #c62828;">segmentation pixel-level</b> - yếu tố then chốt để đánh giá 
+                            mật độ và mức độ xâm nhiễm chính xác.
+                        </p>
                     </div>
                 </div>
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
+            <div style="position: absolute; bottom: 20px; left: 40px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 4
             </div>
         </div>
@@ -1179,14 +1292,16 @@
             <div class="content-layout">
                 <!-- Header: Chương -->
                 <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
+                    <div style="display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); padding: 8px 20px; border-radius: 20px; margin-bottom: 10px;">
+                        <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+                        </h2>
+                    </div>
                 </div>
                 
                 <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 30px;">
-                    1.2.2. Tính mới của đồ án
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 22px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    Tính mới của đồ án
                 </h2>
                 
                 <div class="content-body">
@@ -1324,13 +1439,17 @@
             <div class="content-layout">
                 <!-- Header: Chương -->
                 <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
+                    <div style="display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); padding: 8px 20px; border-radius: 20px; margin-bottom: 10px;">
+                        <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+                        </h2>
+                    </div>
                 </div>
                 
-                <h2 class="slide-title" style="color: #1565c0;">1.3. Mục tiêu nghiên cứu</h2>
-                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">1.3.1. Mục tiêu tổng quát</h3>
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 22px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    Mục tiêu nghiên cứu
+                </h2>
                 
                 <div class="content-body">
                     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 15px; color: white; text-align: center; margin-bottom: 30px;">
@@ -1438,13 +1557,17 @@
             <div class="content-layout">
                 <!-- Header: Chương -->
                 <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
+                    <div style="display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); padding: 8px 20px; border-radius: 20px; margin-bottom: 10px;">
+                        <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+                        </h2>
+                    </div>
                 </div>
                 
-                <h2 class="slide-title" style="color: #1565c0;">1.4. Đối tượng và quy mô nghiên cứu</h2>
-                <h3 style="color: #00796b; font-size: 32px; margin-bottom: 25px;">1.4.1. Phạm vi</h3>
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 22px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    Đối tượng và phạm vi nghiên cứu
+                </h2>
                 
                 <div class="content-body">
                     <div style="background: #fff3cd; padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #ffc107;">
