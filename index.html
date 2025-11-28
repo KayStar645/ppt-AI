@@ -1286,8 +1286,142 @@
         </div>
     </section>
 
-    <!-- SLIDE 5: Tính mới của đồ án -->
+    <!-- SLIDE 5: Mục tiêu nghiên cứu -->
     <section class="slide-section" data-slide="5">
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);">
+            <div class="content-layout" style="padding: 25px 35px;">
+                <!-- Header: Chương -->
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); padding: 6px 18px; border-radius: 20px;">
+                        <h2 style="font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+                        </h2>
+                    </div>
+                </div>
+                
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 28px; margin-bottom: 18px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    Mục tiêu nghiên cứu
+                </h2>
+                
+                <div class="content-body" style="overflow: visible; display: flex; flex-direction: column; gap: 14px;">
+                    <!-- Mục tiêu Tổng quát -->
+                    <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 14px 18px; border-radius: 12px; border-left: 4px solid #9c27b0; box-shadow: 0 4px 12px rgba(156, 39, 176, 0.15); flex-shrink: 0;">
+                        <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 3px 8px rgba(156, 39, 176, 0.3); flex-shrink: 0;">
+                                <i class="fa-solid fa-bullseye" style="font-size: 20px; color: #ffffff;"></i>
+                            </div>
+                            <h3 style="color: #7b1fa2; font-size: 18px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Mục tiêu Tổng quát</h3>
+                        </div>
+                        <p style="font-size: 13px; line-height: 1.5; color: #424242; margin: 0; font-family: 'Roboto', sans-serif;">
+                            Xây dựng hệ thống <b style="color: #2e7d32; background: #e8f5e9; padding: 2px 4px; border-radius: 3px;">phát hiện, phân loại và phân đoạn</b> rầy nâu trên cây lúa 
+                            bằng pipeline <b style="color: #2e7d32; background: #e8f5e9; padding: 2px 4px; border-radius: 3px;">YOLO + SAM-ViT</b>, sử dụng bộ dữ liệu thực địa từ nghiên cứu 
+                            SwinT-YOLOv8-p2, nhằm <b style="color: #2e7d32; background: #e8f5e9; padding: 2px 4px; border-radius: 3px;">tăng độ chính xác</b> nhận diện vùng rầy nâu và 
+                            <b style="color: #2e7d32; background: #e8f5e9; padding: 2px 4px; border-radius: 3px;">tính toán mật độ chính xác</b> phục vụ giám sát dịch hại tự động.
+                        </p>
+                    </div>
+
+                    <!-- Mục tiêu Cụ thể -->
+                    <div style="background: #ffffff; padding: 14px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border: 2px solid #e0e0e0; flex-shrink: 0;">
+                        <div style="text-align: center; margin-bottom: 12px;">
+                            <div style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%); padding: 6px 14px; border-radius: 20px; box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);">
+                                <i class="fa-solid fa-list-check" style="font-size: 14px; color: #ffffff;"></i>
+                                <span style="font-size: 13px; font-weight: 600; color: #ffffff; font-family: 'Montserrat', sans-serif;">Mục tiêu Cụ thể</span>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <!-- Mục tiêu 1 -->
+                            <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 10px; border-radius: 8px; border-left: 3px solid #4caf50;">
+                                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                                    <div style="width: 28px; height: 28px; background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 8px; box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3); flex-shrink: 0;">
+                                        <span style="font-size: 12px; font-weight: 700; color: #ffffff; font-family: 'Montserrat', sans-serif;">1</span>
+                                    </div>
+                                    <h4 style="color: #2e7d32; font-size: 13px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Huấn luyện YOLO</h4>
+                                </div>
+                                <p style="font-size: 11px; line-height: 1.4; color: #333; margin: 0; font-family: 'Roboto', sans-serif;">
+                                    Phát hiện và phân loại ba loại đối tượng: <b>rầy nâu</b>, <b>rầy lưng trắng</b> và <b>sâu ăn lá lúa</b>
+                                </p>
+                            </div>
+
+                            <!-- Mục tiêu 2 -->
+                            <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 10px; border-radius: 8px; border-left: 3px solid #2196f3;">
+                                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                                    <div style="width: 28px; height: 28px; background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 8px; box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3); flex-shrink: 0;">
+                                        <span style="font-size: 12px; font-weight: 700; color: #ffffff; font-family: 'Montserrat', sans-serif;">2</span>
+                                    </div>
+                                    <h4 style="color: #1565c0; font-size: 13px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Tích hợp SAM-ViT</h4>
+                                </div>
+                                <p style="font-size: 11px; line-height: 1.4; color: #333; margin: 0; font-family: 'Roboto', sans-serif;">
+                                    Phân đoạn <b>pixel-level</b> dựa trên bounding boxes từ YOLO, đảm bảo tách biệt chính xác giữa rầy và nền ruộng phức tạp
+                                </p>
+                            </div>
+
+                            <!-- Mục tiêu 3 -->
+                            <div style="background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%); padding: 10px; border-radius: 8px; border-left: 3px solid #ff9800;">
+                                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                                    <div style="width: 28px; height: 28px; background: linear-gradient(135deg, #ff9800 0%, #fb8c00 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 8px; box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3); flex-shrink: 0;">
+                                        <span style="font-size: 12px; font-weight: 700; color: #ffffff; font-family: 'Montserrat', sans-serif;">3</span>
+                                    </div>
+                                    <h4 style="color: #e65100; font-size: 13px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Khai thác ViT</h4>
+                                </div>
+                                <p style="font-size: 11px; line-height: 1.4; color: #333; margin: 0; font-family: 'Roboto', sans-serif;">
+                                    Sử dụng cơ chế <b>tự chú ý toàn cục</b> nhằm nâng cao khả năng nhận diện đặc trưng hình thái của các đối tượng nhỏ, phân tán hoặc bị che khuất
+                                </p>
+                            </div>
+
+                            <!-- Mục tiêu 4 -->
+                            <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 10px; border-radius: 8px; border-left: 3px solid #9c27b0;">
+                                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                                    <div style="width: 28px; height: 28px; background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 8px; box-shadow: 0 2px 4px rgba(156, 39, 176, 0.3); flex-shrink: 0;">
+                                        <span style="font-size: 12px; font-weight: 700; color: #ffffff; font-family: 'Montserrat', sans-serif;">4</span>
+                                    </div>
+                                    <h4 style="color: #7b1fa2; font-size: 13px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Đánh giá hiệu quả</h4>
+                                </div>
+                                <p style="font-size: 11px; line-height: 1.4; color: #333; margin: 0; font-family: 'Roboto', sans-serif;">
+                                    Sử dụng các chỉ số: <b>IoU</b>, <b>Dice coefficient</b>, <b>Precision</b>, <b>Recall</b> và <b>F1-score</b> để đo lường hiệu suất phân đoạn
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ứng dụng và Kết quả -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex-shrink: 0; margin-bottom: 60px;">
+                        <div style="background: #ffffff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15); border-top: 4px solid #4caf50;">
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <div style="width: 35px; height: 35px; background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 10px; box-shadow: 0 3px 6px rgba(76, 175, 80, 0.3); flex-shrink: 0;">
+                                    <i class="fa-solid fa-seedling" style="font-size: 18px; color: #ffffff;"></i>
+                                </div>
+                                <h3 style="color: #2e7d32; font-size: 15px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Ứng dụng</h3>
+                            </div>
+                            <p style="font-size: 12px; line-height: 1.4; color: #333; margin: 0; font-family: 'Roboto', sans-serif;">
+                                Giám sát dịch hại tự động trong nông nghiệp thông minh
+                            </p>
+                        </div>
+
+                        <div style="background: #ffffff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15); border-top: 4px solid #2196f3;">
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <div style="width: 35px; height: 35px; background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 10px; box-shadow: 0 3px 6px rgba(33, 150, 243, 0.3); flex-shrink: 0;">
+                                    <i class="fa-solid fa-chart-line" style="font-size: 18px; color: #ffffff;"></i>
+                                </div>
+                                <h3 style="color: #1565c0; font-size: 15px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Kết quả</h3>
+                            </div>
+                            <p style="font-size: 12px; line-height: 1.4; color: #333; margin: 0; font-family: 'Roboto', sans-serif;">
+                                Tăng độ chính xác nhận diện và tính toán mật độ rầy
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide Number -->
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                5
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 6: Tính mới của đồ án -->
+    <section class="slide-section" data-slide="6">
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);">
             <div class="content-layout" style="padding: 25px 35px;">
                 <!-- Header: Chương -->
@@ -1455,59 +1589,6 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                5
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 6: Mục tiêu tổng quát -->
-    <section class="slide-section" data-slide="6" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <div style="display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); padding: 8px 20px; border-radius: 20px; margin-bottom: 10px;">
-                        <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
-                            CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                        </h2>
-                    </div>
-                </div>
-                
-                <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 22px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
-                    Mục tiêu nghiên cứu
-                </h2>
-                
-                <div class="content-body">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 15px; color: white; text-align: center; margin-bottom: 30px;">
-                        <h3 style="color: white; font-size: 32px; margin-bottom: 20px;">
-                            <i class="fa-solid fa-bullseye" style="margin-right: 15px;"></i>
-                            Mục tiêu Tổng quát
-                        </h3>
-                        <p style="font-size: 22px; line-height: 1.8; color: white;">
-                            Xây dựng hệ thống <b>phát hiện, phân loại và phân đoạn</b> rầy nâu trên cây lúa 
-                            bằng pipeline <b>YOLO + SAM-ViT</b>, sử dụng bộ dữ liệu thực địa từ nghiên cứu 
-                            SwinT-YOLOv8-p2, nhằm <b>tăng độ chính xác</b> nhận diện vùng rầy nâu và 
-                            <b>tính toán mật độ chính xác</b> phục vụ giám sát dịch hại tự động.
-                        </p>
-                    </div>
-
-                    <div class="grid-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="grid-item" style="border-left-color: #4caf50;">
-                            <h3><i class="fa-solid fa-seedling" style="margin-right: 10px;"></i>Ứng dụng</h3>
-                            <p style="font-size: 18px;">Giám sát dịch hại tự động trong nông nghiệp thông minh</p>
-                        </div>
-
-                        <div class="grid-item" style="border-left-color: #2196f3;">
-                            <h3><i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i>Kết quả</h3>
-                            <p style="font-size: 18px;">Tăng độ chính xác nhận diện và tính toán mật độ rầy</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
                 6
             </div>
         </div>
