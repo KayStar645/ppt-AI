@@ -492,7 +492,7 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            display: flex;
+            display: none !important;
             gap: 20px;
             align-items: center;
         }
@@ -597,7 +597,7 @@
         }
 
         body.fullscreen .fullscreen-btn {
-            background: rgba(102, 126, 234, 0.8);
+            display: none !important;
         }
 
         /* Thumbnail Navigation Bar */
@@ -714,8 +714,7 @@
         }
 
         body.fullscreen .fullscreen-btn {
-            top: 10px;
-            left: 10px;
+            display: none !important;
         }
 
         /* Click to advance in fullscreen */
@@ -926,92 +925,165 @@
     </section>
 
     <!-- SLIDE 3: Đặt vấn đề -->
-    <section class="slide-section" data-slide="3" >
-        <div class="slide-container">
-            <div class="content-layout">
+    <section class="slide-section" data-slide="3">
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);">
+            <div class="content-layout" style="padding: 30px 40px;">
                 <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 21px;">
-                    <h2 style="font-size: 30px; font-weight: 700; color: #1565c0; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
-                        CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
-                    </h2>
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%); padding: 8px 20px; border-radius: 20px; margin-bottom: 10px;">
+                        <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+                        </h2>
+                    </div>
                 </div>
                 
                 <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 34px; margin-bottom: 37px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
                     Đặt vấn đề
                 </h2>
                 
-                <div class="content-body">
-                    <div class="two-col-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 37px; padding: 0;">
-                        <div class="col" style="background: #f8f9fa; padding: 27px; border-radius: 13px; box-shadow: 0 2px 9px rgba(0,0,0,0.08);">
-                            <div class="section-title" style="color: #1b5e20; border-bottom-color: #4caf50; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 21px; padding-bottom: 11px; margin-bottom: 21px;">Bối cảnh & Thách thức</div>
+                <div class="content-body" style="overflow-y: auto; min-height: 0;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                        <!-- Left Column: Bối cảnh & Thách thức -->
+                        <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #4caf50;">
+                            <div style="display: flex; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #e8f5e9;">
+                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);">
+                                    <i class="fa-solid fa-exclamation-circle" style="font-size: 22px; color: #ffffff;"></i>
+                                </div>
+                                <h3 style="color: #2e7d32; font-size: 20px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Bối cảnh & Thách thức</h3>
+                            </div>
                             
-                            <div style="margin-bottom: 27px;">
-                                <h4 style="color: #2e7d32; font-size: 19px; margin-bottom: 13px; font-weight: 600; font-family: 'Montserrat', sans-serif;">Thách thức Truyền thống</h4>
+                            <!-- Thách thức Truyền thống -->
+                            <div style="margin-bottom: 22px; background: #fff9e6; padding: 15px; border-radius: 10px; border-left: 4px solid #ff9800;">
+                                <h4 style="color: #e65100; font-size: 17px; margin-bottom: 12px; font-weight: 600; font-family: 'Montserrat', sans-serif; display: flex; align-items: center;">
+                                    <i class="fa-solid fa-hand-paper" style="margin-right: 8px; font-size: 18px;"></i>
+                                    Thách thức Truyền thống
+                                </h4>
                                 <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="margin-bottom: 13px; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-seedling" style="color: #2e7d32; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
-                                        <span><b>Lúa:</b> Cây trồng chủ lực, chịu thiệt hại nặng nề từ <b>rầy nâu</b> và sâu bệnh.</span>
+                                    <li style="margin-bottom: 10px; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-seedling" style="color: #2e7d32; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
+                                        <span><b style="color: #2e7d32;">Lúa:</b> Cây trồng chủ lực, chịu thiệt hại nặng nề từ <b>rầy nâu</b> và sâu bệnh.</span>
                                     </li>
-                                    <li style="margin-bottom: 13px; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-clock" style="color: #f57c00; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
+                                    <li style="margin-bottom: 10px; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-clock" style="color: #f57c00; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
                                         <span><b>Giám sát thủ công:</b> Tốn <b>thời gian</b>, <b>chi phí</b>, và <b>độ chính xác thấp</b> (dựa vào kinh nghiệm).</span>
                                     </li>
-                                    <li style="margin-bottom: 0; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-map-location-dot" style="color: #607d8b; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
+                                    <li style="margin-bottom: 0; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-map-location-dot" style="color: #607d8b; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
                                         <span><b>Quy mô lớn:</b> Khó đưa ra cảnh báo <b>kịp thời và khách quan</b> trên diện rộng.</span>
                                     </li>
                                 </ul>
                             </div>
                             
-                            <div>
-                                <h4 style="color: #03a9f4; font-size: 19px; margin-bottom: 13px; font-weight: 600; font-family: 'Montserrat', sans-serif;">Giải pháp AI & Giới hạn</h4>
+                            <!-- Giải pháp AI & Giới hạn -->
+                            <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; border-left: 4px solid #2196f3;">
+                                <h4 style="color: #1565c0; font-size: 17px; margin-bottom: 12px; font-weight: 600; font-family: 'Montserrat', sans-serif; display: flex; align-items: center;">
+                                    <i class="fa-solid fa-robot" style="margin-right: 8px; font-size: 18px;"></i>
+                                    Giải pháp AI & Giới hạn
+                                </h4>
                                 <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="margin-bottom: 13px; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-robot" style="color: #03a9f4; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
+                                    <li style="margin-bottom: 10px; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-check-circle" style="color: #4caf50; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
                                         <span><b>AI & YOLO:</b> Đã giải quyết tốt bài toán <b>Phát hiện (Detection)</b> và <b>Phân loại</b> rầy.</span>
                                     </li>
-                                    <li style="margin-bottom: 0; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-square" style="color: #c62828; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
-                                        <span><b>Hộp bao (Bounding Box):</b> Chỉ là <b>vùng ước lượng</b> bao quanh đối tượng.</span>
+                                    <li style="margin-bottom: 0; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-square" style="color: #c62828; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
+                                        <span><b>Hộp bao (Bounding Box):</b> Chỉ là <b>vùng ước lượng</b> bao quanh đối tượng, <b style="color: #c62828;">KHÔNG</b> tách biệt rầy khỏi nền.</span>
                                     </li>
                                 </ul>
                             </div>
+                            
+                            <!-- Visual Illustration -->
+                            <div style="margin-top: 18px; padding: 12px; background: #f5f5f5; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 12px; color: #666; margin-bottom: 8px; font-weight: 600; font-family: 'Roboto', sans-serif;">MINH HỌA</div>
+                                <div style="display: flex; justify-content: space-around; align-items: center;">
+                                    <div style="text-align: center;">
+                                        <div style="width: 80px; height: 60px; background: #e8f5e9; border: 2px dashed #4caf50; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px;">
+                                            <i class="fa-solid fa-image" style="font-size: 24px; color: #4caf50;"></i>
+                                        </div>
+                                        <div style="font-size: 11px; color: #666; font-family: 'Roboto', sans-serif;">Hình ảnh lá lúa</div>
+                                    </div>
+                                    <div style="font-size: 20px; color: #999;">→</div>
+                                    <div style="text-align: center;">
+                                        <div style="width: 80px; height: 60px; background: #fff3e0; border: 3px solid #ff9800; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px; position: relative;">
+                                            <div style="position: absolute; width: 50px; height: 40px; border: 2px solid #c62828; border-radius: 4px; background: rgba(198, 40, 40, 0.1);"></div>
+                                            <i class="fa-solid fa-square" style="font-size: 20px; color: #c62828; position: relative; z-index: 1;"></i>
+                                        </div>
+                                        <div style="font-size: 11px; color: #666; font-family: 'Roboto', sans-serif;">Bounding Box</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="col" style="background: #fff5f5; padding: 27px; border-radius: 13px; box-shadow: 0 2px 9px rgba(0,0,0,0.08);">
-                            <div class="section-title" style="color: #c62828; border-bottom-color: #ef5350; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 21px; padding-bottom: 11px; margin-bottom: 21px;">Khoảng trống Nghiên cứu</div>
+                        <!-- Right Column: Khoảng trống Nghiên cứu -->
+                        <div style="background: linear-gradient(135deg, #ffffff 0%, #fff5f5 100%); padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #f44336;">
+                            <div style="display: flex; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #ffebee;">
+                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 12px; box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);">
+                                    <i class="fa-solid fa-lightbulb" style="font-size: 22px; color: #ffffff;"></i>
+                                </div>
+                                <h3 style="color: #c62828; font-size: 20px; font-weight: 700; margin: 0; font-family: 'Montserrat', sans-serif;">Khoảng trống Nghiên cứu</h3>
+                            </div>
                             
-                            <div style="margin-bottom: 27px;">
-                                <h4 style="color: #c62828; font-size: 19px; margin-bottom: 13px; font-weight: 600; font-family: 'Montserrat', sans-serif;">Thách thức về Độ chính xác</h4>
+                            <!-- Thách thức về Độ chính xác -->
+                            <div style="margin-bottom: 22px; background: #ffebee; padding: 15px; border-radius: 10px; border-left: 4px solid #f44336;">
+                                <h4 style="color: #c62828; font-size: 17px; margin-bottom: 12px; font-weight: 600; font-family: 'Montserrat', sans-serif; display: flex; align-items: center;">
+                                    <i class="fa-solid fa-times-circle" style="margin-right: 8px; font-size: 18px;"></i>
+                                    Thách thức về Độ chính xác
+                                </h4>
                                 <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="margin-bottom: 13px; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-slash" style="color: #c62828; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
+                                    <li style="margin-bottom: 10px; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-ban" style="color: #c62828; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
                                         <span><b>KHÔNG</b> thể tách biệt rầy khỏi nền lá lúa ở mức độ <b>pixel-level</b>.</span>
                                     </li>
-                                    <li style="margin-bottom: 0; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-exclamation-triangle" style="color: #ff9800; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
+                                    <li style="margin-bottom: 0; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-exclamation-triangle" style="color: #ff9800; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
                                         <span>Khó tính toán <b>mật độ chính xác</b> từ bounding boxes.</span>
                                     </li>
                                 </ul>
                             </div>
                             
-                            <div>
-                                <h4 style="color: #3f51b5; font-size: 19px; margin-bottom: 13px; font-weight: 600; font-family: 'Montserrat', sans-serif;">Nhu cầu Cấp thiết</h4>
+                            <!-- Nhu cầu Cấp thiết -->
+                            <div style="background: #e8eaf6; padding: 15px; border-radius: 10px; border-left: 4px solid #3f51b5;">
+                                <h4 style="color: #283593; font-size: 17px; margin-bottom: 12px; font-weight: 600; font-family: 'Montserrat', sans-serif; display: flex; align-items: center;">
+                                    <i class="fa-solid fa-bullseye" style="margin-right: 8px; font-size: 18px;"></i>
+                                    Nhu cầu Cấp thiết
+                                </h4>
                                 <ul style="list-style: none; padding: 0; margin: 0;">
-                                    <li style="margin-bottom: 13px; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-mask" style="color: #3f51b5; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
-                                        <span>Cần <b>Phân đoạn thực thể (Instance Segmentation)</b>.</span>
+                                    <li style="margin-bottom: 10px; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-mask" style="color: #3f51b5; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
+                                        <span>Cần <b>Phân đoạn thực thể (Instance Segmentation)</b> để tách biệt từng cá thể rầy.</span>
                                     </li>
-                                    <li style="margin-bottom: 13px; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-calculator" style="color: #3f51b5; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
+                                    <li style="margin-bottom: 10px; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-calculator" style="color: #3f51b5; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
                                         <span>Yếu tố then chốt để tính <b>Mật độ rầy/m²</b> một cách <b>khoa học và chính xác</b>.</span>
                                     </li>
-                                    <li style="margin-bottom: 0; font-size: 17px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
-                                        <i class="fa-solid fa-chart-line" style="color: #3f51b5; margin-right: 11px; margin-top: 4px; font-size: 19px; flex-shrink: 0;"></i>
+                                    <li style="margin-bottom: 0; font-size: 15px; line-height: 1.5; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-chart-line" style="color: #3f51b5; margin-right: 10px; margin-top: 3px; font-size: 16px; flex-shrink: 0;"></i>
                                         <span>Hỗ trợ đánh giá mức độ xâm nhiễm và dự báo dịch hại.</span>
                                     </li>
                                 </ul>
+                            </div>
+                            
+                            <!-- Visual Illustration -->
+                            <div style="margin-top: 18px; padding: 12px; background: #f5f5f5; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 12px; color: #666; margin-bottom: 8px; font-weight: 600; font-family: 'Roboto', sans-serif;">GIẢI PHÁP</div>
+                                <div style="display: flex; justify-content: space-around; align-items: center;">
+                                    <div style="text-align: center;">
+                                        <div style="width: 80px; height: 60px; background: #e8f5e9; border: 2px dashed #4caf50; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px;">
+                                            <i class="fa-solid fa-image" style="font-size: 24px; color: #4caf50;"></i>
+                                        </div>
+                                        <div style="font-size: 11px; color: #666; font-family: 'Roboto', sans-serif;">Hình ảnh lá lúa</div>
+                                    </div>
+                                    <div style="font-size: 20px; color: #999;">→</div>
+                                    <div style="text-align: center;">
+                                        <div style="width: 80px; height: 60px; background: #e3f2fd; border: 3px solid #2196f3; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px; position: relative; overflow: hidden;">
+                                            <div style="position: absolute; width: 30px; height: 30px; background: #4caf50; border-radius: 50%; top: 10px; left: 10px; border: 2px solid #2e7d32;"></div>
+                                            <div style="position: absolute; width: 25px; height: 25px; background: #ff9800; border-radius: 50%; bottom: 10px; right: 10px; border: 2px solid #f57c00;"></div>
+                                            <i class="fa-solid fa-mask" style="font-size: 20px; color: #2196f3; position: relative; z-index: 1;"></i>
+                                        </div>
+                                        <div style="font-size: 11px; color: #666; font-family: 'Roboto', sans-serif;">Segmentation</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1019,7 +1091,7 @@
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; font-family: 'Roboto', sans-serif;">
+            <div style="position: absolute; bottom: 20px; left: 40px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 3
             </div>
         </div>
@@ -1038,7 +1110,7 @@
                 
                 <!-- Mục -->
                 <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 30px;">
-                    1.2.1. Nghiên cứu liên quan
+                    Nghiên cứu liên quan
                 </h2>
                 
                 <div class="content-body">
