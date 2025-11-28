@@ -2946,13 +2946,13 @@
                 <!-- Mục -->
                 <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
                     <i class="fa-solid fa-project-diagram" style="margin-right: 10px; color: #4caf50;"></i>
-                    Pipeline tổng thể của mô hình
+                    Pipeline tổng thể của hệ thống
                 </h2>
                 
                 <div style="display: flex; flex-direction: column; gap: 12px; flex: 1; overflow-y: auto; padding-right: 5px;">
                     <!-- Sơ đồ -->
                     <div style="text-align: center; margin-bottom: 10px;">
-                        <img src="images/Kiến trúc pipeline yolo - sam.jpg" alt="Sơ đồ tổng thể kiến trúc" loading="lazy" decoding="async" style="max-width: 100%; max-height: 200px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.15);">
+                        <img src="images/Sơ đồ tổng thể.jpg" alt="Sơ đồ tổng thể kiến trúc" loading="lazy" decoding="async" style="max-width: 100%; max-height: 200px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.15);">
                         <p style="font-size: 12px; color: #666; margin-top: 5px; font-style: italic;">Hình 3.1. Sơ đồ tổng thể kiến trúc Pipeline YOLO + SAM-ViT</p>
                     </div>
                     
@@ -3281,95 +3281,8 @@
         </div>
     </section>
 
-    <!-- SLIDE 24: Đánh giá hiệu suất và Metrics -->
+    <!-- SLIDE 24: Image Encoding và Feature Extraction -->
     <section class="slide-section" data-slide="24" >
-        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
-            <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 8px;">
-                    <div style="display: inline-block; background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%); padding: 6px 18px; border-radius: 20px;">
-                        <h2 style="font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
-                            CHƯƠNG 3: THIẾT KẾ VÀ XÂY DỰNG HỆ THỐNG
-                        </h2>
-                    </div>
-                </div>
-                
-                <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
-                    <i class="fa-solid fa-chart-line" style="margin-right: 10px; color: #4caf50;"></i>
-                    Đánh giá hiệu suất và Metrics
-                </h2>
-                
-                <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
-                    <!-- Hình ảnh -->
-                    <div style="text-align: center; margin-bottom: 8px;">
-                        <img src="images/Quá trình đào tạo.jpg" alt="Quá trình đào tạo YOLOv8" loading="lazy" decoding="async" style="max-width: 100%; max-height: 180px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.15);">
-                        <p style="font-size: 11px; color: #666; margin-top: 4px; font-style: italic;">Hình 3.2. Kết quả đào tạo YOLOv8 qua các epochs</p>
-                    </div>
-                    
-                    <!-- Metrics -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
-                            <h3 style="color: #2e7d32; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-bullseye" style="margin-right: 6px;"></i>
-                                mAP
-                            </h3>
-                            <ul style="margin: 0; padding-left: 18px; font-size: 11px; color: #1b5e20; line-height: 1.5;">
-                                <li><strong>mAP@0.5:</strong> Độ chính xác TB với IoU = 0.5</li>
-                                <li><strong>mAP@0.5:0.95:</strong> TB mAP trên nhiều ngưỡng IoU</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
-                            <h3 style="color: #1565c0; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-chart-bar" style="margin-right: 6px;"></i>
-                                Precision & Recall
-                            </h3>
-                            <ul style="margin: 0; padding-left: 18px; font-size: 11px; color: #0d47a1; line-height: 1.5;">
-                                <li><strong>Precision:</strong> Tỷ lệ dự đoán đúng/tổng dự đoán dương tính</li>
-                                <li><strong>Recall:</strong> Tỷ lệ đối tượng thực sự được phát hiện</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);">
-                            <h3 style="color: #e65100; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-balance-scale" style="margin-right: 6px;"></i>
-                                F1-score
-                            </h3>
-                            <p style="font-size: 11px; color: #856404; margin: 0; line-height: 1.5;">
-                                Trung bình điều hòa của Precision và Recall, chỉ số cân bằng
-                            </p>
-                        </div>
-                        
-                        <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #9c27b0; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2);">
-                            <h3 style="color: #7b1fa2; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-list" style="margin-right: 6px;"></i>
-                                Per-class Metrics
-                            </h3>
-                            <p style="font-size: 11px; color: #4a148c; margin: 0; line-height: 1.5;">
-                                Đánh giá riêng từng class, xác định đối tượng mô hình còn yếu
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Lợi ích -->
-                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
-                        <p style="font-size: 12px; color: #0d47a1; margin: 0; line-height: 1.6;">
-                            <strong>Theo dõi metrics qua epochs:</strong> Phát hiện overfitting sớm; Đánh giá hiệu quả augmentation; Quyết định thời điểm dừng (Early Stopping).
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                24
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 25: Image Encoding và Feature Extraction -->
-    <section class="slide-section" data-slide="25" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
             <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                 <!-- Header: Chương -->
@@ -3453,13 +3366,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                25
+                24
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 26: Prompt Encoding và Box Transformation -->
-    <section class="slide-section" data-slide="26" >
+    <!-- SLIDE 25: Prompt Encoding và Box Transformation -->
+    <section class="slide-section" data-slide="25" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
             <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                 <!-- Header: Chương -->
@@ -3543,13 +3456,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                26
+                25
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 27: Mask Decoder và sinh Mask Pixel-level -->
-    <section class="slide-section" data-slide="27" >
+    <!-- SLIDE 26: Mask Decoder và sinh Mask Pixel-level -->
+    <section class="slide-section" data-slide="26" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
             <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                 <!-- Header: Chương -->
@@ -3631,13 +3544,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                27
+                26
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 28: Kết hợp Kết quả từ YOLO và SAM -->
-    <section class="slide-section" data-slide="28" >
+    <!-- SLIDE 27: Kết hợp Kết quả từ YOLO và SAM -->
+    <section class="slide-section" data-slide="27" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
             <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                 <!-- Header: Chương -->
@@ -3652,7 +3565,7 @@
                 <!-- Mục -->
                 <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
                     <i class="fa-solid fa-link" style="margin-right: 10px; color: #4caf50;"></i>
-                    Kết hợp Kết quả từ YOLO và SAM
+                    Kết hợp kết quả từ YOLO và SAM
                 </h2>
                 
                 <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
@@ -3708,13 +3621,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                28
+                27
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 29: Non-Maximum Suppression và Lọc Kết quả -->
-    <section class="slide-section" data-slide="29" >
+    <!-- SLIDE 28: Non-Maximum Suppression và Lọc Kết quả -->
+    <section class="slide-section" data-slide="28" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
             <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                 <!-- Header: Chương -->
@@ -3729,7 +3642,7 @@
                 <!-- Mục -->
                 <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
                     <i class="fa-solid fa-filter" style="margin-right: 10px; color: #4caf50;"></i>
-                    Non-Maximum Suppression và Lọc Kết quả
+                    NMS và Lọc kết quả
                 </h2>
                 
                 <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
@@ -3798,12 +3711,87 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                28
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 29: Kết hợp kết quả và Post-processing -->
+    <section class="slide-section" data-slide="29" >
+        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
+            <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                <!-- Header: Chương -->
+                <div style="text-align: center; margin-bottom: 8px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%); padding: 6px 18px; border-radius: 20px;">
+                        <h2 style="font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
+                            CHƯƠNG 3: THIẾT KẾ VÀ XÂY DỰNG HỆ THỐNG
+                        </h2>
+                    </div>
+                </div>
+                
+                <!-- Mục -->
+                <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    <i class="fa-solid fa-link" style="margin-right: 10px; color: #4caf50;"></i>
+                    Kết hợp kết quả và Post-processing
+                </h2>
+                
+                <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
+                    <!-- Giới thiệu -->
+                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
+                        <p style="font-size: 12px; color: #0d47a1; margin: 0; line-height: 1.6;">
+                            Pipeline YOLO + SAM hoạt động <strong>tuần tự</strong>. Kết hợp kết quả đòi hỏi <strong>đồng bộ hóa 1:1</strong> giữa outputs của YOLO và SAM để đảm bảo tính nhất quán.
+                        </p>
+                    </div>
+                    
+                    <!-- Format Conversion -->
+                    <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
+                        <h3 style="color: #2e7d32; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
+                            <i class="fa-solid fa-exchange-alt" style="margin-right: 8px;"></i>
+                            Format Conversion
+                        </h3>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #1b5e20; line-height: 1.5;">
+                            <li>Chuyển đổi từ <strong>tensor</strong> sang <strong>numpy array</strong></li>
+                            <li>Hoặc <strong>boolean mask</strong> (threshold 0.5) để dễ dàng xử lý với các thư viện ảnh</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Đồng bộ hóa -->
+                    <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #9c27b0; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2);">
+                        <h3 style="color: #7b1fa2; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
+                            <i class="fa-solid fa-link" style="margin-right: 8px;"></i>
+                            Đồng bộ hóa 1:1
+                        </h3>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #4a148c; line-height: 1.5;">
+                            <li>Mỗi bounding box từ YOLO tương ứng <strong>1:1</strong> với một mask từ SAM</li>
+                            <li>Theo thứ tự confidence score giảm dần (sau NMS)</li>
+                            <li>Duy trì liên kết giữa thông tin phân loại (class, confidence) và phân đoạn (mask)</li>
+                            <li>Tạo cấu trúc dữ liệu thống nhất cho visualization và phân tích</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Giữ nguyên chất lượng -->
+                    <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);">
+                        <h3 style="color: #e65100; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
+                            <i class="fa-solid fa-shield-alt" style="margin-right: 8px;"></i>
+                            Giữ nguyên chất lượng Masks
+                        </h3>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #856404; line-height: 1.5;">
+                            <li>Nhờ SAM là mô hình <strong>zero-shot mạnh</strong>, masks có độ chính xác cao</li>
+                            <li>Không cần các bước phức tạp như loại nhiễu hay điền lỗ hổng</li>
+                            <li>Giữ nguyên masks gốc đảm bảo độ chính xác phân đoạn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide Number -->
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 29
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 30: Mask Post-processing và Visualization -->
+    <!-- SLIDE 30: Kiến trúc Pipeline Tuần tự -->
     <section class="slide-section" data-slide="30" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
             <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
@@ -3818,60 +3806,52 @@
                 
                 <!-- Mục -->
                 <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
-                    <i class="fa-solid fa-palette" style="margin-right: 10px; color: #4caf50;"></i>
-                    Mask Post-processing và Visualization
+                    <i class="fa-solid fa-project-diagram" style="margin-right: 10px; color: #4caf50;"></i>
+                    Kiến trúc Pipeline Tuần tự
                 </h2>
                 
                 <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
-                    <!-- Format Conversion -->
-                    <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
-                        <h3 style="color: #2e7d32; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
-                            <i class="fa-solid fa-exchange-alt" style="margin-right: 8px;"></i>
-                            Format Conversion
-                        </h3>
-                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #1b5e20; line-height: 1.5;">
-                            <li>Chuyển đổi từ <strong>tensor</strong> sang <strong>numpy array</strong></li>
-                            <li>Hoặc <strong>boolean mask</strong> (threshold 0.5) để dễ dàng xử lý với các thư viện ảnh</li>
-                        </ul>
+                    <!-- Hình ảnh Pipeline -->
+                    <div style="text-align: center; margin-bottom: 8px;">
+                        <img src="images/Kiến trúc pipeline yolo - sam.jpg" alt="Kiến trúc Pipeline YOLO + SAM-ViT" loading="lazy" decoding="async" style="max-width: 100%; max-height: 180px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.15);">
+                        <p style="font-size: 11px; color: #666; margin-top: 4px; font-style: italic;">Hình 3.2. Kiến trúc Pipeline Tuần tự YOLO + SAM-ViT</p>
                     </div>
                     
-                    <!-- Alpha Blending -->
+                    <!-- Giới thiệu -->
                     <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
-                        <h3 style="color: #1565c0; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
-                            <i class="fa-solid fa-palette" style="margin-right: 8px;"></i>
-                            Alpha Blending Visualization
+                        <p style="font-size: 12px; color: #0d47a1; margin: 0; line-height: 1.6;">
+                            Pipeline được thiết kế theo mô hình <strong>tuần tự (sequential pipeline)</strong>. 
+                            <strong>YOLO</strong> phát hiện đối tượng và tạo bounding boxes → 
+                            <strong>SAM-ViT</strong> phân đoạn chi tiết dựa trên boxes này. 
+                            Hai mô hình vận hành theo <strong>thứ tự cố định</strong> vì SAM yêu cầu bounding boxes làm prompts đầu vào.
+                        </p>
+                    </div>
+                    
+                    <!-- Tối ưu hóa cốt lõi -->
+                    <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);">
+                        <h3 style="color: #e65100; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
+                            <i class="fa-solid fa-bolt" style="margin-right: 8px;"></i>
+                            Tối ưu hóa cốt lõi: ViT-H Encoder
                         </h3>
-                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #0d47a1; line-height: 1.5;">
-                            <li>Masks được overlay lên ảnh gốc bằng <strong>alpha blending</strong></li>
-                            <li>Kết hợp màu sắc theo class: <strong>xanh lá</strong> – rầy lưng trắng, <strong>xanh dương</strong> – sâu ăn lá lúa, <strong>đỏ</strong> – rầy nâu</li>
-                            <li>Alpha ≈ 0.4, giúp quan sát đồng thời đối tượng và bối cảnh</li>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #856404; line-height: 1.5;">
+                            <li>ViT-H Encoder chỉ chạy <strong>một lần</strong> cho mỗi ảnh</li>
+                            <li>Feature map (256×64×64) được <strong>lưu và tái sử dụng</strong> cho tất cả boxes</li>
+                            <li>Với 5–20 boxes/ảnh: giảm thời gian segmentation xuống <strong>5–20 lần</strong></li>
+                            <li>Biến SAM từ mô hình tốn kém → <strong>khả thi trong ứng dụng thực tế</strong></li>
                         </ul>
                     </div>
                     
-                    <!-- Giữ nguyên chất lượng -->
+                    <!-- Lý do không batch song song -->
                     <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #9c27b0; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2);">
                         <h3 style="color: #7b1fa2; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
-                            <i class="fa-solid fa-shield-alt" style="margin-right: 8px;"></i>
-                            Giữ nguyên chất lượng Masks
+                            <i class="fa-solid fa-info-circle" style="margin-right: 8px;"></i>
+                            Lý do không batch song song
                         </h3>
                         <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #4a148c; line-height: 1.5;">
-                            <li>Nhờ SAM là mô hình <strong>zero-shot mạnh</strong>, masks có độ chính xác cao</li>
-                            <li>Không cần các bước phức tạp như loại nhiễu hay điền lỗ hổng</li>
-                            <li>Giữ nguyên masks gốc đảm bảo độ chính xác phân đoạn</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Ưu điểm -->
-                    <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
-                        <h3 style="color: #2e7d32; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
-                            <i class="fa-solid fa-star" style="margin-right: 8px;"></i>
-                            Ưu điểm của Pipeline
-                        </h3>
-                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #1b5e20; line-height: 1.5;">
-                            <li>Tỷ lệ false positives thấp nhờ NMS và confidence threshold</li>
-                            <li>Masks chính xác và chi tiết nhờ zero-shot segmentation của SAM</li>
-                            <li>Mỗi đối tượng có cả box, mask, class và confidence</li>
-                            <li>Tối ưu hiệu suất: feature map ViT-H được tái sử dụng</li>
+                            <li>YOLO và SAM-ViT đều tiêu tốn nhiều <strong>VRAM</strong></li>
+                            <li>Batching ảnh cho SAM-ViT làm tăng <strong>gấp đôi/gấp ba</strong> lượng bộ nhớ</li>
+                            <li>Segmentation theo box prompts có tính chất <strong>tuần tự (prompt-dependent)</strong></li>
+                            <li>Thiết kế tuần tự đảm bảo hiệu suất cao mà không vượt quá giới hạn phần cứng</li>
                         </ul>
                     </div>
                 </div>
@@ -3884,7 +3864,7 @@
         </div>
     </section>
 
-    <!-- SLIDE 31: Visualization và Alpha Blending -->
+    <!-- SLIDE 31: Cơ chế Xử lý và Tối ưu hóa Hiệu suất -->
     <section class="slide-section" data-slide="31" >
         <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
             <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
@@ -3899,54 +3879,88 @@
                 
                 <!-- Mục -->
                 <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
-                    <i class="fa-solid fa-eye" style="margin-right: 10px; color: #4caf50;"></i>
-                    3.6.1. Visualization và Alpha Blending
+                    <i class="fa-solid fa-cogs" style="margin-right: 10px; color: #4caf50;"></i>
+                    Cơ chế Xử lý và Tối ưu hóa Hiệu suất
                 </h2>
                 
-                <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
-                    <!-- Hình ảnh -->
-                    <div style="text-align: center; margin-bottom: 8px;">
-                        <img src="images/DemoPhanDoan.jpg" alt="Demo phân đoạn rầy" loading="lazy" decoding="async" style="max-width: 100%; max-height: 180px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.15);">
-                        <p style="font-size: 11px; color: #666; margin-top: 4px; font-style: italic;">Hình 3.3. Kết quả phân đoạn rầy trên ảnh ruộng lúa</p>
-                    </div>
-                    
-                    <!-- Alpha Blending -->
-                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
-                        <h3 style="color: #1565c0; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
-                            <i class="fa-solid fa-palette" style="margin-right: 8px;"></i>
-                            Nguyên lý Alpha Blending
-                        </h3>
-                        <p style="font-size: 12px; color: #0d47a1; margin: 0; line-height: 1.6;">
-                            <strong>Công thức:</strong> I<sub>result</sub> = α × I<sub>foreground</sub> + (1-α) × I<sub>background</sub><br>
-                            Trong đề tài, <strong>α = 0.4</strong> được lựa chọn để tối ưu sự cân bằng giữa việc nhấn mạnh các vùng phân đoạn và giữ lại chi tiết môi trường gốc.
-                        </p>
-                    </div>
-                    
-                    <!-- Color Mapping và Vai trò -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
-                            <h3 style="color: #2e7d32; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-tag" style="margin-right: 6px;"></i>
-                                Color Mapping
-                            </h3>
-                            <ul style="margin: 0; padding-left: 18px; font-size: 11px; color: #1b5e20; line-height: 1.5;">
-                                <li><span style="color: #4caf50;">●</span> <strong>Class 0:</strong> Xanh lá - Rầy lưng trắng</li>
-                                <li><span style="color: #2196f3;">●</span> <strong>Class 1:</strong> Xanh dương - Sâu ăn lá lúa</li>
-                                <li><span style="color: #f44336;">●</span> <strong>Class 2:</strong> Đỏ - Rầy nâu</li>
-                            </ul>
+                <div style="display: flex; flex-direction: column; gap: 8px; flex: 1; overflow-y: auto; padding-right: 5px;">
+                    <!-- Bước 1-2 -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 10px 12px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <span style="background: #4caf50; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; margin-right: 8px;">1</span>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #2e7d32; font-size: 14px; font-weight: 700; margin: 0 0 4px 0;">Đọc và tiền xử lý</h3>
+                                    <p style="font-size: 11px; color: #1b5e20; margin: 0; line-height: 1.4;">Ảnh được đọc và chuẩn hóa kích thước. Tiền xử lý tối thiểu để giảm overhead.</p>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);">
-                            <h3 style="color: #e65100; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-eye" style="margin-right: 6px;"></i>
-                                Vai trò Visualization
-                            </h3>
-                            <ul style="margin: 0; padding-left: 18px; font-size: 11px; color: #856404; line-height: 1.5;">
-                                <li>Kiểm tra năng lực phân đoạn</li>
-                                <li>Nhận dạng lỗi (over/under-segmentation)</li>
-                                <li>Đánh giá phân bố dịch hại</li>
-                                <li>Giao tiếp kết quả với người dùng</li>
-                            </ul>
+                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 10px 12px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <span style="background: #2196f3; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; margin-right: 8px;">2</span>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #1565c0; font-size: 14px; font-weight: 700; margin: 0 0 4px 0;">YOLO Detection</h3>
+                                    <p style="font-size: 11px; color: #0d47a1; margin: 0; line-height: 1.4;">YOLO load <strong>một lần</strong> trong __init__(), tái sử dụng. Chạy trên GPU nếu khả dụng.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bước 3-4 -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 10px 12px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <span style="background: #ff9800; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; margin-right: 8px;">3</span>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #e65100; font-size: 14px; font-weight: 700; margin: 0 0 4px 0;">Lọc Bounding Boxes</h3>
+                                    <p style="font-size: 11px; color: #856404; margin: 0; line-height: 1.4;">Lọc confidence và chuẩn hóa boxes. Kiểm tra sớm giúp bỏ qua SAM nếu không có đối tượng.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 10px 12px; border-radius: 10px; border-left: 5px solid #9c27b0; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <span style="background: #9c27b0; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; margin-right: 8px;">4</span>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #7b1fa2; font-size: 14px; font-weight: 700; margin: 0 0 4px 0;">SAM Image Encoding</h3>
+                                    <p style="font-size: 11px; color: #4a148c; margin: 0; line-height: 1.4;"><strong>ViT-H chạy một lần</strong> → Feature map (256×64×64) được lưu và tái sử dụng cho tất cả boxes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bước 5-6 -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <div style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 10px 12px; border-radius: 10px; border-left: 5px solid #f44336; box-shadow: 0 2px 8px rgba(244, 67, 54, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <span style="background: #f44336; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; margin-right: 8px;">5</span>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #c62828; font-size: 14px; font-weight: 700; margin: 0 0 4px 0;">SAM Segmentation</h3>
+                                    <p style="font-size: 11px; color: #b71c1c; margin: 0; line-height: 1.4;">Mask Decoder nhận image embeddings, box prompts → sinh masks pixel-level. Tận dụng feature map đã tính.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 10px 12px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
+                            <div style="display: flex; align-items: flex-start;">
+                                <span style="background: #4caf50; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; margin-right: 8px;">6</span>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #2e7d32; font-size: 14px; font-weight: 700; margin: 0 0 4px 0;">Hợp nhất kết quả</h3>
+                                    <p style="font-size: 11px; color: #1b5e20; margin: 0; line-height: 1.4;">Kết hợp YOLO (boxes, classes, scores) + SAM (masks). Format masks, rescaling với chi phí nhỏ.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bước 7 và Tối ưu batch -->
+                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
+                        <div style="display: flex; align-items: flex-start;">
+                            <span style="background: #2196f3; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; margin-right: 8px;">7</span>
+                            <div style="flex: 1;">
+                                <h3 style="color: #1565c0; font-size: 14px; font-weight: 700; margin: 0 0 4px 0;">Visualization (Tùy chọn)</h3>
+                                <p style="font-size: 11px; color: #0d47a1; margin: 0; line-height: 1.4;">Chỉ kích hoạt khi người dùng yêu cầu. <strong>predict_batch()</strong> cung cấp vòng lặp tối ưu, quản lý tiến độ và bộ nhớ tốt hơn cho dataset lớn.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -3959,263 +3973,8 @@
         </div>
     </section>
 
-    <!-- SLIDE 32: Tính Toán Mật Độ Rầy -->
+    <!-- SLIDE 32: CHƯƠNG 4 - Giới thiệu -->
     <section class="slide-section" data-slide="32" >
-        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
-            <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 8px;">
-                    <div style="display: inline-block; background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%); padding: 6px 18px; border-radius: 20px;">
-                        <h2 style="font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
-                            CHƯƠNG 3: THIẾT KẾ VÀ XÂY DỰNG HỆ THỐNG
-                        </h2>
-                    </div>
-                </div>
-                
-                <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
-                    <i class="fa-solid fa-calculator" style="margin-right: 10px; color: #4caf50;"></i>
-                    Tính Toán Mật Độ Rầy
-                </h2>
-                
-                <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
-                    <!-- Giới thiệu -->
-                    <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);">
-                        <p style="font-size: 12px; color: #856404; margin: 0; line-height: 1.6;">
-                            Mật độ rầy (số cá thể trên mỗi đơn vị diện tích) là chỉ số quen thuộc trong các phương pháp điều tra đồng ruộng truyền thống, 
-                            giúp kết quả tương thích với các tiêu chuẩn đánh giá nông nghiệp hiện hành.
-                        </p>
-                    </div>
-                    
-                    <!-- Công thức -->
-                    <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
-                        <h3 style="color: #2e7d32; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
-                            <i class="fa-solid fa-calculator" style="margin-right: 8px;"></i>
-                            Công thức tính mật độ
-                        </h3>
-                        <p style="font-size: 18px; text-align: center; font-weight: 700; color: #1b5e20; margin: 8px 0;">
-                            D = N / A
-                        </p>
-                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #1b5e20; line-height: 1.5;">
-                            <li><strong>D:</strong> Mật độ (con/m²)</li>
-                            <li><strong>N:</strong> Tổng số đối tượng được mô hình phát hiện</li>
-                            <li><strong>A:</strong> Diện tích thực tương ứng với ảnh đầu vào (m²)</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Xác định diện tích và Cấp độ tính toán -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
-                            <h3 style="color: #1565c0; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-ruler" style="margin-right: 6px;"></i>
-                                Xác định diện tích (A)
-                            </h3>
-                            <ul style="margin: 0; padding-left: 18px; font-size: 11px; color: #0d47a1; line-height: 1.5;">
-                                <li>Giả định: <strong>1 m²</strong> cho ảnh 1024×1024 pixels</li>
-                                <li>Dựa trên khoảng cách chụp trung bình và FOV camera</li>
-                                <li>Có thể hiệu chỉnh với thông số camera</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #9c27b0; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2);">
-                            <h3 style="color: #7b1fa2; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-layer-group" style="margin-right: 6px;"></i>
-                                Các cấp độ tính toán
-                            </h3>
-                            <ul style="margin: 0; padding-left: 18px; font-size: 11px; color: #4a148c; line-height: 1.5;">
-                                <li><strong>Mật độ tổng:</strong> Tổng mức độ hiện diện tất cả loài</li>
-                                <li><strong>Mật độ theo class:</strong> Đánh giá loài chiếm ưu thế</li>
-                                <li><strong>Mật độ trung bình dataset:</strong> Cái nhìn tổng quát</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                32
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 33: Hệ thống Đánh giá và Báo cáo -->
-    <section class="slide-section" data-slide="33" >
-        <div class="slide-container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); overflow: hidden;">
-            <div class="content-layout" style="padding: 30px 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 8px;">
-                    <div style="display: inline-block; background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%); padding: 6px 18px; border-radius: 20px;">
-                        <h2 style="font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
-                            CHƯƠNG 3: THIẾT KẾ VÀ XÂY DỰNG HỆ THỐNG
-                        </h2>
-                    </div>
-                </div>
-                
-                <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #2e7d32; font-size: 24px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
-                    <i class="fa-solid fa-chart-bar" style="margin-right: 10px; color: #4caf50;"></i>
-                    Hệ thống Đánh giá và Báo cáo Kết quả
-                </h2>
-                
-                <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding-right: 5px;">
-                    <!-- Giới thiệu -->
-                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
-                        <p style="font-size: 12px; color: #0d47a1; margin: 0; line-height: 1.6;">
-                            Hệ thống đánh giá cung cấp cái nhìn <strong>đầy đủ, đa chiều và có hệ thống</strong> về hiệu suất của pipeline YOLO + SAM, 
-                            được tổ chức thành ba cấp độ: tổng quan, theo class và chi tiết theo từng ảnh.
-                        </p>
-                    </div>
-                    
-                    <!-- Thống kê -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);">
-                            <h3 style="color: #2e7d32; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-chart-pie" style="margin-right: 6px;"></i>
-                                Thống kê Tổng quan
-                            </h3>
-                            <ul style="margin: 0; padding-left: 18px; font-size: 11px; color: #1b5e20; line-height: 1.5;">
-                                <li>Tổng số ảnh được đánh giá</li>
-                                <li>Tổng số đối tượng phát hiện được</li>
-                                <li>Số lượng trung bình đối tượng/ảnh</li>
-                                <li>Mật độ trung bình trên mỗi ảnh</li>
-                                <li>Phần trăm ảnh có xuất hiện rầy</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px 14px; border-radius: 10px; border-left: 5px solid #2196f3; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);">
-                            <h3 style="color: #1565c0; font-size: 15px; font-weight: 700; margin: 0 0 6px 0;">
-                                <i class="fa-solid fa-list" style="margin-right: 6px;"></i>
-                                Thống kê theo Class
-                            </h3>
-                            <ul style="margin: 0; padding-left: 18px; font-size: 11px; color: #0d47a1; line-height: 1.5;">
-                                <li>Tổng số đối tượng phát hiện theo class</li>
-                                <li>Tỷ lệ phần trăm của class</li>
-                                <li>Mật độ trung bình theo từng class</li>
-                                <li>Tần suất xuất hiện trong ảnh</li>
-                                <li>Phân bố theo mức độ dày đặc</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Phân tích Phân bố -->
-                    <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe082 100%); padding: 12px 16px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);">
-                        <h3 style="color: #e65100; font-size: 16px; font-weight: 700; margin: 0 0 8px 0;">
-                            <i class="fa-solid fa-chart-bar" style="margin-right: 8px;"></i>
-                            Phân tích Phân bố Mật độ
-                        </h3>
-                        <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #856404; line-height: 1.5;">
-                            <li><strong>Histogram mật độ:</strong> Tần suất xuất hiện các giá trị mật độ, xác định mức độ phổ biến</li>
-                            <li><strong>Box plot theo class:</strong> So sánh trực quan mật độ giữa các loài, quan sát median và outliers</li>
-                            <li>Phát hiện các vùng có mật độ bất thường (điểm nóng dịch hại)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                33
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 34: Cơ chế Xử lý và Tối ưu hóa -->
-    <section class="slide-section" data-slide="34" >
-        <div class="slide-container">
-            <div class="content-layout">
-                <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
-                        CHƯƠNG 3: THIẾT KẾ VÀ XÂY DỰNG HỆ THỐNG
-                    </h2>
-                </div>
-                
-                <h2 class="slide-title" style="color: #1565c0;">Cơ chế Xử lý và Tối ưu hóa Hiệu suất</h2>
-                
-                <div class="content-body">
-                    <div style="background: #fff3cd; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #ffc107;">
-                        <p style="font-size: 17px; line-height: 1.6; margin: 0; color: #856404;">
-                            Pipeline được thiết kế theo mô hình xử lý tuần tự với <b>7 bước chính</b>, đảm bảo tính nhất quán của đầu ra và tối ưu hóa hiệu suất.
-                        </p>
-                    </div>
-
-                    <div class="steps-layout" style="padding: 0;">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Đọc và tiền xử lý ảnh</h3>
-                                <p>Ảnh được đọc từ ổ đĩa và chuẩn hóa kích thước theo yêu cầu của YOLO và SAM</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>YOLO Detection & Classification</h3>
-                                <p>YOLO được load <b>một lần</b> trong __init__(), sau đó tái sử dụng cho toàn bộ quá trình xử lý</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Lọc Bounding Boxes</h3>
-                                <p>Kiểm tra sớm giúp giảm tính toán cho SAM-ViT nếu không có đối tượng được phát hiện</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>SAM Image Encoding (ViT-H)</h3>
-                                <p><b>Tối ưu quan trọng:</b> ViT Encoder chỉ chạy <b>một lần</b> cho mỗi ảnh. Feature map được tái sử dụng cho tất cả boxes, giảm thời gian segmentation xuống 5–20 lần</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h3>SAM Segmentation với Box Prompts</h3>
-                                <p>Mask Decoder nhận image embeddings, box prompts và sinh masks pixel-level</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">6</div>
-                            <div class="step-content">
-                                <h3>Hợp nhất và Hậu xử lý</h3>
-                                <p>Kết hợp kết quả từ YOLO và SAM, format masks, rescaling với chi phí tính toán nhỏ</p>
-                            </div>
-                        </div>
-
-                        <div class="step-item">
-                            <div class="step-number">7</div>
-                            <div class="step-content">
-                                <h3>Visualization (Tùy chọn)</h3>
-                                <p>Chỉ được kích hoạt khi người dùng yêu cầu, tránh lãng phí tài nguyên khi chạy trên dataset lớn</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #4caf50;">
-                        <p style="font-size: 16px; color: #2e7d32; margin: 0;">
-                            <b>Lý do không batch song song:</b> YOLO và SAM-ViT đều tiêu tốn nhiều VRAM; segmentation theo box prompts có tính chất tuần tự. 
-                            Thiết kế tuần tự nhưng được tổ chức tốt giúp đảm bảo hiệu suất cao mà không vượt quá giới hạn phần cứng.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                34
-            </div>
-        </div>
-    </section>
-
-    <!-- SLIDE 35: CHƯƠNG 4 - Giới thiệu -->
-    <section class="slide-section" data-slide="35" >
         <div class="slide-container">
             <div class="title-layout" style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
                 <h1 style="font-size: 48px; margin-bottom: 30px;">
@@ -4235,13 +3994,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                35
+                32
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 36: Phân tích kết quả đào tạo -->
-    <section class="slide-section" data-slide="36" >
+    <!-- SLIDE 33: Phân tích kết quả đào tạo -->
+    <section class="slide-section" data-slide="33" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4290,13 +4049,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                36
+                33
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 37: Đánh giá khả năng phân loại -->
-    <section class="slide-section" data-slide="37" >
+    <!-- SLIDE 34: Đánh giá khả năng phân loại -->
+    <section class="slide-section" data-slide="34" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4344,13 +4103,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                37
+                34
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 38: Phân tích phân đoạn và mật độ -->
-    <section class="slide-section" data-slide="38" >
+    <!-- SLIDE 35: Phân tích phân đoạn và mật độ -->
+    <section class="slide-section" data-slide="35" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4412,13 +4171,13 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                38
+                35
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 39: Đánh giá chất lượng phân đoạn -->
-    <section class="slide-section" data-slide="39" >
+    <!-- SLIDE 36: Đánh giá chất lượng phân đoạn -->
+    <section class="slide-section" data-slide="36" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4489,13 +4248,13 @@
 
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                39
+                36
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 40: Phân bổ đối tượng -->
-    <section class="slide-section" data-slide="40" >
+    <!-- SLIDE 37: Phân bổ đối tượng -->
+    <section class="slide-section" data-slide="37" >
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
@@ -4562,7 +4321,7 @@
             
             <!-- Slide Number -->
             <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
-                40
+                37
             </div>
         </div>
     </section>
@@ -4765,19 +4524,15 @@
                     color1 = '#667eea';
                     color2 = '#764ba2';
                 } else if (index < 6) {
-                    // Chapter 1 (slide 3-5)
                     color1 = '#1565c0';
                     color2 = '#0d47a1';
                 } else if (index < 18) {
-                    // Chapter 2 (slide 6-18)
                     color1 = '#ff6f00';
                     color2 = '#e65100';
-                } else if (index < 34) {
-                    // Chapter 3 (slide 19-36) - Cùng màu (index 18-35)
+                } else if (index < 31) {
                     color1 = '#4caf50';
                     color2 = '#2e7d32';
                 } else {
-                    // Chapter 4 - Kết quả (slide 37-41) - Cùng màu (index 36+)
                     color1 = '#f44336';
                     color2 = '#c62828';
                 }
