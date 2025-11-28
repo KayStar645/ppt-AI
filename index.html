@@ -901,57 +901,87 @@
         <div class="slide-container">
             <div class="content-layout">
                 <!-- Header: Chương -->
-                <div style="text-align: center; margin-bottom: 15px;">
-                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h2 style="font-size: 28px; font-weight: 700; color: #1565c0; margin: 0; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">
                         CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
                     </h2>
                 </div>
                 
                 <!-- Mục -->
-                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 30px;">
-                    1.1. Đặt vấn đề
+                <h2 class="slide-title" style="text-align: center; color: #1565c0; font-size: 32px; margin-bottom: 35px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.3px;">
+                    Đặt vấn đề
                 </h2>
                 
                 <div class="content-body">
-                    <div class="two-col-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 0;">
-                        <div class="col">
-                            <div class="section-title" style="color: #1b5e20; border-bottom-color: #4caf50;">Bối cảnh & Thách thức</div>
+                    <div class="two-col-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; padding: 0;">
+                        <div class="col" style="background: #f8f9fa; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <div class="section-title" style="color: #1b5e20; border-bottom-color: #4caf50; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 20px; padding-bottom: 10px; margin-bottom: 20px;">Bối cảnh & Thách thức</div>
                             
-                            <div style="margin-bottom: 20px;">
-                                <h4 style="color: #2e7d32; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Thách thức Truyền thống</h4>
-                                <ul>
-                                    <li><i class="fa-solid fa-seedling" style="color: #2e7d32;"></i> <b>Lúa:</b> Cây trồng chủ lực, chịu thiệt hại nặng nề từ <b>rầy nâu</b> và sâu bệnh.</li>
-                                    <li><i class="fa-solid fa-clock" style="color: #f57c00;"></i> <b>Giám sát thủ công:</b> Tốn <b>thời gian</b>, <b>chi phí</b>, và <b>độ chính xác thấp</b> (dựa vào kinh nghiệm).</li>
-                                    <li><i class="fa-solid fa-map-location-dot" style="color: #607d8b;"></i> <b>Quy mô lớn:</b> Khó đưa ra cảnh báo <b>kịp thời và khách quan</b> trên diện rộng.</li>
+                            <div style="margin-bottom: 25px;">
+                                <h4 style="color: #2e7d32; font-size: 18px; margin-bottom: 12px; font-weight: 600; font-family: 'Montserrat', sans-serif;">Thách thức Truyền thống</h4>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-seedling" style="color: #2e7d32; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span><b>Lúa:</b> Cây trồng chủ lực, chịu thiệt hại nặng nề từ <b>rầy nâu</b> và sâu bệnh.</span>
+                                    </li>
+                                    <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-clock" style="color: #f57c00; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span><b>Giám sát thủ công:</b> Tốn <b>thời gian</b>, <b>chi phí</b>, và <b>độ chính xác thấp</b> (dựa vào kinh nghiệm).</span>
+                                    </li>
+                                    <li style="margin-bottom: 0; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-map-location-dot" style="color: #607d8b; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span><b>Quy mô lớn:</b> Khó đưa ra cảnh báo <b>kịp thời và khách quan</b> trên diện rộng.</span>
+                                    </li>
                                 </ul>
                             </div>
                             
                             <div>
-                                <h4 style="color: #03a9f4; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Giải pháp AI & Giới hạn</h4>
-                                <ul>
-                                    <li><i class="fa-solid fa-robot" style="color: #03a9f4;"></i> <b>AI & YOLO:</b> Đã giải quyết tốt bài toán <b>Phát hiện (Detection)</b> và <b>Phân loại</b> rầy.</li>
-                                    <li><i class="fa-solid fa-square" style="color: #c62828;"></i> <b>Hộp bao (Bounding Box):</b> Chỉ là <b>vùng ước lượng</b> bao quanh đối tượng.</li>
+                                <h4 style="color: #03a9f4; font-size: 18px; margin-bottom: 12px; font-weight: 600; font-family: 'Montserrat', sans-serif;">Giải pháp AI & Giới hạn</h4>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-robot" style="color: #03a9f4; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span><b>AI & YOLO:</b> Đã giải quyết tốt bài toán <b>Phát hiện (Detection)</b> và <b>Phân loại</b> rầy.</span>
+                                    </li>
+                                    <li style="margin-bottom: 0; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-square" style="color: #c62828; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span><b>Hộp bao (Bounding Box):</b> Chỉ là <b>vùng ước lượng</b> bao quanh đối tượng.</span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <div class="col">
-                            <div class="section-title" style="color: #c62828; border-bottom-color: #ef5350;">Khoảng trống Nghiên cứu</div>
+                        <div class="col" style="background: #fff5f5; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <div class="section-title" style="color: #c62828; border-bottom-color: #ef5350; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 20px; padding-bottom: 10px; margin-bottom: 20px;">Khoảng trống Nghiên cứu</div>
                             
-                            <div style="margin-bottom: 20px;">
-                                <h4 style="color: #c62828; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Thách thức về Độ chính xác</h4>
-                                <ul>
-                                    <li><i class="fa-solid fa-slash" style="color: #c62828;"></i> <b>KHÔNG</b> thể tách biệt rầy khỏi nền lá lúa ở mức độ <b>pixel-level</b>.</li>
-                                    <li><i class="fa-solid fa-exclamation-triangle" style="color: #ff9800;"></i> Khó tính toán <b>mật độ chính xác</b> từ bounding boxes.</li>
+                            <div style="margin-bottom: 25px;">
+                                <h4 style="color: #c62828; font-size: 18px; margin-bottom: 12px; font-weight: 600; font-family: 'Montserrat', sans-serif;">Thách thức về Độ chính xác</h4>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-exclamation-triangle" style="color: #ff9800; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span><b>KHÔNG</b> thể tách biệt rầy khỏi nền lá lúa ở mức độ <b>pixel-level</b>.</span>
+                                    </li>
+                                    <li style="margin-bottom: 0; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-exclamation-triangle" style="color: #ff9800; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span>Khó tính toán <b>mật độ chính xác</b> từ bounding boxes.</span>
+                                    </li>
                                 </ul>
                             </div>
                             
                             <div>
-                                <h4 style="color: #3f51b5; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Nhu cầu Cấp thiết</h4>
-                                <ul>
-                                    <li><i class="fa-solid fa-mask" style="color: #3f51b5;"></i> Cần <b>Phân đoạn thực thể (Instance Segmentation)</b>.</li>
-                                    <li><i class="fa-solid fa-calculator" style="color: #3f51b5;"></i> Yếu tố then chốt để tính <b>Mật độ rầy/m²</b> một cách <b>khoa học và chính xác</b>.</li>
-                                    <li><i class="fa-solid fa-chart-line" style="color: #3f51b5;"></i> Hỗ trợ đánh giá mức độ xâm nhiễm và dự báo dịch hại.</li>
+                                <h4 style="color: #3f51b5; font-size: 18px; margin-bottom: 12px; font-weight: 600; font-family: 'Montserrat', sans-serif;">Nhu cầu Cấp thiết</h4>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-mask" style="color: #3f51b5; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span>Cần <b>Phân đoạn thực thể (Instance Segmentation)</b>.</span>
+                                    </li>
+                                    <li style="margin-bottom: 12px; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-calculator" style="color: #3f51b5; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span>Yếu tố then chốt để tính <b>Mật độ rầy/m²</b> một cách <b>khoa học và chính xác</b>.</span>
+                                    </li>
+                                    <li style="margin-bottom: 0; font-size: 16px; line-height: 1.6; font-family: 'Roboto', sans-serif; color: #333; display: flex; align-items: flex-start;">
+                                        <i class="fa-solid fa-chart-line" style="color: #3f51b5; margin-right: 10px; margin-top: 4px; font-size: 18px; flex-shrink: 0;"></i>
+                                        <span>Hỗ trợ đánh giá mức độ xâm nhiễm và dự báo dịch hại.</span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -960,7 +990,7 @@
             </div>
             
             <!-- Slide Number -->
-            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20;">
+            <div style="position: absolute; bottom: 4px; left: 4px; width: 50px; height: 50px; background: #bdbdbd; border: 2px solid #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; color: #424242; z-index: 20; font-family: 'Roboto', sans-serif;">
                 3
             </div>
         </div>
